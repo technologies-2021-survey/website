@@ -2921,7 +2921,7 @@ class Power_model extends CI_Model {
 					'parent_id' => (int) $row['parent_id'],
 					'parent_name' => $getInfo[0]['parent_name'],
 					'patient_id' => (int) $row['patient_id'],
-					'patient_name' => $patient_name[0]['patient_name'],
+					'patient_name' => $patient_name[0]['patient_name'] . 'HAHA',
 					'date' => $row['date'],
 					'type_of_laboratory' => $row['type_of_laboratory'],
 					'file' => $row['file'],
