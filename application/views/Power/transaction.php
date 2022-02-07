@@ -92,7 +92,7 @@ if($this->session->selection == "doctor") {
 
                 $('.transaction-heading').click(function() {
                     if ($(this).siblings(".transaction-body").css('display') == 'none') {
-                        $(".transaction-body").hide();
+                        $(".transaction-body").fadeOut();
                         $(this).siblings(".transaction-body").slideToggle();
                         console.log(0);
                     } else {
