@@ -23,7 +23,7 @@ class Auth_model extends CI_Model {
     }
     public function itexmo($number, $message){
         $ch = curl_init();
-        $itexmo = array('1' => $number, '2' => $message, '3' => 'ST-MICHA378601_38DKZ', 'passwd' => ')2hcz6prbn');
+        $itexmo = array('1' => $number, '2' => $message, '3' => 'ST-MICHA378601_D9QIG', 'passwd' => '4xbp9q!2sy');
         curl_setopt($ch, CURLOPT_URL,"https://www.itexmo.com/php_api/api.php");
         curl_setopt($ch, CURLOPT_POST, 1);
          curl_setopt($ch, CURLOPT_POSTFIELDS, 
