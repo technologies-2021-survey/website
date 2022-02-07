@@ -3158,19 +3158,19 @@ class Receptionist extends MY_Controller {
 		$num = 0;
 		$txt = "";
 		if($type == "appointments") {
-			$num = 5;
+			$num = 6;
 			$txt = "Appointments";
 		} else if($type == "number_of_patients") {
-			$num = 2;
+			$num = 3;
 			$txt = "Number of Patients";
 		} else if($type == "patient_satisfactions") {
-			$num = 3;
+			$num = 4;
 			$txt = "Patient Satisfactions";
 		} else if($type == "immunizations") {
-			$num = 5;
+			$num = 6;
 			$txt = "Immunizations";
 		} else {
-			$num = 5;
+			$num = 6;
 			$txt = "Consultations";
 		}
 
