@@ -16,9 +16,13 @@
                         $(document).ready(function() {
 
                             $('.consultation-heading').click(function() {
-                                $(".consultation-body").hide();
-                                $(this).siblings(".consultation-body").slideToggle();
-                                console.log(0);    
+                                if ($(this).siblings(".consultation-body").css('display') == 'none') {
+                                    $(".consultation-body").fadeOut();
+                                    $(this).siblings(".consultation-body").slideToggle();
+                                    console.log(0);
+                                } else {
+                                    $(this).siblings(".consultation-body").slideToggle();
+                                }  
                             });
 
                             $('.pot').click(function() {

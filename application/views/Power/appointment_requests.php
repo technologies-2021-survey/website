@@ -306,11 +306,16 @@
                 ?>
                 <script type="text/javascript">
                     $(document).ready(function() {
+                        
 
                         $('.appointment-heading').click(function() {
-                            $(".appointment-body").hide();
-                            $(this).siblings(".appointment-body").slideToggle();
-                            console.log(0);    
+                            if ($(this).siblings(".appointment-body").css('display') == 'none') {
+                                $(".appointment-body").fadeOut();
+                                $(this).siblings(".appointment-body").slideToggle();
+                                console.log(0);
+                            } else {
+                                $(this).siblings(".appointment-body").slideToggle();
+                            }  
                         });
 
                         $('.pot').click(function() {

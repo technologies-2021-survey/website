@@ -76,9 +76,13 @@ if($this->session->selection == "doctor") {
             $(document).ready(function() {
 
                 $('.transaction-heading').click(function() {
-                    $(".transaction-body").hide();
-                    $(this).siblings(".transaction-body").slideToggle();
-                    console.log(0);    
+                    if ($(this).siblings(".transaction-body").css('display') == 'none') {
+                        $(".transaction-body").fadeOut();
+                        $(this).siblings(".transaction-body").slideToggle();
+                        console.log(0);
+                    } else {
+                        $(this).siblings(".transaction-body").slideToggle();
+                    } 
                 });
                 $('.pot').click(function() {
                     $('#viewModal').modal('show');

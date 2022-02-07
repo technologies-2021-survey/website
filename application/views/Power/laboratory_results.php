@@ -97,11 +97,15 @@ if($this->session->selection == "doctor") {
                 ?>
                 <script type="text/javascript">
                     $(document).ready(function() {
-
+                        
                         $('.laboratory-results-heading').click(function() {
-                            $(".laboratory-results-body").hide();
-                            $(this).siblings(".laboratory-results-body").slideToggle();
-                            console.log(0);    
+                            if ($(this).siblings(".laboratory-results-body").css('display') == 'none') {
+                                $(".laboratory-results-body").fadeOut();
+                                $(this).siblings(".laboratory-results-body").slideToggle();
+                                console.log(0);
+                            } else {
+                                $(this).siblings(".laboratory-results-body").slideToggle();
+                            }
                         });
                     });
                 </script>
