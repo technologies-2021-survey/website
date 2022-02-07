@@ -29,7 +29,7 @@ if($this->session->selection == "doctor") {
             
                 foreach($transactions as $row) {
                     echo '<div class="transaction-'.$row['overallId'].'">';
-                            echo '<div class="transaction-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;border-radius:10px;">';
+                            echo '<div class="transaction-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;border-radius:10px;cursor:pointer;">';
 //                                 echo $row['parent_name'];
 //                                 echo ' / ';
 //                                 echo ucfirst($row['category']);
@@ -91,9 +91,11 @@ if($this->session->selection == "doctor") {
             $(document).ready(function() {
 
                 $('.transaction-heading').click(function() {
-                    $(".transaction-body").hide();
-                    $(this).siblings(".transaction-body").slideToggle();
-                    console.log(0);    
+                    if ($(this).siblings(".transaction-body").css('display') == 'none') {
+                        $(".transaction-body").hide();
+                        $(this).siblings(".transaction-body").slideToggle();
+                        console.log(0);
+                    }
                 });
                 $('.pot').click(function() {
                     $('#viewModal').modal('show');
