@@ -2890,22 +2890,40 @@ class Power_model extends CI_Model {
 		$array = array();
 
 		foreach($q->result_array() as $row) {
+			$count = 0;
 
-			$result = $this->power_model->getUserInfoParent($row['parent_id']);
-			$patient_name = $this->db->query("SELECT * FROM `patients_tbl` WHERE `patient_id` = '".$row['patient_id']."'")->result_array();
-			$getInfo = (array) $result;
-			$newRow = array(
-				'laboratory_results_id' => (int) $row['laboratory_results_id'],
-				'parent_id' => (int) $row['parent_id'],
-				'parent_name' => $getInfo[0]['parent_name'],
-				'patient_id' => (int) $row['patient_id'],
-				'patient_name' => $patient_name[0]['patient_name'],
-				'date' => $row['date'],
-				'type_of_laboratory' => $row['type_of_laboratory'],
-				'file' => $row['file'],
-				'timestamp' => $row['timestamp']
-			);
-			$array[] = $newRow;
+			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
+			if($check1 != 0) {
+				$count++;
+			}
+
+			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
+			if($check2 != 0) {
+				$count++;
+			}
+
+			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
+			if($check3 != 0) {
+				$count++;
+			}
+
+			if($count != 0) {
+				$result = $this->power_model->getUserInfoParent($row['parent_id']);
+				$patient_name = $this->db->query("SELECT * FROM `patients_tbl` WHERE `patient_id` = '".$row['patient_id']."'")->result_array();
+				$getInfo = (array) $result;
+				$newRow = array(
+					'laboratory_results_id' => (int) $row['laboratory_results_id'],
+					'parent_id' => (int) $row['parent_id'],
+					'parent_name' => $getInfo[0]['parent_name'],
+					'patient_id' => (int) $row['patient_id'],
+					'patient_name' => $patient_name[0]['patient_name'],
+					'date' => $row['date'],
+					'type_of_laboratory' => $row['type_of_laboratory'],
+					'file' => $row['file'],
+					'timestamp' => $row['timestamp']
+				);
+				$array[] = $newRow;
+			}
 			
 			
 		}
