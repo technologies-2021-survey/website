@@ -95,6 +95,8 @@ if($this->session->selection == "doctor") {
                         $(".transaction-body").hide();
                         $(this).siblings(".transaction-body").slideToggle();
                         console.log(0);
+                    } else {
+                        $(this).siblings(".transaction-body").slideToggle();
                     }
                 });
                 $('.pot').click(function() {
