@@ -2893,21 +2893,22 @@ class Power_model extends CI_Model {
 			$count = 0;
 
 			if($this->session->selection == "doctor") {
+				$count = 0;
 			} else {
 				$count = 3;
 			}
-
-			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
+			
+			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->rows();
 			if($check1 != 0) {
 				$count++;
 			}
 
-			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
+			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->rows();
 			if($check2 != 0) {
 				$count++;
 			}
 
-			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
+			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->rows();
 			if($check3 != 0) {
 				$count++;
 			}
@@ -2921,7 +2922,7 @@ class Power_model extends CI_Model {
 					'parent_id' => (int) $row['parent_id'],
 					'parent_name' => $getInfo[0]['parent_name'],
 					'patient_id' => (int) $row['patient_id'],
-					'patient_name' => $patient_name[0]['patient_name'] . 'HAHA',
+					'patient_name' => $patient_name[0]['patient_name'],
 					'date' => $row['date'],
 					'type_of_laboratory' => $row['type_of_laboratory'],
 					'file' => $row['file'],
