@@ -308,6 +308,7 @@
                     $(document).ready(function() {
 
                         $('.appointment-heading').click(function() {
+                            $(".appointment-body").hide();
                             $(this).siblings(".appointment-body").slideToggle();
                             console.log(0);    
                         });
