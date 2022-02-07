@@ -2893,11 +2893,10 @@ class Power_model extends CI_Model {
 			$count = 0;
 
 			if($this->session->selection == "doctor") {
-				$count = 0;
 			} else {
 				$count = 3;
 			}
-			
+
 			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->result_array();
 			if($check1 != 0) {
 				$count++;
