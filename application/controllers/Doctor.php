@@ -3326,6 +3326,7 @@ class Doctor extends MY_Controller {
 				$html .= '</tr>';
 				if($type == "") {
 					$html .= '<tr>';
+					$html .= '<th>#</th>';
 					$html .= '<th>Parent Name</th>';
 					$html .= '<th>Patient Name</th>';
 					$html .= '<th>Date Start</th>';
@@ -3334,6 +3335,7 @@ class Doctor extends MY_Controller {
 					$html .= '</tr>';
 				} else if($type == "appointments") {
 					$html .= '<tr>';
+					$html .= '<th>#</th>';
 					$html .= '<th>Parent Name</th>';
 					$html .= '<th>Patient Name</th>';
 					$html .= '<th>Date Start</th>';
@@ -3342,17 +3344,20 @@ class Doctor extends MY_Controller {
 					$html .= '</tr>';
 				} else if($type == "number_of_patients") {
 					$html .= '<tr>';
+					$html .= '<th>#</th>';
 					$html .= '<th>Patient Name</th>';
 					$html .= '<th>Services</th>';
 					$html .= '</tr>';
 				} else if($type == "patient_satisfactions") {
 					$html .= '<tr>';
+					$html .= '<th>#</th>';
 					$html .= '<th>Question</th>';
 					$html .= '<th>Answer</th>';
 					$html .= '<th>Percentage</th>';
 					$html .= '</tr>';
 				} else if($type == "immunizations") {
 					$html .= '<tr>';
+					$html .= '<th>#</th>';
 					$html .= '<th>Patient Name</th>';
 					$html .= '<th>Date</th>';
 					$html .= '<th>Vaccine</th>';
@@ -3364,8 +3369,13 @@ class Doctor extends MY_Controller {
 			$html .= '<tbody>';
 				$count = 0;
 				if($type == "") {
+					$counting1 = 0;
 					foreach($data as $row) {
+						$counting1++;
 						$html .= "<tr>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+								$html .= $counting1;
+							$html .= "</td>";
 							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
 								$html .= $row['parent_name'];
 							$html .= "</td>";
@@ -3385,8 +3395,13 @@ class Doctor extends MY_Controller {
 						$count++;
 					}
 				} else if($type == "appointments") {
+					$counting2 = 0;
 					foreach($data as $row) {
+						$counting2++;
 						$html .= "<tr>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+								$html .= $counting2;
+							$html .= "</td>";
 							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
 								$html .= $row['parent_name'];
 							$html .= "</td>";
@@ -3406,20 +3421,30 @@ class Doctor extends MY_Controller {
 						$count++;
 					}
 				} else if($type == "number_of_patients") {
+					$counting3 = 0;
 					foreach($data as $row) {
+						$counting3++;
 						$html .= "<tr>";
-						$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
-						$html .= $row['patient_name'];
-						$html .= "</td>";
-						$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
-						$html .= $row['services'];
-						$html .= "</td>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+								$html .= $counting3;
+							$html .= "</td>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+							$html .= $row['patient_name'];
+							$html .= "</td>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+							$html .= $row['services'];
+							$html .= "</td>";
 						$html .= "</tr>";
 						$count++;
 					}
 				} else if($type == "patient_satisfactions") {
+					$counting4 = 0;
 					foreach($data as $row) {
+						$counting4++;
 						$html .= "<tr>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+								$html .= $counting4;
+							$html .= "</td>";
 							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
 								$html .= $row['question'];
 							$html .= "</td>";
@@ -3433,8 +3458,13 @@ class Doctor extends MY_Controller {
 						$count++;
 					}
 				} else if($type == "immunizations") {
+					$counting5 = 0;
 					foreach($data as $row) {
+						$counting5++;
 						$html .= "<tr>";
+							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
+								$html .= $counting5;
+							$html .= "</td>";
 							$html .= "<td style=\"font-size: 10px;border: 1px solid black; border-collapse: collapse;padding:10px;\">";
 								$html .= $row['patient_name'];
 							$html .= "</td>";
