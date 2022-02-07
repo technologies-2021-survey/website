@@ -99,6 +99,7 @@ if($this->session->selection == "doctor") {
                     $(document).ready(function() {
 
                         $('.laboratory-results-heading').click(function() {
+                            $(".laboratory-results-body").hide();
                             $(this).siblings(".laboratory-results-body").slideToggle();
                             console.log(0);    
                         });

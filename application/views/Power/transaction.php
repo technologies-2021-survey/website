@@ -91,6 +91,7 @@ if($this->session->selection == "doctor") {
             $(document).ready(function() {
 
                 $('.transaction-heading').click(function() {
+                    $(".transaction-body").hide();
                     $(this).siblings(".transaction-body").slideToggle();
                     console.log(0);    
                 });

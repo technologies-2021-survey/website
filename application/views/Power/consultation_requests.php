@@ -16,6 +16,7 @@
                         $(document).ready(function() {
 
                             $('.consultation-heading').click(function() {
+                                $(".consultation-body").hide();
                                 $(this).siblings(".consultation-body").slideToggle();
                                 console.log(0);    
                             });
