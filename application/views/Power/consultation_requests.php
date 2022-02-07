@@ -121,7 +121,7 @@
                     } 
                     foreach($consultations as $row) {
                         echo '<div class="consultation-'.$row['consultation_id'].'">';
-                            echo '<div class="consultation-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;">';
+                            echo '<div class="consultation-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;border-radius:10px;cursor:pointer;">';
                                 //echo $row['parent_name'];
 						echo $row['parent_name']." / <b>".$row['patient_name']."</b> (".$row['date_consultation_datetime'].")";
                                 echo '<div class="pull-right">';

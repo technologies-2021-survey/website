@@ -26,7 +26,8 @@ if($this->session->selection == "doctor") {
                     } 
                     foreach($laboratory_results as $row) {
                         echo '<div class="laboratory-results-'.$row['laboratory_results_id'].'">';
-                            echo '<div class="laboratory-results-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;">';
+                        
+                            echo '<div class="laboratory-results-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;border-radius:10px;cursor:pointer;">';
                                 //echo $row['parent_name'];
 			                    echo htmlspecialchars($row['parent_name'])." / <b>".htmlspecialchars($row['patient_name'])."</b> (".date("M d, Y h:iA",$row['timestamp']).")";  
                                 if(empty($row['file'])) {

@@ -93,7 +93,7 @@
                     } 
                     foreach($appointment_requests as $row) {
                         echo '<div class="appointment-requests-'.$row['appointment_id'].'">';
-                            echo '<div class="appointment-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;">';
+                            echo '<div class="appointment-heading" style="padding: 10px;box-shadow: 0 0 2px #000 inset;border-radius:10px;cursor:pointer;">';
                                 //echo $row['parent_name'];
 			    echo htmlspecialchars($row['parent_name'])." / <b>".htmlspecialchars($row['patient_name'])."</b> (".$row['appointment_datetime'].")";
                                 echo '<div class="pull-right">';
