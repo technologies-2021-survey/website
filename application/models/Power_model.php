@@ -2898,17 +2898,17 @@ class Power_model extends CI_Model {
 				$count = 3;
 			}
 			
-			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->rows();
+			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
 			if($check1 != 0) {
 				$count++;
 			}
 
-			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->rows();
+			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
 			if($check2 != 0) {
 				$count++;
 			}
 
-			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->rows();
+			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
 			if($check3 != 0) {
 				$count++;
 			}
