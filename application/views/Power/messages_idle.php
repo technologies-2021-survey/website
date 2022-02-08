@@ -91,7 +91,10 @@ if($this->session->selection == "doctor") {
 			<div class="col-sm-8" style="position: relative; height: 100%;">
 				<div class="chat" style="height: 100%; position: relative;">
 					<div class="chat-heading">
+						<img src="<?php echo base_url(). 'assets/img/whealth.png';?>" class="img-circle img-thumbnail img-responsive">
 						<div class="chat-info">
+							<span id="name">...</span><br/>
+							<span id="active">...</span>
 						</div>
 						<div style="clear:both;"></div>
 					</div>
