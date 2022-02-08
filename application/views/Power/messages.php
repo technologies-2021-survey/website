@@ -79,7 +79,7 @@ if($this->session->selection == "doctor") {
 									$('span.text-'+i).text(s);
 								}
 								if($count == 0) {
-									var x='<div class="people-info"><center><b>No results found.</b></center></div>';
+									var x='<div class="people-info"><center style="color:white;"><b>No results found.</b></center></div>';
 									$('.people-list').append(x);
 								}
 							}
