@@ -18,7 +18,7 @@ if($this->session->selection == "doctor") {
 		
 		<link rel="icon" type="image/png" href="<?php echo base_url() . "assets/img/whealth.png";?>"/>
 		
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i" rel="stylesheet" type="text/css">
 		
 		
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
