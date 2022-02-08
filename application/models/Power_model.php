@@ -3056,11 +3056,11 @@ class Power_model extends CI_Model {
 				$consultationQuery = "";
 				$immunizationQuery = "";
 				if($this->session->selection == "doctor") {
-					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."'")->where('interview_id', $this->session->id);
+					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'");
 
-					$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."'")->where('interview_id', $this->session->id);
+					$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'");
 
-					$immunizationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."'")->where('interview_id', $this->session->id);
+					$immunizationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'");
 
 				} else {
 					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."'");
