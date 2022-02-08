@@ -250,6 +250,9 @@ class Home extends CI_Controller {
 				$this->db->set("active", "0");
 				$this->db->update("doctors_tbl");
 			}
+
+			echo $final;
+			echo '<br/>';
 		}
 
 		$query2 = $this->db->query("SELECT * FROM `admins_tbl`");
