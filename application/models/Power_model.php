@@ -3106,14 +3106,7 @@ class Power_model extends CI_Model {
 				
 				
 			}
-			foreach($array as $key => $value) {     
-
-				if(empty($value)) {
-
-					unset($array[$key]);
-				}
-			}
-			return array_reverse($array);
+			return $array;
 		} else if($type == "patient_satisfactions") {
 			$this->db->limit($limit, $start);
 			if($this->session->selection == "doctor") {
