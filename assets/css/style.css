@@ -2,3 +2,12 @@
 section.header { height: 200px; margin-bottom: 50px; background-color: #486e94; color:#fff;}
 h2.heading{margin-top: 74px; font-size: 55px; text-shadow: 2px 2px 0px #000;}
 .icon-bar{border-color: white; border-width: 1px; border-style: solid;}.navbar-toggle{background-color: #0c9cfe;} 
+@media only screen and (max-width: 767px) {
+    .chat-heading{
+        display: none!important;
+    }
+    
+}
+.chat-heading{
+    display: block;
+}
