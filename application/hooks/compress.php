@@ -7,14 +7,12 @@ function compress()
 	$search = array(
 		'/\n/',      // replace end of line by a space
 		'/\>[^\S ]+/s',    // strip whitespaces after tags, except space
-		'/[^\S ]+\</s',    // strip whitespaces before tags, except space
-		'/(\s)+/s'    // shorten multiple whitespace sequences
+		'/[^\S ]+\</s'    // strip whitespaces before tags, except space
 	);
 	$replace = array(
 		' ',
 		'>',
 		'<',
-		'\\'
 	);
 	$buffer = preg_replace($search, $replace, $buffer);
 	$CI->output->set_output($buffer);
