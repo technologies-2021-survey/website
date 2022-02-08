@@ -32,9 +32,9 @@
 			<!-- Logo -->
 			<a href="<?php echo base_url(); ?>login" class="logo">
 			<!-- mini logo for sidebar mini 50x50 pixels -->
-			<span class="logo-mini"><b style="color:#ff9800;">W</b>H</span>
+			<span class="logo-mini"><b>W</b>H</span>
 			<!-- logo for regular state and mobile devices -->
-			<span class="logo-lg"><b style="color:#ff9800;">W</b>Health</span>
+			<span class="logo-lg"><b>W</b>Health</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
 			<nav class="navbar navbar-static-top">
