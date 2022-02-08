@@ -2957,13 +2957,45 @@ class Power_model extends CI_Model {
         		return $this->db->count_all("appointments");
 			}
 		} else if($type == "number_of_patients") {
-			if($this->session->selection == "doctor") {
-				$this->db->where('interview_id', $this->session->id)->order_by("patient_id", "desc");
-        		return $this->db->count_all("patients_tbl");
-			} else {
-				$this->db->order_by("patient_id", "desc");
-        		return $this->db->count_all("patients_tbl");
+			$count = 0;
+			$this->db->order_by("patient_id", "desc");
+			$q = $this->db->get("patients_tbl");
+
+			foreach($q->result_array() as $row) {
+				
+				$services = "";
+				$appointmentQuery = "";
+				$consultationQuery = "";
+				$immunizationQuery = "";
+				if($this->session->selection == "doctor") {
+					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'");
+
+					$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'");
+
+					$immunizationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'");
+
+				} else {
+					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."'");
+
+					$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."'");
+
+					$immunizationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."'");
+				}
+				
+				if($appointmentQuery->num_rows() > 0) {
+					$count ++;
+					$services .= "Appointment, ";
+				}
+				if($consultationQuery->num_rows() > 0) {
+					$count ++;
+					$services .= "Online Consultation, ";
+				}
+				if($immunizationQuery->num_rows() > 0) {
+					$count ++;
+					$services .= "Immunization, ";
+				}
 			}
+			return $count;
 		} else if($type == "patient_satisfactions") {
 			if($this->session->selection == "doctor") {
 				$this->db->where('interview_id', $this->session->id)->order_by("survey_id", "desc");
@@ -3106,7 +3138,7 @@ class Power_model extends CI_Model {
 				
 				
 			}
-			return $array;
+			return array_reverse($array);
 		} else if($type == "patient_satisfactions") {
 			$this->db->limit($limit, $start);
 			if($this->session->selection == "doctor") {
