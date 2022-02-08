@@ -3095,11 +3095,13 @@ class Power_model extends CI_Model {
 						$array[] = $newRow;
 					}
 				} else {
-					$newRow = array(
-						'patient_name' => $patient_name[0]['patient_name'],
-						'services' => $services
-					);
-					$array[] = $newRow;
+					if($count != 0) {
+						$newRow = array(
+							'patient_name' => $patient_name[0]['patient_name'],
+							'services' => $services
+						);
+						$array[] = $newRow;
+					}
 				}
 				
 				
