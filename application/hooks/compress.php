@@ -9,11 +9,13 @@ function compress()
 		'/\>[^\S ]+/s',    // strip whitespaces after tags, except space
 		'/[^\S ]+\</s',    // strip whitespaces before tags, except space
 		'/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/',    // strip whitespaces before tags, except space
+        '/<!--(.|\s)*?-->/',
 	);
 	$replace = array(
 		'',
 		'>',
 		'<',
+        "",
         ""
 	);
 	$buffer = preg_replace($search, $replace, $buffer);
