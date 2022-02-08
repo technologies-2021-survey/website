@@ -232,6 +232,8 @@ class Home extends CI_Controller {
 
 	public function autoNotification() {
 		date_default_timezone_set('Asia/Manila');
+
+		// auto offline user
 		$query = $this->db->query("SELECT * FROM `doctors_tbl`");
 		foreach($query->result_array() as $data) {
 			if((time() - $data['login_timeout']) > 10) {
