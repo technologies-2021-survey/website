@@ -267,7 +267,7 @@ class Home extends CI_Controller {
 		$query4 = $this->db->query("SELECT * FROM `parents_tbl`");
 		foreach($query4->result_array() as $data4) {
 			if((time() - $data4['login_timeout']) > 10) {
-				$this->db->where("parent_id", $data3['parent_id']);
+				$this->db->where("parent_id", $data4['parent_id']);
 				$this->db->set("parent_sms_code", "@@@@@@@@EXIT@@@@@@@@");
 				$this->db->set("active", "0");
 				$this->db->update("parents_tbl");
