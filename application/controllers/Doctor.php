@@ -33,7 +33,7 @@ class Doctor extends MY_Controller {
 		$DoctorCode = "";
 
 		$data = array(
-			'title' => 'Dashboard | Doctor',
+			'title' => 'Dashboard | Doctor | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor',
 			'nextPatients' => $this->power_model->allTransactions() 
@@ -66,7 +66,7 @@ class Doctor extends MY_Controller {
 	// change profile picture
 	public function change_profile_picture() {
 		$data = array(
-			'title' => 'Doctor',
+			'title' => 'Doctor | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor',
 			'error' => '',
@@ -208,7 +208,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Appointment',
+			'title' => 'Appointment | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -239,7 +239,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Appointment Requests',
+			'title' => 'Appointment Requests | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'appointment_requests' => '',
@@ -605,7 +605,7 @@ class Doctor extends MY_Controller {
 		}
 		
         $data = array(
-			'title' => 'Doctor',
+			'title' => 'Doctor | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'), 
 			'error' => '',
 			'level' => 'doctor'
@@ -740,7 +740,7 @@ class Doctor extends MY_Controller {
 
 	public function messages($code = "") {
 		$data = array(
-			'title' => 'Messages',
+			'title' => 'Messages | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'code' => $code,
 			'level' => 'doctor'
@@ -830,7 +830,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Inquiries',
+			'title' => 'Inquiries | WHealth',
 			'inquiries' => $this->power_model->getInquiries(), // get all data in inquiries
 			'content' => 'Inquiries',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
@@ -887,7 +887,7 @@ class Doctor extends MY_Controller {
 		
 
 		$data = array(
-			'title' => 'Inquiries View',
+			'title' => 'Inquiries View | WHealth',
 			'inquiries_view' => $this->power_model->getInquiriesById($id),
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
@@ -920,7 +920,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Consultations',
+			'title' => 'Consultations | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -988,7 +988,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Consultation Requests',
+			'title' => 'Consultation Requests | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'consultations' => '',
@@ -1259,7 +1259,7 @@ class Doctor extends MY_Controller {
         
 
 		$data = array(
-			'title' => 'Transaction (Medical Certificate)',
+			'title' => 'Transaction (Medical Certificate) | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'transactions' => '',
@@ -1324,7 +1324,7 @@ class Doctor extends MY_Controller {
         $this->pagination->initialize($config);
 
 		$data = array(
-			'title' => 'Transaction (Appointment)',
+			'title' => 'Transaction (Appointment) | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'transactions' => '',
@@ -1389,7 +1389,7 @@ class Doctor extends MY_Controller {
         $this->pagination->initialize($config);
 
 		$data = array(
-			'title' => 'Transaction (Consultation)',
+			'title' => 'Transaction (Consultation) | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'transactions' => '',
@@ -1433,7 +1433,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Immunization Record',
+			'title' => 'Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'immunizationrecords' => '',
@@ -1526,7 +1526,7 @@ class Doctor extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($id);
 		$data = array(
-			'title' => 'Add Immunization Record',
+			'title' => 'Add Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($id),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($id),
@@ -1622,7 +1622,7 @@ class Doctor extends MY_Controller {
 		$getParent = $this->db->query("SELECT * FROM `parents_tbl` WHERE `parent_id` = '".$result2[0]['parent_id']."'")->result_array();
 
 		$data = array(
-			'title' => 'Edit Immunization Record',
+			'title' => 'Edit Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'patient_name' => $patient_name[0]['patient_name'],
 			'parent_name' => $getParent[0]['parent_name'],
@@ -1743,7 +1743,7 @@ class Doctor extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'View Immunization Record',
+			'title' => 'View Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'viewImmunizationRecords' => '',
@@ -1781,7 +1781,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Parent List',
+			'title' => 'Parent List | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'parents' => '',
@@ -1844,7 +1844,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Add Parent',
+			'title' => 'Add Parent | WHealth',
 			'data' => $this->power_model->getId($this->session->id,'doctor'),
 			'level' => 'doctor'
 		);
@@ -1905,7 +1905,7 @@ class Doctor extends MY_Controller {
 		$result = $this->power_model->getUserInfoParent($id);
 
 		$data = array(
-			'title' => 'Edit Parent',
+			'title' => 'Edit Parent | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'parents' => $result,
 			'level' => 'doctor'
@@ -1961,7 +1961,7 @@ class Doctor extends MY_Controller {
 			redirect("doctor/parents?error");
 		}
 		$datau = array(
-			'title' => 'Add Child',
+			'title' => 'Add Child | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'parent_name' => $this->power_model->getUserInfoParentName($id),
 			'level' => 'doctor',
@@ -2014,7 +2014,7 @@ class Doctor extends MY_Controller {
 			redirect("doctor/parents");
 		}
 		$data = array(
-			'title' => 'Child List',
+			'title' => 'Child List | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'listChilds' => '',
 			'parent_name' =>  $this->power_model->getUserInfoParentName($id),
@@ -2062,7 +2062,7 @@ class Doctor extends MY_Controller {
 		$parent_name = $this->power_model->getUserInfoPatientGetParentName($result2[0]['parent_id']);
 
 		$data = array(
-			'title' => 'Edit Child',
+			'title' => 'Edit Child | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'parent_name' => $parent_name,
 			'parent_id' => $result2[0]['parent_id'],
@@ -2143,7 +2143,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Patient List',
+			'title' => 'Patient List | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'patients' => '',
@@ -2208,7 +2208,7 @@ class Doctor extends MY_Controller {
 			End of Access Privilege
 		*/
 		$data = array(
-			'title' => 'Announcement',
+			'title' => 'Announcement | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'announcements' => '',
@@ -2271,7 +2271,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Add Announcement',
+			'title' => 'Add Announcement | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -2372,7 +2372,7 @@ class Doctor extends MY_Controller {
 		$content = $result2[0]['announcement_tbl_content'];
 
 		$data = array(
-			'title' => 'Edit Announcement',
+			'title' => 'Edit Announcement | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'title' => $title,
 			'content' => $content,
@@ -2447,7 +2447,7 @@ class Doctor extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'View Pediatric Charts',
+			'title' => 'View Pediatric Charts | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'viewPediatricCharts' => '',
@@ -2522,7 +2522,7 @@ class Doctor extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($id);
 		$data = array(
-			'title' => 'Add Pediatric Chart',
+			'title' => 'Add Pediatric Chart | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($id),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($id),
@@ -2667,7 +2667,7 @@ class Doctor extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($damz[0]['patient_id']);
 		$data = array(
-			'title' => 'Edit Pediatric Chart',
+			'title' => 'Edit Pediatric Chart | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($damz[0]['patient_id']),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($damz[0]['patient_id']),
@@ -2808,7 +2808,7 @@ class Doctor extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($damz[0]['patient_id']);
 		$data = array(
-			'title' => 'View Pediatric Chart Data',
+			'title' => 'View Pediatric Chart Data | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($damz[0]['patient_id']),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($damz[0]['patient_id']),
@@ -2825,7 +2825,7 @@ class Doctor extends MY_Controller {
 	// clinic analytics
 	public function clinic_analytics() {
 		$data = array(
-			'title' => 'Clinic Analytics',
+			'title' => 'Clinic Analytics | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -2856,7 +2856,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Health Tips',
+			'title' => 'Health Tips | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -3531,7 +3531,7 @@ class Doctor extends MY_Controller {
 			End of Access Privilege
 		*/
 		$data = array(
-			'title' => 'Patient Satisfaction',
+			'title' => 'Patient Satisfaction | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'links' => '',
 			'response_rate' => '',
@@ -3567,7 +3567,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Pre-defined Terms',
+			'title' => 'Pre-defined Terms | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -3603,7 +3603,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Medical Certificate',
+			'title' => 'Medical Certificate | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor',
 			'medical_certificates' => ""
@@ -3771,7 +3771,7 @@ class Doctor extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Laboratory Results',
+			'title' => 'Laboratory Results | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor',
 			'laboratory_results' => ""
@@ -3814,7 +3814,7 @@ class Doctor extends MY_Controller {
 	}
 	public function doctor_schedule() {
 		$data = array(
-			'title' => 'Doctor Schedule',
+			'title' => 'Doctor Schedule | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor'
 		);
@@ -3917,7 +3917,7 @@ class Doctor extends MY_Controller {
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		
 		$data = array(
-			'title' => 'Tabular Reports',
+			'title' => 'Tabular Reports | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'doctor'),
 			'level' => 'doctor',
 			'tabular_reports' => "",

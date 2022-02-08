@@ -22,7 +22,7 @@ class Login extends MY_Controller {
 	public function index() {
 
 		$data = array(
-			'title' => 'Login',
+			'title' => 'Login | WHealth',
 			'content' => 'Login'
 		);
 
@@ -33,7 +33,7 @@ class Login extends MY_Controller {
 
 	public function validation() {
 		$data = array(
-			'title' => 'Login',
+			'title' => 'Login | WHealth',
 			'content' => 'Login'
 		);
 

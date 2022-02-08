@@ -32,7 +32,7 @@ class Administrator extends MY_Controller {
 		$AdministratorCode = ""; 
 
 		$data = array(
-			'title' => 'Administrator',
+			'title' => 'Administrator | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator',
 			'nextPatients' => $this->power_model->allTransactions() 
@@ -74,7 +74,7 @@ class Administrator extends MY_Controller {
 		}
 		
         $data = array(
-			'title' => 'Administrator',
+			'title' => 'Administrator | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'), 
 			'error' => '',
 			'level' => 'administrator'
@@ -103,7 +103,7 @@ class Administrator extends MY_Controller {
 	// change profile picture
 	public function change_profile_picture() {
 		$data = array(
-			'title' => 'Administrator',
+			'title' => 'Administrator | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator',
 			'error' => '',
@@ -156,7 +156,7 @@ class Administrator extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'Access Privilege',
+			'title' => 'Access Privilege | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'accessprivilege' => '',
@@ -220,7 +220,7 @@ class Administrator extends MY_Controller {
 		}
 		
 		$data = array(
-			'title' => 'Add Access Privilege',
+			'title' => 'Add Access Privilege | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'accessprivilege' => $this->power_model->getAccessPrivilege($id, $selection),
 			'user' => $this->power_model->getUserInfo($id, $selection),
@@ -369,7 +369,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Appointment',
+			'title' => 'Appointment | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -400,7 +400,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Appointment Requests',
+			'title' => 'Appointment Requests | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'appointment_requests' => '',
@@ -857,7 +857,7 @@ class Administrator extends MY_Controller {
 	public function messages($code = "") {
 		
 		$data = array(
-			'title' => 'Messages',
+			'title' => 'Messages | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'code' => $code,
 			'level' => 'administrator'
@@ -944,7 +944,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Inquiries',
+			'title' => 'Inquiries | WHealth',
 			'inquiries' => $this->power_model->getInquiries(), // get all data in inquiries
 			'content' => 'Inquiries',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
@@ -1001,7 +1001,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Inquiries View',
+			'title' => 'Inquiries View | WHealth',
 			'inquiries_view' => $this->power_model->getInquiriesById($id),
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
@@ -1035,7 +1035,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Consultations',
+			'title' => 'Consultations | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -1102,7 +1102,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Consultation Requests',
+			'title' => 'Consultation Requests | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'consultations' => '',
@@ -1361,7 +1361,7 @@ class Administrator extends MY_Controller {
         $this->pagination->initialize($config);
 
 		$data = array(
-			'title' => 'Transaction (Medical Certificate)',
+			'title' => 'Transaction (Medical Certificate) | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'transactions' => '',
@@ -1426,7 +1426,7 @@ class Administrator extends MY_Controller {
         
 
 		$data = array(
-			'title' => 'Transaction (Appointment)',
+			'title' => 'Transaction (Appointment) | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'transactions' => '',
@@ -1493,7 +1493,7 @@ class Administrator extends MY_Controller {
         
 
 		$data = array(
-			'title' => 'Transaction (Consultation)',
+			'title' => 'Transaction (Consultation) | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'transactions' => '',
@@ -1535,7 +1535,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Immunization Record',
+			'title' => 'Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'immunizationrecords' => '',
@@ -2268,7 +2268,7 @@ class Administrator extends MY_Controller {
 		}
 		$patient = $this->power_model->getUserInfoPatient($id);
 		$data = array(
-			'title' => 'Add Immunization Record',
+			'title' => 'Add Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($id),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($id),
@@ -2367,7 +2367,7 @@ class Administrator extends MY_Controller {
 		$parent_name = $this->power_model->getUserInfoPatientGetParentName($result2[0]['parent_id']);
 
 		$data = array(
-			'title' => 'Edit Immunization Record',
+			'title' => 'Edit Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'patient_name' => $patient_name,
 			'parent_name' => $parent_name,
@@ -2483,7 +2483,7 @@ class Administrator extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'View Immunization Record',
+			'title' => 'View Immunization Record | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'viewImmunizationRecords' => '',
@@ -2521,7 +2521,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Parent List',
+			'title' => 'Parent List | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'parents' => '',
@@ -2583,7 +2583,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Add Parent',
+			'title' => 'Add Parent | WHealth',
 			'data' => $this->power_model->getId($this->session->id,'administrator'),
 			'level' => 'administrator'
 		);
@@ -2644,7 +2644,7 @@ class Administrator extends MY_Controller {
 		$result = $this->power_model->getUserInfoParent($id);
 
 		$data = array(
-			'title' => 'Edit Parent',
+			'title' => 'Edit Parent | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'parents' => $result,
 			'level' => 'administrator'
@@ -2700,7 +2700,7 @@ class Administrator extends MY_Controller {
 			redirect("administrator/parents?error");
 		}
 		$datau = array(
-			'title' => 'Add Child',
+			'title' => 'Add Child | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'parent_name' => $this->power_model->getUserInfoParentName($id),
 			'level' => 'administrator',
@@ -2753,7 +2753,7 @@ class Administrator extends MY_Controller {
 			redirect("administrator/parents");
 		}
 		$data = array(
-			'title' => 'Child List',
+			'title' => 'Child List | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'listChilds' => '',
 			'parent_name' =>  $this->power_model->getUserInfoParentName($id),
@@ -2803,7 +2803,7 @@ class Administrator extends MY_Controller {
 		$parent_name = $this->power_model->getUserInfoPatientGetParentName($result2[0]['parent_id']);
 
 		$data = array(
-			'title' => 'Edit Child',
+			'title' => 'Edit Child | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'parent_name' => $parent_name,
 			'parent_id' => $result2[0]['parent_id'],
@@ -2883,7 +2883,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Patient List',
+			'title' => 'Patient List | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'patients' => '',
@@ -2946,7 +2946,7 @@ class Administrator extends MY_Controller {
 			End of Access Privilege
 		*/
 		$data = array(
-			'title' => 'Announcement',
+			'title' => 'Announcement | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'announcements' => '',
@@ -3009,7 +3009,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Add Announcement',
+			'title' => 'Add Announcement | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -3110,7 +3110,7 @@ class Administrator extends MY_Controller {
 		$content = $result2[0]['announcement_tbl_content'];
 
 		$data = array(
-			'title' => 'Edit Announcement',
+			'title' => 'Edit Announcement | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'title' => $title,
 			'content' => $content,
@@ -3184,7 +3184,7 @@ class Administrator extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'View Pediatric Charts',
+			'title' => 'View Pediatric Charts | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'viewPediatricCharts' => '',
@@ -3259,7 +3259,7 @@ class Administrator extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($id);
 		$data = array(
-			'title' => 'Add Pediatric Chart',
+			'title' => 'Add Pediatric Chart | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($id),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($id),
@@ -3402,7 +3402,7 @@ class Administrator extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($damz[0]['patient_id']);
 		$data = array(
-			'title' => 'Edit Pediatric Chart',
+			'title' => 'Edit Pediatric Chart | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($damz[0]['patient_id']),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($damz[0]['patient_id']),
@@ -3543,7 +3543,7 @@ class Administrator extends MY_Controller {
 
 		$patient = $this->power_model->getUserInfoPatient($damz[0]['patient_id']);
 		$data = array(
-			'title' => 'View Pediatric Chart Data',
+			'title' => 'View Pediatric Chart Data | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'patient_name' => $this->power_model->getUserInfoPatientName($damz[0]['patient_id']),
 			'parent_name' => $this->power_model->getUserInfoPatientGetParentName($damz[0]['patient_id']),
@@ -3560,7 +3560,7 @@ class Administrator extends MY_Controller {
 	// clinic analytics
 	public function clinic_analytics() {
 		$data = array(
-			'title' => 'Clinic Analytics',
+			'title' => 'Clinic Analytics | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -3591,7 +3591,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Health Tips',
+			'title' => 'Health Tips | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -3621,7 +3621,7 @@ class Administrator extends MY_Controller {
 			End of Access Privilege
 		*/
 		$data = array(
-			'title' => 'Patient Satisfaction',
+			'title' => 'Patient Satisfaction | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'response_rate' => '',
@@ -3657,7 +3657,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Pre-defined Terms',
+			'title' => 'Pre-defined Terms | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -3686,7 +3686,7 @@ class Administrator extends MY_Controller {
 			End of Access Privilege
 		*/
 		$data = array(
-			'title' => 'Account Lists',
+			'title' => 'Account Lists | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'response_rate' => '',
@@ -3724,7 +3724,7 @@ class Administrator extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'Add '.ucfirst($type),
+			'title' => 'Add '.ucfirst($type), | WHealth
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'response_rate' => '',
@@ -3759,7 +3759,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Edit '.ucfirst($type) . ' Account',
+			'title' => 'Edit '.ucfirst($type) . ' Account | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'response_rate' => '',
@@ -3795,7 +3795,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Delete '.ucfirst($type) . ' Account',
+			'title' => 'Delete '.ucfirst($type) . ' Account | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'response_rate' => '',
@@ -3834,7 +3834,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Medical Certificate',
+			'title' => 'Medical Certificate | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator',
 			'medical_certificates' => ""
@@ -4002,7 +4002,7 @@ class Administrator extends MY_Controller {
 		*/
 
 		$data = array(
-			'title' => 'Laboratory Results',
+			'title' => 'Laboratory Results | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator',
 			'laboratory_results' => ""
@@ -4045,7 +4045,7 @@ class Administrator extends MY_Controller {
 	}
 	public function doctor_schedule() {
 		$data = array(
-			'title' => 'Doctor Schedule',
+			'title' => 'Doctor Schedule | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator'
 		);
@@ -4115,7 +4115,7 @@ class Administrator extends MY_Controller {
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data = array(
-			'title' => 'Tabular Reports',
+			'title' => 'Tabular Reports | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'level' => 'administrator',
 			'tabular_reports' => "",

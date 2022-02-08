@@ -30,7 +30,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'title' => 'Home',
+			'title' => 'Home | WHealth',
 			'content' => 'Home'
 		);
 		$this->load->view('Home/Include/header', $data);
@@ -99,7 +99,7 @@ class Home extends CI_Controller {
 		}
 		
 		$data = array(
-			'title' => 'Forgot Password',
+			'title' => 'Forgot Password | WHealth',
 			'error' => '',
 			'success' => ''
 		);
@@ -164,7 +164,7 @@ class Home extends CI_Controller {
 	}
 	public function forgot($md5, $username, $selection) {
 		$data = array(
-			'title' => 'Forgot Password',
+			'title' => 'Forgot Password | WHealth',
 			'error' => '',
 			'success' => ''
 		);
