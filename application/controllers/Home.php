@@ -244,7 +244,7 @@ class Home extends CI_Controller {
 			$second = date('s', $timestamp);
 
 			$final = mktime($hour, $minute, $second, $month, $day, $year);
-			if(($data['login_timeout'] <= $final)) {
+			if(($final <= $data['login_timeout'])) {
 				$this->db->where("doctor_id", $data['doctor_id']);
 				$this->db->set("doctor_sms_code", "@@@@@@@@EXIT@@@@@@@@");
 				$this->db->set("active", "0");
@@ -257,7 +257,7 @@ class Home extends CI_Controller {
 
 		$query2 = $this->db->query("SELECT * FROM `admins_tbl`");
 		foreach($query2->result_array() as $data2) {
-			if(($data2['login_timeout'] <= $final)) {
+			if(($final <= $data2['login_timeout'])) {
 				$this->db->where("admin_id", $data2['admin_id']);
 				$this->db->set("admin_sms_code", "@@@@@@@@EXIT@@@@@@@@");
 				$this->db->set("active", "0");
@@ -267,7 +267,7 @@ class Home extends CI_Controller {
 
 		$query3 = $this->db->query("SELECT * FROM `receptionists_tbl`");
 		foreach($query3->result_array() as $data3) {
-			if(($data3['login_timeout'] <= $final)) {
+			if(($final <= $data3['login_timeout'])) {
 				$this->db->where("receptionist_id", $data3['receptionist_id']);
 				$this->db->set("receptionist_sms_code", "@@@@@@@@EXIT@@@@@@@@");
 				$this->db->set("active", "0");
