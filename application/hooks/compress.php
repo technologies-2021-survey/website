@@ -9,7 +9,7 @@ function compress()
 		'/\>[^\S ]+/s',    // strip whitespaces after tags, except space
 		'/[^\S ]+\</s',    // strip whitespaces before tags, except space
 		'/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/',    // strip whitespaces before tags, except space
-        '/\=\r\n$/',
+        '/\r\n\r\n|\r\r|\n\n/',
 	);
 	$replace = array(
 		'',
