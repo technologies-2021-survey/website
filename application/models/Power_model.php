@@ -3052,18 +3052,31 @@ class Power_model extends CI_Model {
 
 				$patient_name = $this->db->query("SELECT * FROM `patients_tbl` WHERE `patient_id` = '".$row['patient_id']."'")->result_array();
 				$services = "";
+				$appointmentQuery = "";
+				$consultationQuery = "";
+				$immunizationQuery = "";
+				if($this->session->selection == "doctor") {
+					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."'")->where('interview_id', $this->session->id);
 
+					$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."'")->where('interview_id', $this->session->id);
 
-				$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."'");
+					$immunizationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."'")->where('interview_id', $this->session->id);
+
+				} else {
+					$appointmentQuery = $this->db->query("SELECT * FROM `appointments` WHERE appointment_patient_id = '".$row['patient_id']."'");
+
+					$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."'");
+
+					$immunizationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."'");
+				}
+				
 				if($appointmentQuery->num_rows() > 0) {
 					$services .= "Appointment, ";
 				}
-				$consultationQuery = $this->db->query("SELECT * FROM `consultations` WHERE consultation_patient_id = '".$row['patient_id']."'");
 				if($consultationQuery->num_rows() > 0) {
 					$services .= "Online Consultation, ";
 				}
-				$consultationQuery = $this->db->query("SELECT * FROM `immunization_record` WHERE patient_id = '".$row['patient_id']."'");
-				if($consultationQuery->num_rows() > 0) {
+				if($immunizationQuery->num_rows() > 0) {
 					$services .= "Immunization, ";
 				}
 
