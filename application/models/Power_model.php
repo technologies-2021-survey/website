@@ -2875,11 +2875,64 @@ class Power_model extends CI_Model {
 	// laboratory results
 	public function get_laboratory_results_count() {
 		if($this->session->selection == "doctor") {
-			$this->db->where('interview_id', $this->session->id)->order_by("laboratory_results_id", "desc");
-        	return $this->db->count_all("laboratory_results");
+			$count = 0;
+			if($this->session->selection == "doctor") {
+				$count = 0;
+			} else {
+				$count = 3;
+			}
+			
+			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
+			if($check1 != 0) {
+				$count++;
+			}
+
+			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
+			if($check2 != 0) {
+				$count++;
+			}
+
+			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
+			if($check3 != 0) {
+				$count++;
+			}
+
+			if($count != 0) {
+				$this->db->where('interview_id', $this->session->id)->order_by("laboratory_results_id", "desc");
+			
+        		return $this->db->count_all("laboratory_results");
+			} else {
+				return 0;
+			}
 		} else {
-			$this->db->order_by("laboratory_results_id", "desc");
-        	return $this->db->count_all("laboratory_results");
+			$count = 0;
+			if($this->session->selection == "doctor") {
+				$count = 0;
+			} else {
+				$count = 3;
+			}
+			
+			$check1 = $this->db->query("SELECT * FROM `appointments` WHERE `appointment_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
+			if($check1 != 0) {
+				$count++;
+			}
+
+			$check2 = $this->db->query("SELECT * FROM `immunization_record` WHERE `patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
+			if($check2 != 0) {
+				$count++;
+			}
+
+			$check3 = $this->db->query("SELECT * FROM `consultations` WHERE `consultation_patient_id` = '".$row['patient_id']."' AND interview_id = '".$this->session->id."'")->row();
+			if($check3 != 0) {
+				$count++;
+			}
+
+			if($count != 0) {
+				$this->db->order_by("laboratory_results_id", "desc");
+        		return $this->db->count_all("laboratory_results");
+			} else {
+				$count++;
+			}
 		}
 		
     }
