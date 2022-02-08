@@ -3040,9 +3040,10 @@ class Power_model extends CI_Model {
 			return array_reverse($array);
 		} else if($type == "number_of_patients") {
 			$this->db->limit($limit, $start);
+			/*
 			if($this->session->selection == "doctor") {
 				$this->db->where('interview_id', $this->session->id);
-			}
+			}*/
 			$this->db->order_by("patient_id", "desc");
 			$q = $this->db->get("patients_tbl");
 			$array = array();
