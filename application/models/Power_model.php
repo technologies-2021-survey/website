@@ -3104,9 +3104,7 @@ class Power_model extends CI_Model {
 				
 				
 			}
-			$array = array_map('array_filter', $array);
-			$array = array_filter($array);
-			return array_reverse($array);
+			return array_reverse(array_values($array));
 		} else if($type == "patient_satisfactions") {
 			$this->db->limit($limit, $start);
 			if($this->session->selection == "doctor") {
