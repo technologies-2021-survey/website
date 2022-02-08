@@ -16,6 +16,7 @@
     '\\1'
   );
 
+
  $buffer = preg_replace($search, $replace, $buffer);
 
  $CI->output->set_output($buffer);
