@@ -3049,7 +3049,7 @@ class Power_model extends CI_Model {
 			$array = array();
 
 			foreach($q->result_array() as $row) {
-
+				$count = 0;
 				$patient_name = $this->db->query("SELECT * FROM `patients_tbl` WHERE `patient_id` = '".$row['patient_id']."'")->result_array();
 				$services = "";
 				$appointmentQuery = "";
@@ -3071,23 +3071,36 @@ class Power_model extends CI_Model {
 				}
 				
 				if($appointmentQuery->num_rows() > 0) {
+					$count ++;
 					$services .= "Appointment, ";
 				}
 				if($consultationQuery->num_rows() > 0) {
+					$count ++;
 					$services .= "Online Consultation, ";
 				}
 				if($immunizationQuery->num_rows() > 0) {
+					$count ++;
 					$services .= "Immunization, ";
 				}
 
 				if($services == "") {
 					$services = "No services.";
 				}
-				$newRow = array(
-					'patient_name' => $patient_name[0]['patient_name'],
-					'services' => $services
-				);
-				$array[] = $newRow;
+				if($this->session->selection == "doctor") {
+					if($count != 0) {
+						$newRow = array(
+							'patient_name' => $patient_name[0]['patient_name'],
+							'services' => $services
+						);
+						$array[] = $newRow;
+					}
+				} else {
+					$newRow = array(
+						'patient_name' => $patient_name[0]['patient_name'],
+						'services' => $services
+					);
+					$array[] = $newRow;
+				}
 				
 				
 			}
