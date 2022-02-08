@@ -3724,7 +3724,7 @@ class Administrator extends MY_Controller {
 		}
 
 		$data = array(
-			'title' => 'Add '.ucfirst($type), | WHealth
+			'title' => 'Add '.ucfirst($type).' | WHealth',
 			'data' => $this->power_model->getId($this->session->id, 'administrator'),
 			'links' => '',
 			'response_rate' => '',
