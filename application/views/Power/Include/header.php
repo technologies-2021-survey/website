@@ -32,7 +32,7 @@ if($this->session->selection == "doctor") {
 		<!-- Theme style -->
 		<link rel="stylesheet" href="<?php echo base_url(); ?>dist/css/AdminLTE.min.css">
 		<!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-		<link rel="stylesheet" href="<?php echo base_url(); ?>dist/css/skins/skin-black.min.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>dist/css/skins/_all-skins.min.css">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="<?php echo base_url(); ?>bower_components/html5shiv/dist/html5shiv.js"></script>
