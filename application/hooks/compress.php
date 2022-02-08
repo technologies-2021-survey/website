@@ -11,7 +11,7 @@ function compress()
 		'/[^\S ]+\</s'    // strip whitespaces before tags, except space
 	);
 	$replace = array(
-        '',
+        ' ',
 		'',
 		'>',
 		'<'
