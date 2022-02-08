@@ -3,16 +3,17 @@
  $buffer = $CI->output->get_output();
  
  $search = array(
-    '/\>[^\S ]+/s', 
-    '/[^\S ]+\</s', 
-     '/(\s)+/s', // shorten multiple whitespace sequences
-  '#(?://)?<!\[CDATA\[(.*?)(?://)?\]\]>#s' //leave CDATA alone
+    '/\n/',
+    '/\>[^\S ]+/s',
+    '/[^\S ]+\</s',
+    '/(\s)+/s'
   );
+
  $replace = array(
-     '>',
-     '<',
-     '\\1',
-  "//<![CDATA[\n".'\1'."\n//]]>"
+    ' ',
+    '>',
+    '<',
+    '\\1'
   );
 
  $buffer = preg_replace($search, $replace, $buffer);
