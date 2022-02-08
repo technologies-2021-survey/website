@@ -19,7 +19,6 @@
 						<li><a href="#aboutus">About Us</a></li>
 						<li><a href="#downloadOurApp">Our App!</a></li>
 						<li><a href="#inquiries">Inquiries</a></li>
-						<li><a href="#contactus">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
