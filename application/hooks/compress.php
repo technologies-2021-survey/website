@@ -8,13 +8,12 @@ function compress()
 		'/\t/',      // replace end of line by a space
 		'/\>[^\S ]+/s',    // strip whitespaces after tags, except space
 		'/[^\S ]+\</s',    // strip whitespaces before tags, except space
-        '/(\s)+/s'
 	);
 	$replace = array(
 		'',
 		'>',
 		'<',
-        '\\1'
+        
 	);
 	$buffer = preg_replace($search, $replace, $buffer);
 	$CI->output->set_output($buffer);
