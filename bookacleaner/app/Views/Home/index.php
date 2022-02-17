@@ -7,7 +7,7 @@ namespace App\Controllers;
         <title>BookACleaner</title>
     </head>
     <body>
-        <?php view('navigation'); ?>
+        <?php view('navigation.php'); ?>
         {elapsed_time}
     </body>
 </html>
