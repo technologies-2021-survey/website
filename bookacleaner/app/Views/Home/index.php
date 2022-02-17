@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php 
-            $this->load->view('navigation'); 
+            $this->load->view('Home/navigation'); 
         ?>
         {elapsed_time}
     </body>
