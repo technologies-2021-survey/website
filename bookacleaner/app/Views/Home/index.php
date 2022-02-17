@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>BookACleaner</title>
+        <
     </head>
     <body>
-        <?php 
-        ?>
+        <?php $this->load->view('Home/navigation.php'); ?>
         {elapsed_time}
     </body>
 </html>
