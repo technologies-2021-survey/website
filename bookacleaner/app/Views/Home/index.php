@@ -5,7 +5,6 @@ namespace App\Controllers;
 <html>
     <head>
         <title>BookACleaner</title>
-        <
     </head>
     <body>
         <?php view('Home/navigation.php'); ?>
