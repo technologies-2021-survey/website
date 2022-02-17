@@ -4,7 +4,9 @@
         <title>BookACleaner</title>
     </head>
     <body>
-        <?php echo view('navigation.php'); ?>
+        <?php 
+            $this->load->view('navigation'); 
+        ?>
         {elapsed_time}
     </body>
 </html>
