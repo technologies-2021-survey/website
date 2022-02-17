@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /bookacleaner
+RewriteRule (.*) public/$1 [L]
