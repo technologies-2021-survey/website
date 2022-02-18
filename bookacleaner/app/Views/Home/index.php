@@ -24,14 +24,6 @@
 		<script type="text/javascript" src="<?=base_url('public/assets/js/bootstrap.min.js');?>"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
-
-		
-        <script type="text/javascript">
-			window.sr = ScrollReveal();
-            sr.reveal('body', {duration: 1000,origin: 'bottom'});
-			sr.reveal('section.header', {duration: 1000,origin: 'bottom'});
-			sr.reveal('section.services', {duration: 1000,origin: 'bottom'});
-		</script>
     </head>
     <body>
         <?php echo view('Home/navigation.php'); ?>
@@ -52,6 +44,11 @@
 				e.preventDefault();
 				$('html, body').animate({scrollTop:0}, '300');
 			});
+
+			window.sr = ScrollReveal();
+            sr.reveal('body', {duration: 1000,origin: 'bottom'});
+			sr.reveal('section.header', {duration: 1000,origin: 'bottom'});
+			sr.reveal('section.services', {duration: 1000,origin: 'bottom'});
 		</script>
     </body>
 </html>
