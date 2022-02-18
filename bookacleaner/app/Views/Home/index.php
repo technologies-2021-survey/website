@@ -46,8 +46,8 @@
 			});
 
 			window.sr = ScrollReveal();
-			sr.reveal('.row', {duration: 1000,origin: 'bottom'});
-			sr.reveal('.container', {duration: 1000,origin: 'bottom'});
+			sr.reveal('.row', {duration: 1000,origin: 'bottom', reset: true});
+			sr.reveal('.container', {duration: 1000,origin: 'bottom', reset: true});
 		</script>
     </body>
 </html>
