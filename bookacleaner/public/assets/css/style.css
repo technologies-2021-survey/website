@@ -117,6 +117,12 @@ section.header > .header2 {
     margin-top: 50px;
 }
 
+section.header p {
+    color: white;
+    font-size: 1.6em;
+    padding: 0 20px;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
