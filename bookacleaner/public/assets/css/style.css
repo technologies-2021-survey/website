@@ -19,7 +19,8 @@
     .navbar-default .navbar-nav > li > a:focus, 
     .navbar-default .navbar-nav > li > a:hover {
         color: #fff;
-        background-color: #000;
+        font-weight: bold;
+        background-color: #381ba0;
         border-radius: 5px;
     }
 }
