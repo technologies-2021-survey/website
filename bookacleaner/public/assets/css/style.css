@@ -1,10 +1,16 @@
 body {
     font-family: "Nunito", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+.navbar {
+    margin-bottom: 0;
+}
+
 .navbar-default {
     background-color: #ffffff;
     border-color: #e7e7e7;
 }
+
 @media (min-width: 768px) {
     .navbar-header {
         float: left;
@@ -34,6 +40,7 @@ body {
     line-height: 20px;
     padding: 0; /** 0 only hehe! **/
 }
+
 .navbar-brand > img {
     height: 100%; 
 }
@@ -84,6 +91,10 @@ body {
 
 .navbar-toggle .icon-bar:nth-child(4){
     transform: rotate(45deg) translateY(-6px) translateX(-6px);
+}
+
+section.header {
+    height: 60vh;
 }
 
 a:hover, a:focus {
