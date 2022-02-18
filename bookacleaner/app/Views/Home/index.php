@@ -8,6 +8,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{elapsed_time} - BookACleaner</title>
+		<meta name="description" content="BookACleaner">
+		<meta name="keywords" content="BookACleaner">
+		<meta name="author" content="Harvey Arboleda">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
