@@ -177,6 +177,17 @@ section.header p {
     list-style: none;
 }
 
+section.services {
+    padding: 5vh 0;
+}
+
+section.services h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
