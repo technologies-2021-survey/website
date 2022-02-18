@@ -88,6 +88,7 @@
         <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="services-box2">
+                    <i class="fa fa-home" aria-hidden="true"></i>
                     <div class="services-title2">
                         Home Cleaning
                     </div>
@@ -96,6 +97,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="services-box2">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
                     <div class="services-title2">
                         Office Cleaning
                     </div>
@@ -104,6 +106,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="services-box2">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                     <div class="services-title2">
                         Cleaning Products
                     </div>
