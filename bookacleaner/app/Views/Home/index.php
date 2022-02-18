@@ -18,7 +18,6 @@
 		<link rel="stylesheet" href="<?=base_url('public/assets/css/style.css');?>" media="screen" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700" media="screen" />
 
         <script type="text/javascript" src="<?=base_url('public/assets/js/jquery-1.10.2.min.js');?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/assets/js/bootstrap.min.js');?>"></script>

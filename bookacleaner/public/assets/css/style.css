@@ -4,7 +4,7 @@
  */
 
 body {
-    font-family: "Nunito", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Catamaran", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .navbar {
@@ -190,6 +190,12 @@ section.services h4 {
 .services-box {
     height: 170px;
     padding: 20px;
+}
+
+.services-title {
+    font-family: 'Catamaran';
+    font-weight: bold;
+    font-size: 20px;
 }
 
 @keyframes logo {
