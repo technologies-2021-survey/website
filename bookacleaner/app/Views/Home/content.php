@@ -16,5 +16,26 @@
 </section>
 
 <section class="services">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                Service
+            </div>
+            <div class="col-xs-4">
+                Service
+            </div>
+            <div class="col-xs-4">
+                Service
+            </div>
+            <div class="col-xs-4">
+                Service
+            </div>
+            <div class="col-xs-4">
+                Service
+            </div>
+            <div class="col-xs-4">
+                Service
+            </div>
+        </div>
+    </div>
 </section>
