@@ -23,3 +23,7 @@
         border-radius: 5px;
     }
 }
+
+a:hover, a:focus {
+    transition: 0.5s;
+}
