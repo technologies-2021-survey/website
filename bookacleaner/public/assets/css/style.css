@@ -221,6 +221,14 @@ section.services h4 {
     right: 0;
 }
 
+.services-title2 {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 14px;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
