@@ -26,5 +26,22 @@
     <body>
         <?php echo view('Home/navigation.php'); ?>
 		<?php echo view('Home/content.php'); ?>
+		<a id="back-to-top"></a>
+		<script>
+			var btn = $('#back-to-top');
+
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 300) {
+					btn.addClass('show');
+				} else {
+					btn.removeClass('show');
+				}
+			});
+
+			btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '300');
+			});
+		</script>
     </body>
 </html>
