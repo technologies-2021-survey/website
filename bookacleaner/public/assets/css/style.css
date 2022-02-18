@@ -209,14 +209,14 @@ section.services h4 {
     border-radius: 100%;
     margin: 0 auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 18px;
     color: #fff;
     background: #381ba0;
 }
 
 .services-box2 i::before {
     position: absolute;
-    top: 12px;
+    top: 19px;
     left: 0;
     right: 0;
 }
