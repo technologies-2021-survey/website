@@ -90,8 +90,8 @@ body {
     opacity:1;
 }
 
-.navbar-toggle .icon-bar:nth-child(4) {
-    transform: rotate(45deg) translateY(-4px) translateX(-3px);
+.navbar-toggle.collapsed .icon-bar:nth-child(4){
+    transform: rotate(0) translateY(0) translateX(0);
 }
 
 .navbar-toggle .icon-bar:nth-child(2){
@@ -103,7 +103,7 @@ body {
 }
 
 .navbar-toggle .icon-bar:nth-child(4){
-    transform: rotate(45deg) translateY(-6px) translateX(-6px);
+    transform: rotate(45deg) translateY(-4px) translateX(-3px);
 }
 
 section.header {
