@@ -92,7 +92,9 @@
                     <div class="services-title2">
                         Home Cleaning
                     </div>
-                    Our professional cleaner can tidy up homes of all shapes and sizes.
+                    <div class="services-body2">
+                        Our professional cleaner can tidy up homes of all shapes and sizes.
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -101,7 +103,9 @@
                     <div class="services-title2">
                         Office Cleaning
                     </div>
-                    Our professional cleaner can clean up your workplace and make it feel like home.
+                    <div class="services-body2">
+                        Our professional cleaner can clean up your workplace and make it feel like home.
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -110,7 +114,9 @@
                     <div class="services-title2">
                         Cleaning Products
                     </div>
-                    We use all-natural products to clean, disinfect and sanitize.
+                    <div class="services-body2">
+                        We use all-natural products to clean, disinfect and sanitize.
+                    </div>
                 </div>
             </div>
         </div>
