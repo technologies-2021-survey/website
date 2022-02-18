@@ -17,7 +17,7 @@
 
 <section class="services">
     <div class="container">
-        <h1>Services</h1>
+        <h4>Services</h4>
         <div class="row">
             <div class="col-sm-4 col-xs-12">
                 Service
