@@ -204,13 +204,14 @@ section.services h4 {
 .services-box2 i {
     width: 50px;
     height: 50px;
+    display: block;
+    position: relative;
     border-radius: 100%;
+    margin: 0 auto;
     text-align: center;
     font-size: 30px;
-    display: block;
-    background: #381ba0;
-    position: relative;
     color: #fff;
+    background: #381ba0;
 }
 
 .services-box2 i::before {
