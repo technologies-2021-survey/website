@@ -19,7 +19,7 @@
     <div class="container">
         <h4>Services</h4>
         <div class="row">
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-4 col-md-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
                         Deep Cleaning
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-4 col-md-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
                         Disinfection Services
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-4 col-md-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
                         Move In & Move Out Cleaning
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-4 col-md-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
                         Upholstery Cleaning
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-4 col-md-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
                         Steam Cleaning
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-4 col-md-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
                         Aircon Cleaning

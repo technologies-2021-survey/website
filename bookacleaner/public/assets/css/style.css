@@ -190,6 +190,9 @@ section.services h4 {
 .services-box {
     height: 170px;
     padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px #d0d0d0;
+    margin: 10px;
 }
 
 .services-title {
