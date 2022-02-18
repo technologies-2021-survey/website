@@ -229,6 +229,12 @@ section.services h4 {
     margin-top: 14px;
 }
 
+.services-body2 {
+    width: 69%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;

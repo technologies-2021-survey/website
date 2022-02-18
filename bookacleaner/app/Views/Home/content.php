@@ -19,6 +19,42 @@
     <div class="container">
         <h4>Services</h4>
         <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="services-box2">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <div class="services-title2">
+                        Home Cleaning
+                    </div>
+                    <div class="services-body2">
+                        Our professional cleaner can tidy up homes of all shapes and sizes.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="services-box2">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <div class="services-title2">
+                        Office Cleaning
+                    </div>
+                    <div class="services-body2">
+                        Our professional cleaner can clean up your workplace and make it feel like home.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="services-box2">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    <div class="services-title2">
+                        Cleaning Products
+                    </div>
+                    <div class="services-body2">
+                        We use all-natural products to clean, disinfect and sanitize.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="services-box">
                     <div class="services-title">
@@ -85,40 +121,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="services-box2">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <div class="services-title2">
-                        Home Cleaning
-                    </div>
-                    <div class="services-body2">
-                        Our professional cleaner can tidy up homes of all shapes and sizes.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="services-box2">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    <div class="services-title2">
-                        Office Cleaning
-                    </div>
-                    <div class="services-body2">
-                        Our professional cleaner can clean up your workplace and make it feel like home.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="services-box2">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                    <div class="services-title2">
-                        Cleaning Products
-                    </div>
-                    <div class="services-body2">
-                        We use all-natural products to clean, disinfect and sanitize.
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </section>
