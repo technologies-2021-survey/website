@@ -17,7 +17,7 @@
 
 <section class="services">
     <div class="container">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="services-box2">
@@ -55,7 +55,7 @@
         </div>
 
         <div class="divider"></div>
-        
+
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="services-box">
