@@ -24,5 +24,6 @@
     </head>
     <body>
         <?php echo view('Home/navigation.php'); ?>
+		<?php echo view('Home/content.php'); ?>
     </body>
 </html>
