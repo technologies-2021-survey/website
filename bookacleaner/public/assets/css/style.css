@@ -114,6 +114,7 @@ section.header > .header2 {
     width: 100%;
     height: 88px;
     animation: logo 6s ease-in-out infinite;
+    margin-top: 50px;
 }
 
 @keyframes logo {
