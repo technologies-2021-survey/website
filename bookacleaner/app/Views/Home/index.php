@@ -14,6 +14,7 @@
 		<link rel="icon" type="image/png" href="<?php echo base_url() . "public/assets/img/whealth.png";?>">
 		
 		<link rel="stylesheet" href="<?=base_url('public/assets/css/bootstrap.min.css');?>" media="screen">
+		<link rel="stylesheet" href="<?=base_url('public/assets/css/style.css');?>" media="screen">
         <script type="text/javascript" src="<?=base_url('public/assets/js/jquery-1.10.2.min.js');?>"></script>
 		<script type="text/javascript" src="<?=base_url('public/assets/js/bootstrap.min.js');?>"></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
