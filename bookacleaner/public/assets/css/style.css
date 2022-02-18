@@ -235,6 +235,13 @@ section.services h4 {
     text-align: center;
 }
 
+.divider {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 1px;
+    background: #e5e5e5;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
