@@ -48,7 +48,7 @@
 			window.sr = ScrollReveal();
             sr.reveal('body', {duration: 1000,origin: 'bottom'});
 			sr.reveal('section.header', {duration: 1000,origin: 'bottom'});
-			sr.reveal('section.services', {duration: 1000,origin: 'bottom'});
+			sr.reveal('.two', {duration: 1000,origin: 'bottom'});
 		</script>
     </body>
 </html>
