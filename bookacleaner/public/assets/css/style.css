@@ -94,9 +94,16 @@ body {
 }
 
 section.header {
-    height: 60vh;
+    height: 500px;
     background: rgb(56,27,160);
     background: linear-gradient(90deg, rgba(56,27,160,1) 0%, rgba(5,0,23,1) 48%, rgba(0,0,0,1) 100%);
+}
+
+section.header > .header2 {
+    width: inherit;
+    height: inherit;
+    background: url('../img/header.png') center;
+    background-size: cover;
 }
 
 a:hover, a:focus {
