@@ -31,6 +31,9 @@
     line-height: 20px;
     padding: 0; /** 0 only hehe! **/
 }
+.navbar-brand img {
+    height: 100%; 
+}
 
 a:hover, a:focus {
     transition: 0.5s;
