@@ -145,21 +145,25 @@ section.header p {
     visibility: hidden;
     z-index: 1000;
     list-style: none;
+    
 }
 
 #back-to-top.show {
     opacity: 1;
     visibility: visible;
+    list-style: none;
 }
 
 #back-to-top:active {
     background-color: #555;
+    list-style: none;
     
 }
 
 #back-to-top:hover {
     cursor: pointer;
     background-color: #333;
+    list-style: none;
 }
 
 #back-to-top::after {
@@ -170,6 +174,7 @@ section.header p {
     font-size: 2em;
     line-height: 50px;
     color: #fff;
+    list-style: none;
 }
 
 @keyframes logo {
