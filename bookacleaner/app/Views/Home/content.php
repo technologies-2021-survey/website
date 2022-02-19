@@ -160,9 +160,10 @@
                     </div>
                 </div>
                 -->
+                <img src="<?=base_url('../public/assets/img/book.png');?>" style="height: 500px; margin: 0 auto; display: block;">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <img src="<?=base_url('../public/assets/img/book.png');?>" style="height: 300px; margin: 0 auto; display: block;">
+                
 
             </div>
         </div>
