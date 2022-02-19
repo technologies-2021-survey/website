@@ -48,6 +48,16 @@
 			window.sr = ScrollReveal();
 			sr.reveal('.row', {duration: 1500,origin: 'bottom', reset: true});
 			sr.reveal('.container', {duration: 1000,origin: 'bottom', reset: true});
+
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					document.querySelector(this.getAttribute('href')).scrollIntoView({
+						behavior: 'smooth'
+					});
+				});
+			});
 		</script>
     </body>
 </html>

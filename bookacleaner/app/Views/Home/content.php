@@ -1,5 +1,5 @@
 
-<section class="header" id="header">
+<section class="header">
     <div class="header2">
         <div class="container">
             <div class="row">
