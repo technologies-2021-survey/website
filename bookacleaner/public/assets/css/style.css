@@ -367,6 +367,10 @@ section.footer i {
     padding: 16px 16px 7px 10px;
 }
 
+.form-group {
+    position: relative;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
