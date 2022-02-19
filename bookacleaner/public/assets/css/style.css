@@ -117,7 +117,7 @@ section.header {
 section.header > .header2 {
     width: inherit;
     height: inherit;
-    background: url('../img/header.png') center;
+    background: url('../img/header.png') center no-repeat;
     background-size: cover;
 }
 
