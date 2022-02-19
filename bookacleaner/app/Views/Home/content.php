@@ -132,8 +132,9 @@
         <h3>Book a service or get a quote today</h3>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <!--
                 <div class="timeline">
-                <div class="timeline-block">
+                    <div class="timeline-block">
                         <div class="timeline-title">
                             1
                         </div>
@@ -158,6 +159,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <img src="<?=base_url('../public/assets/img/book.png');?>" style="height: 300px; margin: 0 auto; display: block;">
