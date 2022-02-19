@@ -150,7 +150,7 @@ section.header p {
     visibility: hidden;
     z-index: 1000;
     list-style: none;
-    box-shadow: 0 0 3px #21105e;
+    box-shadow: 0 0 15px #00000085;
 }
 
 #back-to-top.show {
