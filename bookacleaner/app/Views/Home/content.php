@@ -242,7 +242,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <select class="form-control" name="cleaningFor" class="form-control input-lg" tabindex="7">
+                                <select name="cleaningFor" class="form-control input-lg" tabindex="7">
                                     <option value="Test">Test</option>
                                     <option value="Test">Test</option>
                                     <option value="Test">Test</option>
