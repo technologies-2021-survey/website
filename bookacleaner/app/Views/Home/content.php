@@ -139,30 +139,28 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     
                     <div class="timeline">
-                        <div>
-                            <div class="timeline-block">
-                                <div class="timeline-title">
-                                    1
-                                </div>
-                                <div class="timeline-body">
-                                    Check out our available services.
-                                </div>
+                        <div class="timeline-block">
+                            <div class="timeline-title">
+                                1
                             </div>
-                            <div class="timeline-block">
-                                <div class="timeline-title">
-                                    2
-                                </div>
-                                <div class="timeline-body">
-                                Fill out the form and click submit.
-                                </div>
+                            <div class="timeline-body">
+                                Check out our available services.
                             </div>
-                            <div class="timeline-block">
-                                <div class="timeline-title">
-                                    3
-                                </div>
-                                <div class="timeline-body">
-                                    Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.
-                                </div>
+                        </div>
+                        <div class="timeline-block">
+                            <div class="timeline-title">
+                                2
+                            </div>
+                            <div class="timeline-body">
+                            Fill out the form and click submit.
+                            </div>
+                        </div>
+                        <div class="timeline-block">
+                            <div class="timeline-title">
+                                3
+                            </div>
+                            <div class="timeline-body">
+                                Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.
                             </div>
                         </div>
                     </div>
