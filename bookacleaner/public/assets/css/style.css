@@ -348,6 +348,11 @@ section.footer i {
     margin-right: 4px;
 }
 
+.modal-content {
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
