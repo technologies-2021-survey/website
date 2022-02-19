@@ -132,35 +132,8 @@
         <h3>Book a service or get a quote today</h3>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!--
-                <div class="timeline">
-                    <div class="timeline-block">
-                        <div class="timeline-title">
-                            1
-                        </div>
-                        <div class="timeline-body">
-                            Check out our available services.
-                        </div>
-                    </div>
-                    <div class="timeline-block">
-                        <div class="timeline-title">
-                            2
-                        </div>
-                        <div class="timeline-body">
-                        Fill out the form and click submit.
-                        </div>
-                    </div>
-                    <div class="timeline-block">
-                        <div class="timeline-title">
-                            3
-                        </div>
-                        <div class="timeline-body">
-                            Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.
-                        </div>
-                    </div>
-                </div>
-                -->
-                <img src="<?=base_url('../public/assets/img/book.png');?>" style="height: 500px; margin: 0 auto; display: block;">
+                
+                <img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block; margin-left: -15px; }">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 
