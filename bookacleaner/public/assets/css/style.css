@@ -247,6 +247,11 @@ section.services h3 {
     height: 1px;
 }
 
+section.book {
+    padding: 5vh 0;
+    background: #381ba0;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
