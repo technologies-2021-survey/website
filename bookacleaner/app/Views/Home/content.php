@@ -240,16 +240,14 @@
                         </div>
                     </div>
                     <div class="rows">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" tabindex="7">
-                                <label class="floatingText">Password</label>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" tabindex="8">
-                                <label class="floatingText">Confirm Password</label>
+                                <select class="form-control" name="cleaningFor" class="form-control input-lg" tabindex="7">
+                                    <option value="Test">Test</option>
+                                    <option value="Test">Test</option>
+                                    <option value="Test">Test</option>
+                                </select>
+                                <label class="floatingText">I need cleaning for</label>
                             </div>
                         </div>
                     </div>

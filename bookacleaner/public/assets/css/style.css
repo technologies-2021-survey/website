@@ -381,7 +381,7 @@ label.floatingText {
     cursor: pointer;
 }
 
-.modal-body input:focus ~ label.floatingText {
+.modal-body .form-control:focus ~ label.floatingText {
     color: #66afe9;
 }
 
