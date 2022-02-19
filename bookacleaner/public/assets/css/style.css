@@ -348,6 +348,11 @@ section.footer i {
     box-shadow: none;
 }
 
+.modal-title {
+    font-weight: bold;
+    text-align: center;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
