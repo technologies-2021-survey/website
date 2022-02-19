@@ -269,7 +269,7 @@
             if($(this).prev()[0].tagName == "INPUT") {
                 $(this).siblings().select();
             } else {
-                $(this).siblings().select();
+                // can't open <select> :(
             }
             
         });
