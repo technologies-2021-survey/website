@@ -164,7 +164,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-success">
+                    <a href="#" class="">
                         Book a cleaner now!
                     </a>
                 </div>
