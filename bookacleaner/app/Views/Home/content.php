@@ -220,23 +220,23 @@
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="preferred_date" id="preferred_date" class="form-control input-lg" placeholder="Preferred Date" tabindex="5">
+                                <input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" placeholder="Preferred Date" tabindex="5">
                             </div>
                         </div>
                     </div>
                     
                     <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
-                        <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" tabindex="4">
+                        <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" tabindex="6">
                     </div>
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="7">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="8">
                             </div>
                         </div>
                     </div>
