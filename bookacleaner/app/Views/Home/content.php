@@ -266,7 +266,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.floatingText').click(function() {
-            if($(this).siblings().tagName("input")) {
+            if($(this).siblings().prop("<input>")) {
                 $(this).siblings().select();
             } else {
                 $(this).siblings().trigger('click');
