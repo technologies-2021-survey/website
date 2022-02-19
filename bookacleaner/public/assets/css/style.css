@@ -71,7 +71,6 @@ body {
     background: transparent;
     border: 0;
     border-radius: 0;
-    z-index: 1;
 }
 
 .navbar-toggle .icon-bar {
@@ -148,7 +147,6 @@ section.header p {
     transition: background-color .3s, opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
-    z-index: 1000;
     list-style: none;
     box-shadow: 0 0 15px #00000085;
 }
@@ -277,7 +275,6 @@ section.book h3 {
     height: 40px;
     top: -3px;
     left: 24px;
-    z-index: 0;
     border-radius: 100%;
 }
 
@@ -298,7 +295,6 @@ section.book h3 {
     left: 40px;
     top: 11px;
     font-size: 20px;
-    z-index: 999999;
     font-weight: 700;
     color: #381ba0;
 }
@@ -310,7 +306,6 @@ section.book h3 {
     top: -8px;
     left: -8px;
     font-size: 11px;
-    z-index: 9999;
     font-weight: bold;
 }
 
