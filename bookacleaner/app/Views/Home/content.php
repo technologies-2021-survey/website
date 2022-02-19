@@ -266,7 +266,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.floatingText').click(function() {
-            $(this).siblings().select();
+            if($(this).siblings().tagName("input")) {
+                $(this).siblings().select();
+            } else {
+                $(this).siblings().trigger('click');
+            }
+            
         });
     });
 </script>
