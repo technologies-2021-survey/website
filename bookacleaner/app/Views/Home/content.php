@@ -243,11 +243,22 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <select name="cleaningFor" class="form-control input-lg" tabindex="7">
-                                    <option value="Test">Test</option>
-                                    <option value="Test">Test</option>
-                                    <option value="Test">Test</option>
+                                    <option selected="">Please select</option>
+                                    <option value="1">Appartment</option>
+                                    <option value="2">House</option>
+                                    <option value="3">Condo</option>
+                                    <option value="4">Office</option>
+                                    <option value="5">Others (Plesase specify in NOTES)</option>
                                 </select>
                                 <label class="floatingText">I need cleaning for</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <input type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8">
+                                <label class="floatingText">How big is the space that needs cleaning? (sqm.)</label>
                             </div>
                         </div>
                     </div>
