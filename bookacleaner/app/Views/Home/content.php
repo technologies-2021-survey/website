@@ -207,11 +207,12 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
-                        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="3">
                     </div>
                     <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
-                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                        <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" tabindex="4">
                     </div>
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
