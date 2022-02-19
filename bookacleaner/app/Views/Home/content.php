@@ -164,7 +164,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin: 0 auto;">
+                    <div style="text-align:center;">
                         <a href="#" class="book-btn">
                             Book a cleaner now!
                         </a>
