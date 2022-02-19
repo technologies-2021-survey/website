@@ -164,9 +164,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="">
-                        Book a cleaner now!
-                    </a>
+                    <div style="margin: 0 auto;">
+                        <a href="#" class="book-btn">
+                            Book a cleaner now!
+                        </a>
+                    </div>
                 </div>
                 <div style="clear:both;"></div>
             </div>

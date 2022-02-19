@@ -299,6 +299,14 @@ section.book h3 {
     z-index: 9999;
     font-weight: bold;
 }
+.book-btn {
+    padding: 15px 20px;
+    background: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
