@@ -275,26 +275,28 @@ section.book h3 {
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 14px;
-    left: 10px;
+    top: 8px;
+    left: 18px;
     z-index: 0;
     border-radius: 100%;
 }
+
 .timeline-block::after {
     content: ' ';
     position: absolute;
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    
-    border-left:10px solid #381ba0; 
+    width: 0;
+    height: 0;
+    left: 56px;
+    top: 21px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #381ba0;
 }
 
 .timeline-title {
     position: absolute;
-    left: 26px;
-    top: 27px;
+    left: 34px;
+    top: 23px;
     font-size: 20px;
     z-index: 999999;
     font-weight: 700;
