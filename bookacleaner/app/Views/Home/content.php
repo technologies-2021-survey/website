@@ -257,7 +257,7 @@
                 </form>
             </div>
             <hr class="colorgraph" style="margin-bottom: -1px;" />
-            <div class="modal-footer">
+            <div class="modal-footer" style="border: 0;">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
