@@ -177,8 +177,14 @@
 </section>
 
 <section class="footer">
-    <i class="fa fa-copyright" aria-hidden="true"></i>
-    A-Team / Page rendered in {elapsed_time} seconds
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <i class="fa fa-copyright" aria-hidden="true"></i>
+                A-Team / Page rendered in {elapsed_time} seconds
+            </div>
+        </div>
+    </div>
 </section>
 
 <div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="bookNowLabel">
