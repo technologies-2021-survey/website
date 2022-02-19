@@ -185,10 +185,14 @@
 <div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="bookNowLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <!--
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="bookNowLabel">Book a service with us today!</h4>
             </div>
+            -->
+            <h4>Book a service with us today!</h4>
+            <hr class="colorgraph">
             <div class="modal-body">
                 <form>
                     <div class="rows">
