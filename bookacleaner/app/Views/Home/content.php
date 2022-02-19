@@ -211,6 +211,20 @@
                     <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
                         <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="3">
                     </div>
+
+                    <div class="rows">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" placeholder="Mobile Number" pattern="^(09|\+639)\d{9}$" tabindex="4">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="preferred_date" id="preferred_date" class="form-control input-lg" placeholder="Preferred Date" tabindex="5">
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
                         <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" tabindex="4">
                     </div>
