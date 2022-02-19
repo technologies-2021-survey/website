@@ -375,6 +375,7 @@ label.floatingText {
     font-weight: 300;
     top: 5px;
     left: 26px;
+    transition: 0.5s;
 }
 
 .modal-body input:focus ~ label.floatingText {
