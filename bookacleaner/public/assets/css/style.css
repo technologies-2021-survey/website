@@ -306,11 +306,15 @@ section.book h3 {
     margin: 0 auto;
     border-radius: 5px;
     color: #381ba0;
+    transition: 0.5s;
 }
 
 .book-btn:focus, .book-btn:hover {
-    
-    text-decoration: underline;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 @keyframes logo {
