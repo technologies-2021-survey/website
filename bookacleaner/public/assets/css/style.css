@@ -380,7 +380,6 @@ label.floatingText {
 
 .modal-body input:focus ~ label.floatingText {
     color: #66afe9;
-    font-weight: 400;
 }
 
 .rows::after{
