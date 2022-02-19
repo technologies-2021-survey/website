@@ -394,7 +394,7 @@ label.floatingText {
     position: relative;
 }
 
-div {
+div, section {
     user-select: none;
 }
 
