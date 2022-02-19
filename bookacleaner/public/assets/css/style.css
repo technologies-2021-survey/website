@@ -379,7 +379,7 @@ label.floatingText {
 }
 
 .modal-body input:focus ~ label.floatingText {
-    color: red;
+    color: #66afe9;
     font-weight: bold;
 }
 
