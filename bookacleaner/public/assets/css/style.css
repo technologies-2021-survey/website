@@ -267,7 +267,7 @@ section.book h3 {
 
 .timeline-block::before {
     content: ' ';
-    background: #291473;
+    background: #381ba0;
     position: absolute;
     width: 40px;
     height: 40px;
