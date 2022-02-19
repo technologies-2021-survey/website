@@ -366,6 +366,10 @@ section.footer i {
 .input-lg {
     padding: 16px 16px 7px 10px;
 }
+.rows::before{
+    content: ' ';
+    clear: both;
+}
 
 .form-group {
     position: relative;
