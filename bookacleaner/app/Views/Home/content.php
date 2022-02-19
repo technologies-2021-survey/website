@@ -266,7 +266,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.floatingText').click(function() {
-            if($(this).siblings().tagName == "INPUT") {
+            if($(this).prev()[0].tagName == "INPUT") {
                 $(this).siblings().select();
             } else {
                 $(this).siblings().trigger('click');
