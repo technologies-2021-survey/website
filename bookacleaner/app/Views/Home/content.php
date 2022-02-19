@@ -262,6 +262,52 @@
                             </div>
                         </div>
                     </div>
+                    <div class="rows">
+                        <div class="col-lg-12">
+                        <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="serviceRequired" value="Deep Cleaning">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Deep Cleaning
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="serviceRequired" value="Disinfection Service">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Disinfection Service
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="serviceRequired" value="Move In & Move Out Cleaning">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Move In & Move Out Cleaning
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="serviceRequired" value="Upholstery Cleaning">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Upholstery Cleaning
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="serviceRequired" value="Steam Cleaning">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Steam Cleaning
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="serviceRequired" value="Aircon Cleaning">
+                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    Aircon Cleaning
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                     <div style="clear:both;"></div>
                 </form>
             </div>
