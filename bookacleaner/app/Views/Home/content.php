@@ -132,11 +132,11 @@
         <h3>Book a service or get a quote today</h3>
         <div class="row">
             <div style="background: #2b137e;margin: 0 15px;box-shadow: 0 0 10px #281276;">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     
                     <img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block;margin-left:-15px;">
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     
                     <div class="timeline">
                         <div class="timeline-block">
