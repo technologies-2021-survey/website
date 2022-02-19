@@ -19,12 +19,12 @@ body {
 @media (min-width: 768px) {
     .navbar-header {
         float: left;
-        margin: 7px 10px;
+        margin: 9px 10px;
     }
     .nav > li {
         position: relative;
         display: block;
-        margin: 7px 10px;
+        margin: 9px 10px;
     }
     .navbar-nav > li > a {
         padding-top: 13px;
