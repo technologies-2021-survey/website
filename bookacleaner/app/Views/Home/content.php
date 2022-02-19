@@ -131,14 +131,14 @@
     <div class="container">
         <h3>Book a service or get a quote today</h3>
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 
                 <img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block; margin-left: -15px; }">
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 
                 <div class="booking-now">
-                    
+
                 </div>
             </div>
         </div>
