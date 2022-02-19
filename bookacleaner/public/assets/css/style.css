@@ -377,7 +377,7 @@ label.floatingText {
     left: 26px;
 }
 
-label.floatingText ~ .modal-body input:focus {
+.modal-body input:focus ~ label.floatingText {
     color: red;
     font-weight: bold;
 }

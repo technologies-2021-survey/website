@@ -198,60 +198,58 @@
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <label class="floatingText">First Name</label>
                                 <input type="text" name="first_name" id="first_name" class="form-control input-lg" tabindex="1">
-                                
+                                <label class="floatingText">First Name</label>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <label class="floatingText">Last Name</label>
                                 <input type="text" name="last_name" id="last_name" class="form-control input-lg" tabindex="2">
-                                
+                                <label class="floatingText">Last Name</label>
                             </div>
                         </div>
                     </div>
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label class="floatingText">E-mail Address</label>
                                 <input type="email" name="email" id="email" class="form-control input-lg" tabindex="3">
+                                <label class="floatingText">E-mail Address</label>
                             </div>
                         </div> 
                     </div>
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <label class="floatingText">Mobile Number</label>
                                 <input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" pattern="^(09|\+639)\d{9}$" tabindex="4">
+                                <label class="floatingText">Mobile Number</label>
                             </div> 
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                            <label class="floatingText">Preferred Date</label>
                                 <input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" tabindex="5">
+                                <label class="floatingText">Preferred Date</label>
                             </div>
                         </div>
                     </div>
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label class="floatingText">Address</label>
                                 <input type="text" name="address" id="address" class="form-control input-lg" tabindex="6">
+                                <label class="floatingText">Address</label>
                             </div>
                         </div>
                     </div>
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <label class="floatingText">Password</label>
                                 <input type="password" name="password" id="password" class="form-control input-lg" tabindex="7">
+                                <label class="floatingText">Password</label>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <label class="floatingText">Confirm Password</label>
                                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" tabindex="8">
+                                <label class="floatingText">Confirm Password</label>
                             </div>
                         </div>
                     </div>
