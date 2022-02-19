@@ -271,11 +271,11 @@ section.book h3 {
 
 .timeline-block::before {
     content: ' ';
-    background: #381ba0;
+    background: #fff;
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 8px;
+    top: 11px;
     left: 18px;
     z-index: 0;
     border-radius: 100%;
@@ -286,20 +286,21 @@ section.book h3 {
     position: absolute;
     width: 0;
     height: 0;
-    left: 56px;
-    top: 21px;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 8px solid #381ba0;
+    left: 55px;
+    top: 24px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 12px solid #fff;
 }
 
 .timeline-title {
     position: absolute;
     left: 34px;
-    top: 23px;
+    top: 24px;
     font-size: 20px;
     z-index: 999999;
     font-weight: 700;
+    color: #381ba0;
 }
 
 
