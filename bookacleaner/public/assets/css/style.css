@@ -252,6 +252,14 @@ section.book {
     background: #381ba0;
 }
 
+section.book h3 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: #fff;
+}
+
+
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
