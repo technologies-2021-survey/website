@@ -283,11 +283,11 @@ section.book h3 {
     position: absolute;
     width: 0;
     height: 0;
-    left: 55px;
+    left: 54px;
     top: 24px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 12px solid #fff;
+    border-left: 15px solid #fff;
 }
 
 .timeline-title {
