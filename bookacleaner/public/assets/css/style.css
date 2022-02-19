@@ -392,6 +392,7 @@ label.floatingText {
 
 .rows {
     position: relative;
+    user-select: none;
 }
 
 @keyframes logo {
