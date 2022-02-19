@@ -198,12 +198,14 @@
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" tabindex="1">
+                                <label class="floatingText">First Name</label>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" tabindex="2">
+                                <label class="floatingText">Last Name</label>
                             </div>
                         </div>
                     </div>
@@ -215,28 +217,33 @@
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" placeholder="Mobile Number" pattern="^(09|\+639)\d{9}$" tabindex="4">
+                                <input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" pattern="^(09|\+639)\d{9}$" tabindex="4">
+                                <label class="floatingText">Mobile Number</label>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" placeholder="Preferred Date" tabindex="5">
+                                <input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" tabindex="5">
+                                <label class="floatingText">Preferred Date</label>
                             </div>
                         </div>
                     </div>
                     
                     <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
-                        <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" tabindex="6">
+                        <input type="text" name="address" id="address" class="form-control input-lg" tabindex="6">
+                        <label class="floatingText">Address</label>
                     </div>
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="7">
+                                <input type="password" name="password" id="password" class="form-control input-lg" tabindex="7">
+                                <label class="floatingText">Password</label>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="8">
+                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" tabindex="8">
+                                <label class="floatingText">Confirm Password</label>
                             </div>
                         </div>
                     </div>
