@@ -309,6 +309,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="rows">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8"></textarea>
+                                <label class="floatingText">Comments/Notes</label>
+                            </div>
+                        </div>
+                    </div>
                     <div style="clear:both;"></div>
                 </form>
             </div>
