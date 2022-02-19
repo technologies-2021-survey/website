@@ -164,6 +164,9 @@
                             </div>
                         </div>
                     </div>
+                    <a href="#" class="btn btn-success">
+                        Book a cleaner now!
+                    </a>
                 </div>
                 <div style="clear:both;"></div>
             </div>
