@@ -191,7 +191,7 @@
                 <h4 class="modal-title" id="bookNowLabel">Book a service with us today!</h4>
             </div>
             -->
-            <h4>Book a service with us today!</h4>
+            <h4 style="text-align: center; margin-top: 22px;">Book a service with us today!</h4>
             <hr class="colorgraph">
             <div class="modal-body">
                 <form>
