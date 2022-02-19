@@ -242,10 +242,9 @@ section.services h3 {
 }
 
 .divider {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 1px;
-    background: #e5e5e5;
 }
 
 @keyframes logo {
