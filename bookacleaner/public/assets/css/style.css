@@ -266,6 +266,7 @@ section.book h3 {
 .timeline-block {
     position: relative;
     padding: 20px 60px;
+    margin-top: 20px;
 }
 
 .timeline-block::before {
