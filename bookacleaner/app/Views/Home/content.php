@@ -160,7 +160,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <img src="<?=base_url('../public/assets/img/undraw_environment_iaus.svg');?>" alt="Kiwi standing on oval">
+                <img src="<?=base_url('../public/assets/img/undraw_environment_iaus.svg');?>" style="height: 100px; margin: 0 auto; display: block;">
 
             </div>
         </div>
