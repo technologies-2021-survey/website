@@ -178,5 +178,5 @@
 
 <section class="footer">
     <i class="fa fa-copyright" aria-hidden="true"></i>
-    A-Team
+    A-Team / Page rendered in {elapsed_time} seconds
 </section>
