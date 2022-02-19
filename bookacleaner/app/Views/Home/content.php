@@ -139,7 +139,20 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     
                     <div class="booking-now">
-
+                        <ul class="booking-block">
+                            <li>
+                                <span>1</span>
+                                <span>Check out our available services.</span>
+                            </li>
+                            <li>
+                                <span>2</span>
+                                <span>Fill out the form and click submit.</span>
+                            </li>
+                            <li>
+                                <span>3</span>
+                                <span>Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
