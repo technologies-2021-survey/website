@@ -192,7 +192,7 @@
             </div>
             -->
             <h4 style="text-align: center; margin-top: 22px;">Book a service with us today!</h4>
-            <hr class="colorgraph">
+            <hr class="colorgraph" />
             <div class="modal-body">
                 <form>
                     <div class="rows">
@@ -228,7 +228,7 @@
                     <div style="clear:both;"></div>
                 </form>
             </div>
-            <hr class="colorgraph">
+            <hr class="colorgraph" style="margin-bottom: -1px;" />
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
