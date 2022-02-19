@@ -307,6 +307,7 @@ section.book h3 {
     border-radius: 5px;
     color: #381ba0;
     transition: 0.5s;
+    margin-bottom: 20px;
 }
 
 .book-btn:focus, .book-btn:hover {
