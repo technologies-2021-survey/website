@@ -213,7 +213,7 @@
                     </div>
                     <div class="rows">
                         <div class="col-lg-12">
-                            <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
+                            <div class="form-group">
                                 <label class="floatingText">E-mail Address</label>
                                 <input type="email" name="email" id="email" class="form-control input-lg" tabindex="3">
                             </div>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="rows">
                         <div class="col-lg-12">
-                            <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
+                            <div class="form-group">
                                 <label class="floatingText">Address</label>
                                 <input type="text" name="address" id="address" class="form-control input-lg" tabindex="6">
                             </div>
