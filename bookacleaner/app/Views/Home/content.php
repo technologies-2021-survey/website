@@ -138,21 +138,31 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     
-                    <div class="booking-now">
-                        <ul class="booking-block">
-                            <li>
-                                <span>1</span>
-                                <span>Check out our available services.</span>
-                            </li>
-                            <li>
-                                <span>2</span>
-                                <span>Fill out the form and click submit.</span>
-                            </li>
-                            <li>
-                                <span>3</span>
-                                <span>Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.</span>
-                            </li>
-                        </ul>
+                    <div class="timeline">
+                        <div class="timeline-block">
+                            <div class="timeline-title">
+                                1
+                            </div>
+                            <div class="timeline-body">
+                                Check out our available services.
+                            </div>
+                        </div>
+                        <div class="timeline-block">
+                            <div class="timeline-title">
+                                2
+                            </div>
+                            <div class="timeline-body">
+                            Fill out the form and click submit.
+                            </div>
+                        </div>
+                        <div class="timeline-block">
+                            <div class="timeline-title">
+                                3
+                            </div>
+                            <div class="timeline-body">
+                                Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div style="clear:both;"></div>
