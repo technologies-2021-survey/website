@@ -265,7 +265,7 @@ section.book h3 {
 
 .timeline-block {
     position: relative;
-    padding: 20px 60px;
+    padding: 20px 70px;
     margin-top: 20px;
 }
 
@@ -279,6 +279,16 @@ section.book h3 {
     left: 10px;
     z-index: 0;
     border-radius: 100%;
+}
+.timeline-block::after {
+    content: ' ';
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid #381ba0; 
 }
 
 .timeline-title {
@@ -300,6 +310,7 @@ section.book h3 {
     z-index: 9999;
     font-weight: bold;
 }
+
 .book-btn {
     padding: 15px 20px;
     background: #fff;
