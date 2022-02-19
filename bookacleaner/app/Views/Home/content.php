@@ -264,7 +264,8 @@
                     </div>
                     <div class="rows">
                         <div class="col-lg-12">
-                        <div class="checkbox">
+                            <label>Service Required</label>
+                            <div class="checkbox">
                                 <label>
                                     <input type="checkbox" name="serviceRequired" value="Deep Cleaning">
                                     <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
