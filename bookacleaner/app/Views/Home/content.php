@@ -133,7 +133,7 @@
         <div class="row" style="background:#000;">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 
-                <img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block; margin-left: -15px; }">
+                <img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block;">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 
