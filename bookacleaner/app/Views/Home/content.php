@@ -191,7 +191,7 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="row">
+                    <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
@@ -209,7 +209,7 @@
                     <div class="form-group">
                         <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
                     </div>
-                    <div class="row">
+                    <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="rows">
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <span class="button-checkbox">
                                 <button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
