@@ -129,6 +129,14 @@
 
 <section class="book" id="book">
     <div class="container">
-        <h3>Services</h3>
+        <h3>Book a service or get a quote today</h3>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                test
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                test
+            </div>
+        </div>
     </div>
 </section>
