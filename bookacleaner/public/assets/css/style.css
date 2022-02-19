@@ -260,7 +260,42 @@ section.book h3 {
     color: #fff;
 }
 
+.timeline-block {
+    position: relative;
+    padding: 20px 60px;
+}
 
+.timeline-block::before {
+    content: ' ';
+    background: #291473;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 14px;
+    left: 10px;
+    z-index: 0;
+    border-radius: 100%;
+}
+
+.timeline-title {
+    position: absolute;
+    left: 26px;
+    top: 27px;
+    font-size: 20px;
+    z-index: 999999;
+    font-weight: 700;
+}
+
+
+.timeline-title::before {
+    content: 'STEP';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    font-size: 11px;
+    z-index: 9999;
+    font-weight: bold;
+}
 @keyframes logo {
     0%   {
         background: url('../img/logo-white.png') no-repeat;
