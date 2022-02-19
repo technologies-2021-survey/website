@@ -392,6 +392,9 @@ label.floatingText {
 
 .rows {
     position: relative;
+}
+
+div {
     user-select: none;
 }
 
