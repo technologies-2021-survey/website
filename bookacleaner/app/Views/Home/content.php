@@ -1,5 +1,5 @@
 
-<section class="header">
+<section class="header" id="header">
     <div class="header2">
         <div class="container">
             <div class="row">
@@ -15,7 +15,7 @@
     </div>
 </section>
 
-<section class="services">
+<section class="services" id="services">
     <div class="container">
         <h3>Services</h3>
         <div class="row two">
