@@ -175,3 +175,8 @@
         </div>
     </div>
 </section>
+
+<section class="footer">
+    <i class="fa fa-copyright" aria-hidden="true"></i>
+    A-Team
+</section>
