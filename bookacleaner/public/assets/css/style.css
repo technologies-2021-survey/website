@@ -275,8 +275,8 @@ section.book h3 {
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 11px;
-    left: 18px;
+    top: -3px;
+    left: 24px;
     z-index: 0;
     border-radius: 100%;
 }
@@ -295,8 +295,8 @@ section.book h3 {
 
 .timeline-title {
     position: absolute;
-    left: 34px;
-    top: 24px;
+    left: 40px;
+    top: 11px;
     font-size: 20px;
     z-index: 999999;
     font-weight: 700;
