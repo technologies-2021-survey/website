@@ -344,8 +344,8 @@ section.footer i {
 }
 
 .modal-content {
-    -webkit-box-shadow: 0;
-    box-shadow: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 @keyframes logo {
