@@ -305,6 +305,12 @@ section.book h3 {
     display: inline-block;
     margin: 0 auto;
     border-radius: 5px;
+    color: #381ba0;
+}
+
+.book-btn:focus, .book-btn:hover {
+    
+    text-decoration: underline;
 }
 
 @keyframes logo {
