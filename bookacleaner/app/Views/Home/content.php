@@ -264,3 +264,11 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.floatingText').click(function() {
+            $(this).siblings().select();
+        });
+    });
+</script>
