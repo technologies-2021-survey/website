@@ -385,13 +385,9 @@ label.floatingText {
     color: #66afe9;
 }
 
-.rows::after{
-    content: ' ';
-    clear: both;
-}
-
 .rows {
     position: relative;
+    clear: both;
 }
 
 div, section {
