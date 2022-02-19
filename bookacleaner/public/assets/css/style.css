@@ -376,6 +376,9 @@ label.floatingText {
     top: 5px;
     left: 26px;
     transition: 0.5s;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .modal-body input:focus ~ label.floatingText {
