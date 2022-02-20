@@ -53,6 +53,7 @@ div, section {
 .login-box {
     background: #fff;
     padding: 10px;
+    box-shadow: 0 0 39px #00000014;
 }
 
 @media (min-width: 768px) {
