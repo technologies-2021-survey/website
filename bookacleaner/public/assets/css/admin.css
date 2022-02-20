@@ -50,8 +50,9 @@ div, section {
     margin-bottom: 0;
 }
 
-.rows:last-child .form-control {
-    margin-bottom: 0;
+.rows::before {
+    content: ' ';
+    clear: both;
 }
 
 .login-box {
