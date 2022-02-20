@@ -30,6 +30,11 @@
                 </form>
             </div>
             <hr class="colorgraph" style="margin:0;padding:0;"/>
+
+            <p>
+                <i class="fa fa-copyright" aria-hidden="true"></i>
+                A-Team / Page rendered in {elapsed_time} seconds
+            </p>
         </div>
     </div>
 </div>
