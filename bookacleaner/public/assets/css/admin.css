@@ -50,7 +50,7 @@ div, section {
     margin-bottom: 0;
 }
 
-.rows::before {
+.rows::after {
     content: ' ';
     clear: both;
 }
