@@ -9,7 +9,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" name="text" id="username" class="form-control input-lg" tabindex="1" autocomplete="off" required="">
+                                <input type="text" name="username" id="username" class="form-control input-lg" tabindex="1" autocomplete="off" required="">
                                 <label class="floatingText">Username</label>
                             </div>
                         </div> 
