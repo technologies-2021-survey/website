@@ -84,7 +84,7 @@
   function onPlayerReady(event) {
     event.target.playVideo();
     //player.mute(); // comment out if you don't want the auto played video muted
-    player.setVolume(20);
+    
     player.unMute();
   }
 
@@ -100,5 +100,6 @@
   function stopVideo() {
     player.stopVideo();
   }
+  player.setVolume(20);
 </script>
 
