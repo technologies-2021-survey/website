@@ -45,11 +45,6 @@ label.floatingText {
 div, section {
     user-select: none;
 }
-
-.rows:last-child div {
-    margin-bottom: 0;
-}
-
 .rows::after {
     content: ' ';
     clear: both;
