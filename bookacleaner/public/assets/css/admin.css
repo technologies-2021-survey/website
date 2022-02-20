@@ -54,3 +54,9 @@ div, section {
     background: #fff;
     padding: 10px;
 }
+
+@media (min-width: 768px) {
+    .login-box {
+        margin-top: 25%;
+    }
+}
