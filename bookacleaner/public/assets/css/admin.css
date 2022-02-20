@@ -46,7 +46,7 @@ div, section {
     user-select: none;
 }
 
-.form-group:last-child {
+.rows:last-child .form-group {
     margin-bottom: 0;
 }
 
