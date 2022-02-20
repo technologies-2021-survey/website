@@ -1,5 +1,6 @@
 <div class="container">
     <div class="row">
+        <h4>Admin Dashboard</h4>
         <div class="col-md-4 col-md-offset-4">
             <hr class="colorgraph" style="margin-top:25%;margin-bottom:0;padding:0;"/>
             <div class="login-box">
