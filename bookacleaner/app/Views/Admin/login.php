@@ -129,3 +129,16 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.floatingText').click(function() {
+            if($(this).prev()[0].tagName == "INPUT" || $(this).prev()[0].tagName == "TEXTAREA") {
+                $(this).siblings().select();
+            } else {
+                // can't open <select> :(
+            }
+            
+        });
+    });
+</script>
