@@ -50,6 +50,10 @@ div, section {
     margin-bottom: 0;
 }
 
+.rows:last-child input {
+    margin-bottom: 0;
+}
+
 .login-box {
     background: #fff;
     padding: 10px;
