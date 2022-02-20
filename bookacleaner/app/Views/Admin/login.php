@@ -20,8 +20,8 @@
                                 <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2">
                                 <label class="floatingText">Password</label>
                             </div>
+                            <button class="btn btn-success btn-block">Login</button>
                         </div>
-                        <button class="btn btn-success btn-lg">Login</button>
                     </div>
                     <div style="clear:both;"></div>
                 </form>
