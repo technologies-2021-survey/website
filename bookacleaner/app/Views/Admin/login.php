@@ -84,7 +84,7 @@
   function onPlayerReady(event) {
     event.target.playVideo();
     //player.mute(); // comment out if you don't want the auto played video muted
-    //player.unMute()
+    player.unMute();
   }
 
   // 5. The API calls this function when the player's state changes.
