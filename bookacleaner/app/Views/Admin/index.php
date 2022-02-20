@@ -27,7 +27,7 @@
     </head>
     <body>
 		<?php 
-            echo view('Home/'.$file.'.php'); 
+            echo view('Admin/'.$file.'.php'); 
         ?>
 		<a id="back-to-top"></a>
 		<script>
