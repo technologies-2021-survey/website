@@ -2,7 +2,7 @@
     <div class="row">
         
         <div class="col-md-4 col-md-offset-4">
-            <h4 style="text-align: right; margin-top: 25%;">Admin Dashboard</h4>
+            <h4 style="text-align: left; margin-top: 25%;">Admin Dashboard</h4>
             <hr class="colorgraph" style="margin-top:0;margin-bottom:0;padding:0;"/>
             <div class="login-box">
                 <form>
