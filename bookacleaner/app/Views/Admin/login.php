@@ -97,7 +97,7 @@
       player.seekTo(0);
       
       player.playVideo();
-      player.setVolume(30);
+      player.setVolume(40);
     }
   }
   function stopVideo() {
