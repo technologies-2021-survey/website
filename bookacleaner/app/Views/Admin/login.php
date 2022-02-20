@@ -20,7 +20,10 @@
                                 <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2">
                                 <label class="floatingText">Password</label>
                             </div>
-                            <button class="btn btn-success btn-block">Login</button>
+                            <button class="btn btn-success btn-block">
+                                <i class="fa fa-key" aria-hidden="true"></i>
+                                Login
+                            </button>
                         </div>
                     </div>
                     <div style="clear:both;"></div>
