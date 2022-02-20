@@ -57,6 +57,52 @@ div, section {
     box-shadow: 0 0 39px #00000014;
 }
 
+#back-to-top {
+    display: inline-block;
+    background-color: rgb(56,27,160);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    box-shadow: 0 0 15px #00000085;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    list-style: none;
+}
+
+#back-to-top:active {
+    background-color: #555;
+    list-style: none;
+    
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+    list-style: none;
+}
+
+#back-to-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+    list-style: none;
+}
+
 @media (min-width: 768px) {
     .login-box {
         
