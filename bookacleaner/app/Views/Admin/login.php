@@ -52,5 +52,5 @@
     });
 </script>
 
-<iframe width="0" height="0" src="https://www.youtube.com/embed/fQwOtZUd9FY?rel=0&&showinfo=0;&autoplay=1;&loop=1;&playlist=fQwOtZUd9FY" title="YouTube video player" frameborder="0"></iframe>
+<iframe width="0" height="0" src="https://www.youtube.com/embed/fQwOtZUd9FY?rel=0&&showinfo=0;&autoplay=1;&loop=1;&playlist=fQwOtZUd9FY" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"></iframe>
 
