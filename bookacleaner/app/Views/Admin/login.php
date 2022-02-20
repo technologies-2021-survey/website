@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <hr class="colorgraph" />
+        <div class="col-md-4 col-md-offset-4 login">
+            <hr class="colorgraph" style="margin:0;padding:0;"/>
             <div class="login-box">
                 <form>
                     <div class="rows">
@@ -23,7 +23,7 @@
                     <div style="clear:both;"></div>
                 </form>
             </div>
-            <hr class="colorgraph" />
+            <hr class="colorgraph" style="margin:0;padding:0;"/>
         </div>
     </div>
 </div>
