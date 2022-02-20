@@ -9,6 +9,6 @@ class Admin extends BaseController
         $data = [
             'file' => 'login',
         ];
-        return view('Admin/index', $data);
+        return view('Admin/index.php', $data);
     }
 }
