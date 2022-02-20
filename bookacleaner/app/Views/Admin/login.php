@@ -94,8 +94,9 @@
   function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
       player.seekTo(0);
-      player.playVideo();
       player.setVolume(30);
+      player.playVideo();
+      
     }
   }
   function stopVideo() {
