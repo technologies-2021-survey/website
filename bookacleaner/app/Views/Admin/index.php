@@ -5,7 +5,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>BookACleaner</title>
+		<title><?=$title;?> | Admin Dashboard</title>
 		<meta name="description" content="BookACleaner">
 		<meta name="keywords" content="BookACleaner">
 		<meta name="author" content="Harvey Arboleda">
