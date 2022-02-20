@@ -57,7 +57,7 @@
     <div id="ytplayer"></div>
 </div>
 
-<script>
+<script type="text/javascript">
   // (c) https://jsfiddle.net/x45ur3kd/1/
   // 2. This code loads the IFrame Player API code asynchronously.
   var tag = document.createElement('script');
