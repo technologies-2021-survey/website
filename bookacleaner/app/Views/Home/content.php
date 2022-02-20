@@ -197,13 +197,13 @@
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" tabindex="1">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" tabindex="1" autocomplete="off" required="">
                                 <label class="floatingText">First Name</label>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" tabindex="2">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" tabindex="2" autocomplete="off" required="">
                                 <label class="floatingText">Last Name</label>
                             </div>
                         </div>
@@ -211,7 +211,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg" tabindex="3">
+                                <input type="email" name="email" id="email" class="form-control input-lg" tabindex="3" autocomplete="off" required="">
                                 <label class="floatingText">E-mail Address</label>
                             </div>
                         </div> 
@@ -219,13 +219,13 @@
                     <div class="rows">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" pattern="^(09|\+639)\d{9}$" tabindex="4">
+                                <input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" pattern="^(09|\+639)\d{9}$" tabindex="4" autocomplete="off" required="">
                                 <label class="floatingText">Mobile Number</label>
                             </div> 
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" tabindex="5">
+                                <input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" tabindex="5" autocomplete="off" required="">
                                 <label class="floatingText">Preferred Date</label>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" name="address" id="address" class="form-control input-lg" tabindex="6">
+                                <input type="text" name="address" id="address" class="form-control input-lg" tabindex="6" autocomplete="off" required="">
                                 <label class="floatingText">Address</label>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <select name="cleaningFor" class="form-control input-lg" tabindex="7">
+                                <select name="cleaningFor" class="form-control input-lg" tabindex="7" autocomplete="off" required="">
                                     <option selected="">Please select</option>
                                     <option value="1">Appartment</option>
                                     <option value="2">House</option>
@@ -256,7 +256,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8">
+                                <input type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8" autocomplete="off" required="">
                                 <label class="floatingText">How big is the space that needs cleaning? (sqm.)</label>
                             </div>
                         </div>
@@ -311,7 +311,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <textarea type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8"></textarea>
+                                <textarea type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8" autocomplete="off" required=""></textarea>
                                 <label class="floatingText">Comments/Notes</label>
                             </div>
                         </div>

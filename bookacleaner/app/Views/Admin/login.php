@@ -9,7 +9,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" name="text" id="username" class="form-control input-lg" tabindex="1">
+                                <input type="text" name="text" id="username" class="form-control input-lg" tabindex="1" autocomplete="off" required="">
                                 <label class="floatingText">Username</label>
                             </div>
                         </div> 
@@ -17,7 +17,7 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2">
+                                <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2" autocomplete="off" required="">
                                 <label class="floatingText">Password</label>
                             </div>
                             <button class="btn btn-success btn-block">
