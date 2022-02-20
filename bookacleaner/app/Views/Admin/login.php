@@ -52,5 +52,51 @@
     });
 </script>
 
-<iframe width="0" height="0" src="https://www.youtube.com/embed/fQwOtZUd9FY?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+<div id="yt-wrap" style="visibility:hidden;">
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="ytplayer"></div>
+</div>
+
+<script>
+  // (c) https://jsfiddle.net/x45ur3kd/1/
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady(){
+    player = new YT.Player('ytplayer', {
+      width: '100%',
+      height: '100%',
+      videoId: 'fQwOtZUd9FY',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+    player.mute(); // comment out if you don't want the auto played video muted
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+      player.seekTo(0);
+      player.playVideo();
+    }
+  }
+  function stopVideo() {
+    player.stopVideo();
+  }
+</script>
 
