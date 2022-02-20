@@ -52,5 +52,5 @@
     });
 </script>
 
-<iframe width="0" height="0" src="https://www.youtube-nocookie.com/embed/XXYlFuWEuKI?autoplay=1&loop=1&playlist=XXYlFuWEuKI" title="YouTube video player" frameborder="0"></iframe>
+<iframe width="0" height="0" src="https://www.youtube.com/embed/XXYlFuWEuKI?controls=0&autoplay=1&loop=1" frameborder="0"></iframe>
 
