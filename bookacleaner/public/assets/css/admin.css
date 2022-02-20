@@ -49,3 +49,9 @@ div, section {
 .form-group:last-child {
     margin-bottom: 0;
 }
+
+.login-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
