@@ -6,16 +6,16 @@
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg" tabindex="3">
-                                <label class="floatingText">E-mail Address</label>
+                                <input type="text" name="text" id="username" class="form-control input-lg" tabindex="1">
+                                <label class="floatingText">Username</label>
                             </div>
                         </div> 
                     </div>
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg" tabindex="3">
-                                <label class="floatingText">E-mail Address</label>
+                                <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2">
+                                <label class="floatingText">Password</label>
                             </div>
                         </div> 
                     </div>
