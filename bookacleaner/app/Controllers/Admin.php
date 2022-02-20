@@ -6,6 +6,9 @@ class Admin extends BaseController
 {
     public function index()
     {
-        echo 'haha';
+        $data = [
+            'file' => 'login',
+        ];
+        return view('Admin/index', $data);
     }
 }
