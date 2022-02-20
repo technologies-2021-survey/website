@@ -12,9 +12,9 @@
                             </div>
                         </div> 
                     </div>
-                    <div class="rows" style="margin-bottom: 0;">
+                    <div class="rows">
                         <div class="col-lg-12">
-                            <div class="form-group">
+                            <div class="form-group" style="margin-bottom: 0;">
                                 <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2">
                                 <label class="floatingText">Password</label>
                             </div>
