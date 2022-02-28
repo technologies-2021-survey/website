@@ -26,37 +26,38 @@
     </head>
     <body class="skin-purple sidebar-mini">
 		<div class="wrapper">
-		<aside class="main-sidebar">
-			<section class="sidebar">
-				<div class="user-panel">
-					<div class="pull-left image">
-						<img src="<?php echo $profile_picturesz; ?>" class="img-circle" alt="User Image">
+			<aside class="main-sidebar">
+				<section class="sidebar">
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="<?php echo $profile_picturesz; ?>" class="img-circle" alt="User Image">
+						</div>
+						<div class="pull-left info">
+							<p style="margin-bottom: 2px!important;"><?php echo strlen($namesz) > 15 ? substr($namesz,0,15)."..." : $namesz; ?></p>
+							<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+						</div>
 					</div>
-					<div class="pull-left info">
-						<p style="margin-bottom: 2px!important;"><?php echo strlen($namesz) > 15 ? substr($namesz,0,15)."..." : $namesz; ?></p>
-						<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-					</div>
-				</div>
-				<!-- sidebar menu: : style can be found in sidebar.less -->
-			<ul class="sidebar-menu tree" data-widget="tree">
-				<li class="header">MAIN NAVIGATION</li>
-				<li>
-					<a href="<?php echo base_url(); echo $textsz; ?>">
-						<i class="fa fa-dashboard"></i> <span>Dashboard</span>
-					</a>
-				</li>
-				<li class="treeview">
-					<a href="#">
-						<i class="fa fa-pie-chart"></i>
-						<span>Menu</span>
-						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
-						</span>
-					</a>
-					<ul class="treeview-menu">
-						<li><a href="#">Inquiries List(s)</a></li>
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+				<ul class="sidebar-menu tree" data-widget="tree">
+					<li class="header">MAIN NAVIGATION</li>
+					<li>
+						<a href="<?php echo base_url(); echo $textsz; ?>">
+							<i class="fa fa-dashboard"></i> <span>Dashboard</span>
+						</a>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-pie-chart"></i>
+							<span>Menu</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-left pull-right"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="#">Inquiries List(s)</a></li>
+						</ul>
+					</li>
 					</ul>
-				</li>
-				</ul>
-			</section>
-		</aside>
+				</section>
+			</aside>
+			<div class="content-wrapper">
