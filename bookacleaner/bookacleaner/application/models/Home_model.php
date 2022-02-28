@@ -12,7 +12,7 @@ class Home_model extends CI_Model {
     public function insertBook($array) {
         $this->db->insert('bookings', $array);
     }
-    public function insertBookServiceRequired($array) {
+    public function insertServiceRequired($array) {
         $this->db->insert('bookings_service_required', $array);
     }
     public function getBookId($uniq_id) {
