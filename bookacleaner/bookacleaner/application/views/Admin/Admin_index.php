@@ -61,6 +61,7 @@
             }
             
         });
+        var notif = new Audio('https://peekabook.tech/bookacleaner/bookacleaner/assets/mp3/mixkit-dry-pop-up-notification-alert-2356.wav');
         $('#login').submit(function(e) {
             e.preventDefault();
             var username = $('input[name=username]').val();
@@ -75,12 +76,14 @@
 				success: function(data){
                     var data = JSON.parse(data);
                     if(data.status == 200) {
+                        notif.play();
                         Toast.fire({
                             icon: 'success',
                             title: "Successfully, you will be redirected to user page in 3 sec. You are not able to get back to this page by clicking the browser back button."
                         })
                         setTimeout("redirect()", 3000);
                     } else {
+                        notif.play();
                         Toast.fire({
                             icon: 'error',
                             title: data.message
