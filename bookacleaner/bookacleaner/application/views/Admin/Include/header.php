@@ -79,7 +79,7 @@
 							<img src="<?php echo $profile_picturesz; ?>" class="img-circle" alt="User Image">
 						</div>
 						<div class="pull-left info">
-							<p style="margin-bottom: 2px!important;"><?php echo strlen($namesz) > 15 ? substr($namesz,0,15)."..." : $namesz; ?></p>
+							<p style="margin-bottom: 2px!important;"><?=ucfirst($username);?></p>
 							<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
 						</div>
 					</div>
