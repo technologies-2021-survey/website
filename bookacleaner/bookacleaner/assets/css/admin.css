@@ -139,6 +139,15 @@ label.floatingText {
     background: #242424!important;
 }
 
+.skin-purple .sidebar-menu>li.header {
+    color: #ffffff!important;
+    background: #2c2c2c!important;
+}
+
+.skin-purple .sidebar a {
+    color: #898989!important;
+}
+
 div {
     -webkit-transition: opacity 200ms linear;
    -moz-transition: opacity 200ms linear;
