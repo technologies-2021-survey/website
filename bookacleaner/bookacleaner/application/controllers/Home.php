@@ -38,7 +38,7 @@ class Home extends CI_Controller {
 		} else {
 			$check = 0;
 			for($i = 0; $i < 6; $i++) {
-				if($this->input->post('add['.$i.']') != "") {
+				if($this->input->post('service_required['.$i.']') != "") {
 					$check++;
 				}
 			}
