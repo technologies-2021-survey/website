@@ -380,13 +380,14 @@
 							var data = JSON.parse(data);
 							if(data.status == 200) {
 								notif.play();
-								Toast.fire({
+								Swal.fire({
 									icon: 'success',
 									title: "Successfully, you will be redirected to user page in 3 sec. You are not able to get back to this page by clicking the browser back button."
 								})
+								$("form").trigger("reset");
 							} else {
 								notif.play();
-								Toast.fire({
+								Swal.fire({
 									icon: 'error',
 									title: data.message
 								})
