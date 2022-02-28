@@ -32,17 +32,9 @@ class Admin_model extends CI_Model {
 
     public function session() {
         if($this->session->userdata('id')) {
-            if(basename($_SERVER['REQUEST_URI']) == "main.php") {
-                
-            } else {
-			    redirect('admin/main');
-            }
+			return 1;
 		} else {
-            if(basename($_SERVER['REQUEST_URI']) == "login" || basename($_SERVER['REQUEST_URI']) == "index") {
-                
-            } else {
-			    redirect('admin/index');
-            }
+            return 0;
         }
     }
 }

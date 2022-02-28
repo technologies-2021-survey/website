@@ -11,13 +11,13 @@ class Admin extends CI_Controller {
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
 		);
-		$this->admin_model->session();
+		if($this->admin_model->session() == 1) { redirect("admin/main"); } else { }
 		$this->load->view('Admin/Include/header', $data);
 		$this->load->view('Admin/Admin_index');
 		$this->load->view('Admin/Include/footer');
 	}
 	public function login() {
-		$this->admin_model->session();
+		if($this->admin_model->session() == 1) { redirect("admin/main"); } else { }
 
 		$this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric|min_length[5]', 
 			array(
@@ -43,7 +43,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function main() {
-		$this->admin_model->session();
+		if($this->admin_model->session() == 0) { redirect("admin/index"); } else { }
 	}
 	
 }
