@@ -193,7 +193,7 @@
 					<h4 style="text-align: center; margin-top: 22px;">Book a service with us today!</h4>
 					<hr class="colorgraph" />
 					<div class="modal-body">
-						<form>
+						<form id="book">
 							<div class="rows">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
@@ -241,7 +241,7 @@
 							<div class="rows">
 								<div class="col-lg-12">
 									<div class="form-group">
-										<select name="cleaningFor" class="form-control input-lg" tabindex="7" autocomplete="off" required="">
+										<select name="cleaning" class="form-control input-lg" tabindex="7" autocomplete="off" required="">
 											<option selected="">Please select</option>
 											<option value="1">Appartment</option>
 											<option value="2">House</option>
@@ -311,7 +311,7 @@
 							<div class="rows">
 								<div class="col-lg-12">
 									<div class="form-group">
-										<textarea type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8" autocomplete="off" required=""></textarea>
+										<textarea type="text" name="comments_or_notes" id="comments_or_notes" class="form-control input-lg" tabindex="8" autocomplete="off" required=""></textarea>
 										<label class="floatingText">Comments/Notes</label>
 									</div>
 								</div>
@@ -322,7 +322,7 @@
 					<hr class="colorgraph" style="margin-bottom: -1px;" />
 					<div class="modal-footer" style="border: 0;">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success">
+						<button type="submit" class="btn btn-success">
 							<i class="fa fa-paper-plane" aria-hidden="true" style="margin-right: 5px;"></i>
 							Submit Booking
 						</button>
@@ -340,6 +340,56 @@
 						// can't open <select> :(
 					}
 					
+				});
+				var notif = new Audio('https://peekabook.tech/bookacleaner/bookacleaner/assets/mp3/mixkit-dry-pop-up-notification-alert-2356.wav');
+				$('#book').submit(function(e) {
+					e.preventDefault();
+					var first_name = $('input[name=first_name]').val();
+					var last_name = $('input[name=last_name]').val();
+					var email = $('input[name=email]').val();
+					var mobile_number = $('input[name=lastmobile_number_name]').val();
+					var preferred_date = $('input[name=preferred_date]').val();
+					var address = $('input[name=address]').val();
+					var cleaning = $('input[name=cleaning]').val();
+					var sqm = $('input[name=sqm]').val();
+					var service_required = [];
+					var comments_or_notes = $('textarea[name=comments_or_notes]').val();
+
+					$("input[name='serviceRequired']:checked").each(function(){
+						service_required.push(this.value);
+					});
+					$.ajax({
+						url: "<?php echo base_url(); ?>home/book",
+						type: "POST",
+						data: {
+							first_name: first_name,
+							last_name: last_name,				
+							email: email,				
+							mobile_number: mobile_number,				
+							preferred_date: preferred_date,				
+							address: address,				
+							cleaning: cleaning,				
+							sqm: sqm,				
+							service_required: service_required,				
+							comments_or_notes: comments_or_notes		
+						},
+						success: function(data){
+							var data = JSON.parse(data);
+							if(data.status == 200) {
+								notif.play();
+								Toast.fire({
+									icon: 'success',
+									title: "Successfully, you will be redirected to user page in 3 sec. You are not able to get back to this page by clicking the browser back button."
+								})
+							} else {
+								notif.play();
+								Toast.fire({
+									icon: 'error',
+									title: data.message
+								})
+							}
+						}
+					});
 				});
 			});
 		</script>
