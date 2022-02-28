@@ -38,6 +38,20 @@
     </div>
 </div>
 <script type="text/javascript">
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+    function redirect() {
+        window.location.replace("<?php echo base_url(); ?>admin/main");
+    }  
     $(document).ready(function() {
         $('.floatingText').click(function() {
             if($(this).prev()[0].tagName == "INPUT" || $(this).prev()[0].tagName == "TEXTAREA") {
@@ -60,7 +74,18 @@
 				},
 				cache: false,
 				success: function(result){
-					console.log(result);
+                    if(result.status == 203) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: result.message
+                        })
+                    } else {
+                        Toast.fire({
+                            icon: 'success',
+                            title: "Successfully, you will be redirected to user page in 5 sec. You are not able to get back to this page by clicking the browser back button."
+                        })
+                        setTimeout("redirect()", 5000);
+                    }
 				}
 			});
         });
