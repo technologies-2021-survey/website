@@ -95,7 +95,7 @@
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="#">Inquiries List(s)</a></li>
+							<li><a href="#">Hello world!</a></li>
 						</ul>
 					</li>
 					</ul>
