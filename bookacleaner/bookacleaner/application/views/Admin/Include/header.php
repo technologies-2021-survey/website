@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
-		<link rel="icon" type="image/png" href="<?php echo base_url() . "public/assets/img/whealth.png";?>">
+		<link rel="icon" type="image/png" href="https://peekabook.tech/assets/img/whealth.png">
 		
 		<link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css');?>" media="screen" />
 		<link rel="stylesheet" href="<?=base_url('assets/css/admin.css');?>" media="screen" />
@@ -44,12 +44,12 @@
 					<ul class="nav navbar-nav">
 					<li class="dropdown user user-menu">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<img src="#" class="user-image" alt="User Image">
+							<img src="https://peekabook.tech/assets/img/whealth.png" class="user-image" alt="User Image">
 							<span class="hidden-xs"><?=$username;?></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li class="user-header">
-								<img src="#" class="img-circle" alt="User Image">
+								<img src="https://peekabook.tech/assets/img/whealth.png" class="img-circle" alt="User Image">
 
 								<p>
 									<?=$username;?>
@@ -76,7 +76,7 @@
 				<section class="sidebar">
 					<div class="user-panel">
 						<div class="pull-left image">
-							<img src="<?php echo $profile_picturesz; ?>" class="img-circle" alt="User Image">
+							<img src="https://peekabook.tech/assets/img/whealth.png" class="img-circle" alt="User Image">
 						</div>
 						<div class="pull-left info">
 							<p style="margin-bottom: 2px!important;"><?=ucfirst($username);?></p>
