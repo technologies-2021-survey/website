@@ -72,9 +72,7 @@
 					username: username,
 					password: password						
 				},
-				cache: false,
 				success: function(result){
-                    console.log(result);
                     if(result.status == 200) {
                         Toast.fire({
                             icon: 'success',
