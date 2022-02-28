@@ -43,9 +43,6 @@ label.floatingText {
     clear: both;
 }
 
-div, section {
-    user-select: none;
-}
 .rows::after {
     content: ' ';
     clear: both;
