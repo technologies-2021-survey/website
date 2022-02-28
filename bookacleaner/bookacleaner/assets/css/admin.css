@@ -129,3 +129,7 @@ label.floatingText {
 .swal2-popup.swal2-toast .swal2-title {
     font-size: 1.4em!important;
 }
+
+div {
+    transition: 0.5s;
+}
