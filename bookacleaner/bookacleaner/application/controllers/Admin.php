@@ -5,7 +5,14 @@ class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('admin_model', null, true); // auto-connect model
+
+		if($this->session->userdata('id')) {
+			if($this->session->userdata('selection') == "doctor") {
+			    redirect('admin/main');
+			}
+		}
 	}
+	
     public function index() {
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
