@@ -73,6 +73,7 @@
 					password: password						
 				},
 				success: function(data){
+                    var data = JSON.parse(data);
                     if(data.status == 200) {
                         Toast.fire({
                             icon: 'success',
