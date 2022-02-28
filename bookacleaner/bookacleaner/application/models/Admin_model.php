@@ -32,9 +32,9 @@ class Admin_model extends CI_Model {
 
     public function session() {
         if($this->session->userdata('id')) {
-			return 1;
+			redirect('admin/main');
 		} else {
-            return 0;
+            redirect('admin/index');
         }
     }
 }
