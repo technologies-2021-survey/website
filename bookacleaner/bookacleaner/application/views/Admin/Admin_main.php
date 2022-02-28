@@ -1,4 +1,4 @@
-<div class="col-lg-4">
+<div class="col-lg-4 col-md-6">
     <div class="box-container">
         <div class="box-body">
             <h3>Calendar</h3>
@@ -54,6 +54,6 @@
     }
     </script>
 </div>
-<div class="col-lg-8">
+<div class="col-lg-8 col-md-6">
 
 </div>
