@@ -81,7 +81,7 @@
 				<ul class="sidebar-menu tree" data-widget="tree">
 					<li class="header">MAIN NAVIGATION</li>
 					<li>
-						<a href="<?php echo base_url();?>main">
+						<a href="<?php echo base_url();?>admin/main">
 							<i class="fa fa-dashboard"></i> <span>Dashboard</span>
 						</a>
 					</li>
