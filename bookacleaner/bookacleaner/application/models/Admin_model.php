@@ -29,5 +29,11 @@ class Admin_model extends CI_Model {
 		);
 		return json_encode($array);
 	}
+
+    public function session() {
+        if($this->session->userdata('id')) {
+			redirect('admin/main');
+		}
+    }
 }
 ?>
