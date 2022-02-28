@@ -148,6 +148,12 @@ label.floatingText {
     color: #898989!important;
 }
 
+.skin-purple .sidebar-menu>li>.treeview-menu {
+    margin: 0 1px;
+    background: #181818!important;
+    box-shadow: 0 0 3px #000;
+}
+
 div {
     -webkit-transition: opacity 200ms linear;
    -moz-transition: opacity 200ms linear;
