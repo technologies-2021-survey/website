@@ -12,9 +12,9 @@ class Admin extends CI_Controller {
 			'title' => 'Admin Dashboard | BookACleaner',
 		);
 		if($this->admin_model->session() == 1) { redirect("admin/main"); } else { }
-		$this->load->view('Admin/Include/header', $data);
+		$this->load->view('Admin/Include/header_login', $data);
 		$this->load->view('Admin/Admin_index');
-		$this->load->view('Admin/Include/footer');
+		$this->load->view('Admin/Include/footer_login');
 	}
 	public function login() {
 		if($this->admin_model->session() == 1) { redirect("admin/main"); } else { }
