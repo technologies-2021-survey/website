@@ -125,3 +125,6 @@ label.floatingText {
 .navbar-nav>.user-menu>.dropdown-menu>li.user-header>p {
     font-size: 12px;
 }
+.swal2-popup.swal2-toast .swal2-title {
+    font-size: 1.4em;
+}
