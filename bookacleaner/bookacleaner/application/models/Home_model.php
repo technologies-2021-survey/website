@@ -21,5 +21,9 @@ class Home_model extends CI_Model {
             return $row->id;
 		}
     }
+    public function check_uniq_id($uniq_id) {
+        $q = $this->db->query("SELECT * FROM `bookings` WHERE `unique_id` = '".$uniq_id."'")->num_rows();
+		return $q;
+    }
 }
 ?>
