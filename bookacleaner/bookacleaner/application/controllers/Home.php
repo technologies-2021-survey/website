@@ -45,45 +45,49 @@ class Home extends CI_Controller {
 			if($check == 0) {
 				echo $this->home_model->status(203, 'Error! Please select service required!');
 			} else {
-				$uniq_id = md5(uniqid(rand(), true));
-				$uniq_id2 = $uniq_id;
-				
-				if($this->home_model->check_uniq_id($uniq_id2) == 1) {
+				if($this->input->post('cleaning') == "Please select") {
+					echo $this->home_model->status(203, 'Error! Please select one!');
+				} else {
 					$uniq_id = md5(uniqid(rand(), true));
 					$uniq_id2 = $uniq_id;
-				}
-
-				$insertData = array(
-					'unique_id' => $uniq_id2,
-					'first_name' => $this->input->post('first_name'),
-					'last_name' => $this->input->post('last_name'),
-					'email' => $this->input->post('email'),
-					'mobile_number' => $this->input->post('mobile_number'),
-					'preferred_date' => $this->input->post('preferred_date'),
-					'address' => $this->input->post('address'),
-					'cleaning' => $this->input->post('cleaning'),
-					'sqm' => $this->input->post('sqm'),
-					'first_name' => $this->input->post('first_name'),
-					'comments_or_notes' => $this->input->post('comments_or_notes')
-				);
-
-				$this->home_model->insertBook($insertData);
-
-				$getBookId = $this->home_model->getBookId($uniq_id2);
-
-				for($x = 0; $x < 6; $x++) {
-					if($this->input->post('service_required['.$x.']') != "") {
-						$insertData2 = array(
-							'bookings_id' => $getBookId,
-							'choice' => $x
-						);
-						
-						$this->home_model->insertServiceRequired($insertData2);
+					
+					if($this->home_model->check_uniq_id($uniq_id2) == 1) {
+						$uniq_id = md5(uniqid(rand(), true));
+						$uniq_id2 = $uniq_id;
 					}
-				}
 
-				//echo $this->home_model->status(203, 'Service Required: ' . $check);
-				echo $this->home_model->status(200, 'Successfully booked!');
+					$insertData = array(
+						'unique_id' => $uniq_id2,
+						'first_name' => $this->input->post('first_name'),
+						'last_name' => $this->input->post('last_name'),
+						'email' => $this->input->post('email'),
+						'mobile_number' => $this->input->post('mobile_number'),
+						'preferred_date' => $this->input->post('preferred_date'),
+						'address' => $this->input->post('address'),
+						'cleaning' => $this->input->post('cleaning'),
+						'sqm' => $this->input->post('sqm'),
+						'first_name' => $this->input->post('first_name'),
+						'comments_or_notes' => $this->input->post('comments_or_notes')
+					);
+
+					$this->home_model->insertBook($insertData);
+
+					$getBookId = $this->home_model->getBookId($uniq_id2);
+
+					for($x = 0; $x < 6; $x++) {
+						if($this->input->post('service_required['.$x.']') != "") {
+							$insertData2 = array(
+								'bookings_id' => $getBookId,
+								'choice' => $x
+							);
+							
+							$this->home_model->insertServiceRequired($insertData2);
+						}
+					}
+
+					//echo $this->home_model->status(203, 'Service Required: ' . $check);
+					echo $this->home_model->status(200, 'Successfully booked!');
+				}
 			}
 		}
 	}
