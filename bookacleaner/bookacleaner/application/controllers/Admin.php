@@ -5,10 +5,6 @@ class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('admin_model', null, true); // auto-connect model
-
-		if($this->session->userdata('id')) {
-			redirect('admin/main');
-		}
 	}
 
     public function index() {
@@ -44,7 +40,10 @@ class Admin extends CI_Controller {
 	}
 
 	public function main() {
-		
+		// Session
+		if($this->session->userdata('id')) {
+			redirect('admin/main');
+		}
 	}
 	
 }
