@@ -134,7 +134,7 @@
 					<div style="background: #2b137e;margin: 0 15px;box-shadow: 0 0 10px #281276;">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 0;margin: 0;">
 							
-							<img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block;">
+							<img src="<?=base_url('./assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block;">
 						</div>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 							
