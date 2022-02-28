@@ -44,15 +44,15 @@
 					<ul class="nav navbar-nav">
 					<li class="dropdown user user-menu">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="#" class="user-image" alt="User Image">
-						<span class="hidden-xs"><?php echo $username; ?></span>
+							<img src="#" class="user-image" alt="User Image">
+							<span class="hidden-xs"><?=$username;?></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li class="user-header">
-								<img src="<?php echo $profile_picturesz; ?>" class="img-circle" alt="User Image">
+								<img src="#" class="img-circle" alt="User Image">
 
 								<p>
-								<?php echo $username; ?>
+									<?=$username;?>
 								</p>
 							</li>
 							<li class="user-body">
