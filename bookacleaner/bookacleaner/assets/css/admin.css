@@ -6,6 +6,7 @@ body {
 }
 
 .colorgraph {
+    user-select: none;
     height: 5px;
     border-top: 0;
     background: #c4e17f;
