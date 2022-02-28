@@ -60,7 +60,7 @@ class Admin extends CI_Controller {
 			$this->session->unset_userdata($row);
 		}
 		
-		redirect('admin/index');
+		redirect(base_url() . 'admin/index');
 	}
 }
 ?>
