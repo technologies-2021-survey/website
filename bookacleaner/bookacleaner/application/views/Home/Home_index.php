@@ -380,11 +380,13 @@
 							var data = JSON.parse(data);
 							if(data.status == 200) {
 								notif.play();
+								$("#back-to-top").trigger("click");
+								$("form").trigger("reset");
 								Swal.fire({
 									icon: 'success',
 									title: data.message
 								})
-								$("form").trigger("reset");
+								
 							} else {
 								notif.play();
 								Swal.fire({
