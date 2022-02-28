@@ -382,7 +382,7 @@
 								notif.play();
 								Swal.fire({
 									icon: 'success',
-									title: "Successfully, you will be redirected to user page in 3 sec. You are not able to get back to this page by clicking the browser back button."
+									title: data.message
 								})
 								$("form").trigger("reset");
 							} else {
