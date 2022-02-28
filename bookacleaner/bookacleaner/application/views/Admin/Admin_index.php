@@ -52,7 +52,7 @@
             var username = $('input[name=username]').val();
             var password = $('input[name=password]').val();
             $.ajax({
-				url: "/login",
+				url: "<?php echo base_url(); ?>admin/login",
 				type: "POST",
 				data: {
 					username: username,
