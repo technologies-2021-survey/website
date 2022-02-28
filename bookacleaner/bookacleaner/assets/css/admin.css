@@ -126,5 +126,5 @@ label.floatingText {
     font-size: 12px;
 }
 .swal2-popup.swal2-toast .swal2-title {
-    font-size: 1.4em;
+    font-size: 1.4em!important;
 }
