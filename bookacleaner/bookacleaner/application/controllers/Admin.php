@@ -14,13 +14,27 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Admin_index');
 		$this->load->view('Admin/Include/footer');
 	}
-	public function login($username = "", $password = "") {
+	public function login() {
+		$this->form_validation->set_rules('user_name', 'Username', 'required|alpha_numeric|min_length[5]', 
+			array(
+				"min_length" => "Your username is incorrect."
+			)
+		);
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[5]', 
+			array(
+				"min_length" => "Your password is incorrect."
+			)
+		);
+		$result = $this->admin_model->login($this->input->post('username'), $this->input->post('password'));
 
-		$result = $this->admin_model->login($username, $password);
-		if($result == 'Success') {
-			echo $this->admin_model->status('200', $result);
+		if($this->form_validation->run() == FALSE) {
+			echo $this->admin_model->status('203', 'Error! Please input username and password!');
 		} else {
-			echo $this->admin_model->status('203', $result);
+			if($result == 'Success') {
+				echo $this->admin_model->status('200', $result);
+			} else {
+				echo $this->admin_model->status('203', $result);
+			}
 		}
 	}
 	
