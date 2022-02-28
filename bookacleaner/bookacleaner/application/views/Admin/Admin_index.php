@@ -50,7 +50,7 @@
         }
     })
     function redirect() {
-        window.location.replace("./main");
+        window.location.replace("<?php echo base_url();?>admin/main");
     }  
     $(document).ready(function() {
         $('.floatingText').click(function() {
