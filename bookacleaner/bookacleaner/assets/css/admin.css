@@ -118,7 +118,7 @@ label.floatingText {
 }
 
 .navbar-nav>.user-menu>.dropdown-menu>li.user-header {
-    height: 140px;
+    height: 140px!important;
     padding: 10px;
     text-align: center;
 }
