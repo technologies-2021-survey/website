@@ -18,9 +18,10 @@
 		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<script src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
+		
         <script type="text/javascript" src="<?=base_url('assets/js/jquery-1.10.2.min.js');?>"></script>
 		<script type="text/javascript" src="<?=base_url('assets/js/bootstrap.min.js');?>"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
     </head>
