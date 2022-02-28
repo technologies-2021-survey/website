@@ -323,7 +323,7 @@
 					<div class="modal-footer" style="border: 0;">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						<button type="button" class="btn btn-success">
-							<i class="fa fa-paper-plane" aria-hidden="true"></i>
+							<i class="fa fa-paper-plane" aria-hidden="true" style="margin-right: 5px;"></i>
 							Submit Booking
 						</button>
 					</div>
