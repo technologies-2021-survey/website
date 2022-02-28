@@ -74,17 +74,17 @@
 				},
 				cache: false,
 				success: function(result){
-                    if(result.status == 203) {
-                        Toast.fire({
-                            icon: 'error',
-                            title: result.message
-                        })
-                    } else {
+                    if(result.status == 200) {
                         Toast.fire({
                             icon: 'success',
                             title: "Successfully, you will be redirected to user page in 5 sec. You are not able to get back to this page by clicking the browser back button."
                         })
                         setTimeout("redirect()", 5000);
+                    } else {
+                        Toast.fire({
+                            icon: 'error',
+                            title: result.message
+                        })
                     }
 				}
 			});
