@@ -20,7 +20,7 @@
                                 <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2" autocomplete="off" required="">
                                 <label class="floatingText">Password</label>
                             </div>
-                            <button class="btn btn-success btn-block">
+                            <button class="btn btn-success btn-block" id="login">
                                 <i class="fa fa-key" aria-hidden="true"></i>
                                 Login
                             </button>
@@ -46,6 +46,22 @@
                 // can't open <select> :(
             }
             
+        });
+        $('#login').click(function() {
+            var username = $('input[name=username]').val();
+            var password = $('input[name=password]').val();
+            $.ajax({
+				url: "/login",
+				type: "POST",
+				data: {
+					username: username,
+					password: password						
+				},
+				cache: false,
+				success: function(result){
+					console.log(result);
+				}
+			});
         });
     });
 </script>
