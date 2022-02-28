@@ -1,11 +1,16 @@
 <div class="col-lg-4">
+    <div class="box-container">
+        <div class="box-body">
+            <h3>Calendar</h3>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    <style>.fc-row .fc-bg {z-index: 1;background: #fff;}</style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://rawgit.com/tempusdominus/bootstrap-3/master/build/css/tempusdominus-bootstrap-3.css" crossorigin="anonymous">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://rawgit.com/tempusdominus/bootstrap-3/master/build/js/tempusdominus-bootstrap-3.js" crossorigin="anonymous"></script>
-    <style>.fc-row .fc-bg {z-index: 1;background: #fff;}</style>
-    <div id="calendar"></div>
     <script type="text/javascript">
     $(document).ready(function(){
         var calendar = $('#calendar').fullCalendar({
