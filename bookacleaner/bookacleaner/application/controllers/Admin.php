@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Include/footer');
 	}
 	public function login() {
-		$this->form_validation->set_rules('user_name', 'Username', 'required|alpha_numeric|min_length[5]', 
+		$this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric|min_length[5]', 
 			array(
 				"min_length" => "Your username is incorrect."
 			)
