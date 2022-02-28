@@ -45,11 +45,11 @@ class Home extends CI_Controller {
 			if($check == 0) {
 				echo $this->home_model->status(203, 'Error! Please select service required!');
 			} else {
-				$uniq_id = md5(uniqid(rand(999999), true));
+				$uniq_id = md5(uniqid(rand(), true));
 				$uniq_id2 = $uniq_id;
 				
 				if($this->home_model->check_uniq_id($uniq_id2) == 1) {
-					$uniq_id = md5(uniqid(rand(999999), true));
+					$uniq_id = md5(uniqid(rand(), true));
 					$uniq_id2 = $uniq_id;
 				}
 
