@@ -1,4 +1,4 @@
-
+	</div>
 	<a id="back-to-top"></a>
 		<script>
 			var btn = $('#back-to-top');
