@@ -45,9 +45,9 @@ class Admin extends CI_Controller {
 	}
 
 	public function main() {
-		if($this->admin_model->session() == 1) {
-		} else {
+		if($this->admin_model->session() == 0) {
 			redirect('admin/login');
+		} else {
 		}
 	}
 	
