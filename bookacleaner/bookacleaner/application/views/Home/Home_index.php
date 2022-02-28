@@ -322,7 +322,7 @@
 					<hr class="colorgraph" style="margin-bottom: -1px;" />
 					<div class="modal-footer" style="border: 0;">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="submit" class="btn btn-success">
+						<button name="submit" class="btn btn-success">
 							<i class="fa fa-paper-plane" aria-hidden="true" style="margin-right: 5px;"></i>
 							Submit Booking
 						</button>
