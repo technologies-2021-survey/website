@@ -54,6 +54,13 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Admin_main', $data);
 		$this->load->view('Admin/Include/footer');
 	}
-	
+	public function logout() {
+		$data = $this->session->all_userdata();
+		foreach($data as $row => $rows_value) {
+			$this->session->unset_userdata($row);
+		}
+		
+		redirect('home');
+	}
 }
 ?>
