@@ -31,7 +31,7 @@
             </div>
             <hr class="colorgraph" style="margin:0;padding:0;"/>
             <p style="text-align: center; padding: 15px; font-size: 12px; font-weight: 300;">
-                <i class="fa fa-copyright" aria-hidden="true" style="margin-right: 10px;"></i>
+                <i class="fa fa-copyright" aria-hidden="true" style="margin-right: 5px;"></i>
                 A-Team / Page rendered in {elapsed_time} seconds
             </p>
         </div>
