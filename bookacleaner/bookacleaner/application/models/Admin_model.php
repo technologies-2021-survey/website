@@ -10,7 +10,7 @@ class Admin_model extends CI_Model {
             // success
             foreach($query->result() as $row) { // row of this data
                 if($row->password == md5($password)) {
-                    //$this->session->set_userdata('id', $row->id); // setup session
+                    $this->session->set_userdata('id', $row->id); // setup session
                     return 'Success';
                 } else {
                     return 'Error! Wrong password!';
