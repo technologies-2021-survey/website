@@ -9,5 +9,17 @@ class Home_model extends CI_Model {
 		);
 		return json_encode($array);
 	}
+    public function insertBook($array) {
+        $this->db->insert('bookings', $array);
+    }
+    public function insertBookServiceRequired($array) {
+        $this->db->insert('bookings_service_required', $array);
+    }
+    public function getBookId($uniq_id) {
+        $q = $this->db->query("SELECT * FROM `bookings` WHERE `unique_id` = '".$uniq_id."'"); 
+		foreach($q->result() as $row) { 
+            return $row->id;
+		}
+    }
 }
 ?>
