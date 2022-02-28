@@ -5,7 +5,7 @@
             <h4 style="text-align: left; margin-top: 25%;">Admin Dashboard</h4>
             <hr class="colorgraph" style="margin-top:0;margin-bottom:0;padding:0;"/>
             <div class="login-box">
-                <form>
+                <form id="login">
                     <div class="rows">
                         <div class="col-lg-12">
                             <div class="form-group">
@@ -20,7 +20,7 @@
                                 <input type="password" name="password" id="password" class="form-control input-lg" tabindex="2" autocomplete="off" required="">
                                 <label class="floatingText">Password</label>
                             </div>
-                            <button class="btn btn-success btn-block" id="login">
+                            <button class="btn btn-success btn-block" name="submit">
                                 <i class="fa fa-key" aria-hidden="true"></i>
                                 Login
                             </button>
@@ -47,7 +47,8 @@
             }
             
         });
-        $('#login').click(function() {
+        $('#login').submit(function(e) {
+            e.preventDefault();
             var username = $('input[name=username]').val();
             var password = $('input[name=password]').val();
             $.ajax({
