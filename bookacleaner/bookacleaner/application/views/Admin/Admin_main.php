@@ -10,4 +10,3 @@
 
     </div>
 </div>
-<style>body{background:url('../assets/img/bg-admin.png') repeat #1a1a1a!important;background-size: 13px 13px !important;}</style>
