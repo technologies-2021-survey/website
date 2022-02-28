@@ -47,8 +47,14 @@ class Admin extends CI_Controller {
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
 		);
+
+		$user = array(
+			'id' => $this->admin_model->user(),
+			'username' => $this->admin_model->user('username')
+		);
+
 		$this->load->view('Admin/Include/header', $data);
-		$this->load->view('Admin/Admin_main');
+		$this->load->view('Admin/Admin_main', $user);
 		$this->load->view('Admin/Include/footer');
 	}
 	
