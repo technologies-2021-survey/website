@@ -50,7 +50,7 @@
         }
     })
     function redirect() {
-        window.location.replace("./admin/main");
+        window.location.replace("./main");
     }  
     $(document).ready(function() {
         $('.floatingText').click(function() {
