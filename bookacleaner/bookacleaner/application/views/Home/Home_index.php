@@ -1,179 +1,345 @@
 <?php $this->load->view('Home/Home_navigation'); ?>
-        <a id="back-to-top"></a>
-        <section id="header">
-            <h2 class="bottom-left">Welcome to Pediatrics of WHealth!</h2>
-        </section>
-        <section id="services">
-    		<div class="container" style="margin-top: 10px;">
-    			<div class="row">
-    			    <h2 class="services-title">Our Services</h2>
-    				<div class="col-md-3">
-    				    <div class="services">
-    				        <i class="fas fa-baby"></i>
-    				        <h4>Checkup</h4>
-    				        
-    				    </div>
-    				</div>
-    				<div class="col-md-3">
-    				    <div class="services">
-    				        <i class="fas fa-mobile-alt"></i>
-    				        <h4>Online Consultation</h4>
-    				       
-    				    </div>
-    				</div>
-    				<div class="col-md-3">
-    				    <div class="services">
-    				        <i class="fas fa-syringe"></i>
-    				        <h4>Immunization</h4>
-    				        
-    				    </div>
-    				</div>
-    				<div class="col-md-3">
-    				    <div class="services">
-    				        <i class="fas fa-comments"></i>
-    				        <h4>Counselling</h4>
-    				        
-    				    </div>
-    				</div>
-    			</div>
-    			
-    		</div>
-    	</section>
-    	<section id="aboutus">
-    	    <div class="container">
-    	        <div class="row">
-    	            <div class="col-md-6">
-    	                <img src="<?php echo base_url() . "assets/img/pedia.jpg";?>" class="img-responsive"/>
-    	            </div>
-    	            <div class="col-md-6">
-    	                <h2 style="font-size: 35px; font-weight: bold;">Why PeekABook?</h2>
-    	                <p style="font-size: 22px;text-align:justify;word-break:break-word;">
-				PeekABook is a child health record management and appointment system where all data will be digitzed, made portable, 
-				an stored in a single comprehensive system. The developers partnered with the Pediatrics Department of Whealth Medical Clinic and Diagnostic Center
-			    	to deliver the best services possible for their patients.</p>
-    	            </div>
-    	        </div>
-    	    </div>
-    	</section>
-    	<section id="downloadOurApp">
-    	    <div class="container">
-    	        <div class="row">
-    	            <div class="col-xs-4">
-    	                <img src="<?php echo base_url() . "assets/img/ourapp.jpg";?>" class="img-responsive"/>
-    	            </div>
-    	            <div class="col-xs-8">
-    	                <h2>Our app!</h2>
-    	                <p style="font-size: 19px;text-align:justify;word-break:break-word;">To connect directly with our patients,PeekABook has a mobile application.
-			Through this application, user can manage the health records of their child.
-			PeekABook also offers appointment and online consultation for hassle-free scheduling.
-			Users can be notified when their child's next immunization regimen is due. Also, users can easily ask inquiries using the messaging feature.</p>
-    	            </div>
-    	        </div>
-    	    </div>
-    	</section>
-		<section id="inquiries">
-		    <div class="container">
-    			<div class="row">
-    				<div class="col-md-7">
-    					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.2545587207794!2d121.0006312292216!3d14.598036799362745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9e56ff38f8d%3A0xe2c7824b6ca462d0!2s1519%20Nagtahan%20St%2C%20Santa%20Mesa%2C%20Manila%2C%201008%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1623460187850!5m2!1sen!2sph" width="100%" height="315" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    				</div>
-    				<div class="col-md-5">
-    					<form id="insertInquiry">
-    						<div class="form-group">
-    							<label for="fullname">Full Name</label>
-    							<input type="text" id="fullname" class="form-control" name="fullname" placeholder="Full Name" autocomplete="off" required="">
-    						</div>
-    						<div class="row">
-    							<div class="col-sm-6">
-    								<div class="form-group">
-    									<label for="email">E-mail Address</label>
-    									<input type="email" id="email" class="form-control" name="email" placeholder="E-mail Address (xxxxxx@gmail.com)" autocomplete="off" required="">
-    								</div>
-    							</div>
-    							<div class="col-sm-6">
-    								<div class="form-group">
-    									<label for="phoneNumber">Phone Number</label>
-    									<input type="text" id="phoneNumber" class="form-control" name="phoneNumber" placeholder="Phone Number (09123456789)" pattern="^(09|\+639)\d{9}$" autocomplete="off" required="">
-    								</div>
-    							</div>
-    						</div>
-    						<div class="form-group">
-    							<label for="title">Title</label>
-    							<input type="text" id="title" class="form-control" name="title" placeholder="Title" autocomplete="off" required="">
-    						</div>
-    						<div class="form-group">
-    							<label for="message">Message</label>
-    							<textarea type="text" id="message" class="form-control" name="message" placeholder="Message" autocomplete="off" required=""></textarea>
-    						</div>
-    						<div class="form-group">
-    							<button type="submit" class="btn btn-success" name="submit"><i class="far fa-paper-plane" style="margin-right: 10px;"></i> Submit</button>
-    						</div>
-    					</form>
-    				</div>
-    			</div>
-    		</div>
-		</section>
-		<section id="footer">
-		    Copyright &copy; WHealth 2021. All rights reserved.
-		</section>
-		<style type="text/css">#back-to-top { display: inline-block; background-color: #FF9800; width: 50px; height: 50px; text-align: center; border-radius: 4px; position: fixed; bottom: 30px; right: 30px; transition: background-color .3s, opacity .5s, visibility .5s; opacity: 0; visibility: hidden; z-index: 1000; } #back-to-top::after { content: "\f077"; font-family: FontAwesome; font-weight: normal; font-style: normal; font-size: 2em; line-height: 50px; color: #fff; } #back-to-top:hover { cursor: pointer; background-color: #333; } #back-to-top:active { background-color: #555; } #back-to-top.show { opacity: 1; visibility: visible; }section#downloadOurApp{background:#fafafa;padding-bottom: 50px; padding-top: 50px;}section#services{padding-top:50px;padding-bottom:50px;}section#aboutus { padding-top: 50px; padding-bottom: 50px; background: #2c3e50; color: #FFF;}.bottom-left { position: absolute; bottom: 10%; left: 10%; color: #FFF; font-weight: bold; }section#header{position:relative;height: 60vh; background: url(<?php echo base_url();?>assets/img/unsplash.com-photos-gUFQybn_CVg.jpg) no-repeat center; background-size: cover;}h2.services-title{text-align: center; margin-bottom: 50px;}div.services{margin-top: 40px;margin-bottom: 40px;text-align:center;}.services i { font-size: 5vh; margin-bottom: 40px; }section#footer{background: #3b5773; color: white; padding: 10px; text-align: center;}section#inquiries{padding-top: 25px; padding-bottom: 25px; background: #2c3e50; color: #FFF;}</style>
-		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script type="text/javascript">
-		var btn = $('#back-to-top');
+		<section class="header">
+			<div class="header2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="logo"></div>
+							<p>
+								Hire a trusted and reliable professional cleaner for your home or office.
+							</p>
 
-        $(window).scroll(function() {
-          if ($(window).scrollTop() > 300) {
-            btn.addClass('show');
-          } else {
-            btn.removeClass('show');
-          }
-        });
-        
-        btn.on('click', function(e) {
-          e.preventDefault();
-          $('html, body').animate({scrollTop:0}, '300');
-        });
-        $(document).ready(function() {
-            $( "form#insertInquiry" ).submit(function(e)
-            {
-                e.preventDefault();
-                var fullname = $("#fullname").val();
-                var email = $("#email").val();
-                var phoneNumber= $("#phoneNumber").val();
-                var title= $("#title").val();
-                var message= $("#message").val();
-    
-                $.ajax({
-					type:"post",
-					url: "https://peekabook.tech/index.php/home/insert",
-					data:{fullname:fullname,email:email,phoneNumber:phoneNumber, title: title, message: message},
-					success:function(data) {
-						if(data != "") {
-							Swal.fire({
-							title: 'Ooops!',
-							html: data,
-							icon: 'error'
-							});
-						} else {
-							$("#fullname").val("");
-							$("#email").val("");
-							$("#phoneNumber").val("");
-							$("#title").val("");
-							$("#message").val("");
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services" id="services">
+			<div class="container">
+				<h3>Services</h3>
+				<div class="row two">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="services-box2">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<div class="services-title2">
+								Home Cleaning
+							</div>
+							<div class="services-body2">
+								Our professional cleaner can tidy up homes of all shapes and sizes.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="services-box2">
+							<i class="fa fa-briefcase" aria-hidden="true"></i>
+							<div class="services-title2">
+								Office Cleaning
+							</div>
+							<div class="services-body2">
+								Our professional cleaner can clean up your workplace and make it feel like home.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="services-box2">
+							<i class="fa fa-trash" aria-hidden="true"></i>
+							<div class="services-title2">
+								Cleaning Products
+							</div>
+							<div class="services-body2">
+								We use all-natural products to clean, disinfect and sanitize.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="row two">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="services-box">
+							<div class="services-title">
+								Deep Cleaning
+							</div>
+							<div class="services-desc">
+								A total cleaning for your home or office. Full sweep, wipe down, sanitizing and disinfecting. A team of 2 professional cleaner at 5 hours per session (depending on the size of your home or office).
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="services-box">
+							<div class="services-title">
+								Disinfection Services
+							</div>
+							<div class="services-desc">
+								Different cleaning and sanitation services to complement the deep cleaning for your home or office. Tell us cwhich cleaning and sanitation service is best for your needs.
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="services-box">
+							<div class="services-title">
+								Move In & Move Out Cleaning
+							</div>
+							<div class="services-desc">
+								Moving in and out of your home or office can be a very daunting and stressful task. We can help lighten your work load.
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="services-box">
+							<div class="services-title">
+								Upholstery Cleaning
+							</div>
+							<div class="services-desc">
+								It makes use of vacuum cleaning system with ecological pure water filter technology. We remove deep-seated dirt and allergens.
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="services-box">
+							<div class="services-title">
+								Steam Cleaning
+							</div>
+							<div class="services-desc">
+								It makes use of Dry Steam cleaning machine. Picks up dust, removes stains, kills germs and bacteria, disinfects, sanitize all types of hard surfaces without the use of chemicals.
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="services-box">
+							<div class="services-title">
+								Aircon Cleaning
+							</div>
+							<div class="services-desc">
+								Thoroughly clean all types and models of air conditioning systems.
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="book" id="book">
+			<div class="container">
+				<h3>Book a service or get a quote today</h3>
+				<div class="row">
+					<div style="background: #2b137e;margin: 0 15px;box-shadow: 0 0 10px #281276;">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 0;margin: 0;">
 							
-							Swal.fire(
-							'Good job!',
-							'Successfully!',
-							'success'
-							);
-						}
+							<img src="<?=base_url('../public/assets/img/book.png');?>" style="width: 100%; margin: 0 auto; display: block;">
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+							
+							<div class="timeline">
+								<div class="timeline-block">
+									<div class="timeline-title">
+										1
+									</div>
+									<div class="timeline-body">
+										Check out our available services.
+									</div>
+								</div>
+								<div class="timeline-block">
+									<div class="timeline-title">
+										2
+									</div>
+									<div class="timeline-body">
+									Fill out the form and click submit.
+									</div>
+								</div>
+								<div class="timeline-block">
+									<div class="timeline-title">
+										3
+									</div>
+									<div class="timeline-body">
+										Once submitted, kindly wait for a confirmation email from us. Cost and other details will be discussed before proceeding.
+									</div>
+								</div>
+							</div>
+							<div style="text-align:center;"> 
+								<a href="#" class="book-btn" data-toggle="modal" data-target="#bookNow">
+									Book a cleaner now!
+								</a>
+							</div>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<i class="fa fa-copyright" aria-hidden="true"></i>
+						A-Team / Page rendered in {elapsed_time} seconds
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="bookNowLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<h4 style="text-align: center; margin-top: 22px;">Book a service with us today!</h4>
+					<hr class="colorgraph" />
+					<div class="modal-body">
+						<form>
+							<div class="rows">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="first_name" id="first_name" class="form-control input-lg" tabindex="1" autocomplete="off" required="">
+										<label class="floatingText">First Name</label>
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="last_name" id="last_name" class="form-control input-lg" tabindex="2" autocomplete="off" required="">
+										<label class="floatingText">Last Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<input type="email" name="email" id="email" class="form-control input-lg" tabindex="3" autocomplete="off" required="">
+										<label class="floatingText">E-mail Address</label>
+									</div>
+								</div> 
+							</div>
+							<div class="rows">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="mobile_number" id="mobile_number" class="form-control input-lg" pattern="^(09|\+639)\d{9}$" tabindex="4" autocomplete="off" required="">
+										<label class="floatingText">Mobile Number</label>
+									</div> 
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="date" name="preferred_date" id="preferred_date" class="form-control input-lg" tabindex="5" autocomplete="off" required="">
+										<label class="floatingText">Preferred Date</label>
+									</div>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<input type="text" name="address" id="address" class="form-control input-lg" tabindex="6" autocomplete="off" required="">
+										<label class="floatingText">Address</label>
+									</div>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<select name="cleaningFor" class="form-control input-lg" tabindex="7" autocomplete="off" required="">
+											<option selected="">Please select</option>
+											<option value="1">Appartment</option>
+											<option value="2">House</option>
+											<option value="3">Condo</option>
+											<option value="4">Office</option>
+											<option value="5">Others (Plesase specify in NOTES)</option>
+										</select>
+										<label class="floatingText">I need cleaning for</label>
+									</div>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<input type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8" autocomplete="off" required="">
+										<label class="floatingText">How big is the space that needs cleaning? (sqm.)</label>
+									</div>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col-lg-12">
+									<label>Service Required</label>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="serviceRequired" value="Deep Cleaning">
+											<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+											Deep Cleaning
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="serviceRequired" value="Disinfection Service">
+											<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+											Disinfection Service
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="serviceRequired" value="Move In & Move Out Cleaning">
+											<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+											Move In & Move Out Cleaning
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="serviceRequired" value="Upholstery Cleaning">
+											<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+											Upholstery Cleaning
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="serviceRequired" value="Steam Cleaning">
+											<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+											Steam Cleaning
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="serviceRequired" value="Aircon Cleaning">
+											<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+											Aircon Cleaning
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<textarea type="text" name="sqm" id="sqm" class="form-control input-lg" tabindex="8" autocomplete="off" required=""></textarea>
+										<label class="floatingText">Comments/Notes</label>
+									</div>
+								</div>
+							</div>
+							<div style="clear:both;"></div>
+						</form>
+					</div>
+					<hr class="colorgraph" style="margin-bottom: -1px;" />
+					<div class="modal-footer" style="border: 0;">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">
+							<i class="fa fa-paper-plane" aria-hidden="true"></i>
+							Submit Booking
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.floatingText').click(function() {
+					if($(this).prev()[0].tagName == "INPUT" || $(this).prev()[0].tagName == "TEXTAREA") {
+						$(this).siblings().select();
+					} else {
+						// can't open <select> :(
 					}
-                });
-            });
-        });
-        </script>
-        <?php
-        if($this->input->get('success', true)) {
-            echo "<script>Swal.fire( 'Good job!', 'Successfully!', 'success' )</script>";
-        }
-        ?>
+					
+				});
+			});
+		</script>
