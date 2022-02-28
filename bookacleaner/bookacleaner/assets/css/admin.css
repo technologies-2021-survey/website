@@ -2,7 +2,7 @@ body {
     font-family: "Catamaran", "Helvetica Neue",Helvetica,Arial,sans-serif;
     height: 100%;
     background: url('../img/bg-admin.png') repeat #fff;
-    background-size: 10px 10px;
+    background-size: 13px 13px !important;
 }
 
 .colorgraph {
