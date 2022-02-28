@@ -11,13 +11,13 @@ class Admin extends CI_Controller {
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
 		);
-		if($this->admin_model->session() == 1) { redirect("admin/main"); } else { }
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
 		$this->load->view('Admin/Include/header_login', $data);
 		$this->load->view('Admin/Admin_index');
 		$this->load->view('Admin/Include/footer_login');
 	}
 	public function login() {
-		if($this->admin_model->session() == 1) { redirect("admin/main"); } else { }
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
 
 		$this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric|min_length[5]', 
 			array(
@@ -43,7 +43,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function main() {
-		if($this->admin_model->session() == 0) { redirect("admin/index"); } else { }
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
 			'id' => $this->admin_model->user(),
