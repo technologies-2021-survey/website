@@ -9,7 +9,7 @@ class Admin_model extends CI_Model {
         if($query->num_rows() > 0) {
             // success
             foreach($query->result() as $row) { // row of this data
-                if($row->doctor_password == md5($password)) {
+                if($row->password == md5($password)) {
                     $this->session->set_userdata('id', $row->id); // setup session
                     return 'Success';
                 } else {
