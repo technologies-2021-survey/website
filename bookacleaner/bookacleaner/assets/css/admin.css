@@ -105,3 +105,12 @@ label.floatingText {
         
     }
 }
+
+.box-container {
+    background: #fff;
+    box-shadow: 0 0 3px #bebebe;
+}
+
+.box-body {
+    padding: 10px;
+}
