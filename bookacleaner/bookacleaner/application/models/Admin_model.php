@@ -32,8 +32,10 @@ class Admin_model extends CI_Model {
 
     public function session() {
         if($this->session->userdata('id')) {
-			redirect('admin/main');
-		}
+			return 1;
+		} else {
+            return 0;
+        }
     }
 }
 ?>

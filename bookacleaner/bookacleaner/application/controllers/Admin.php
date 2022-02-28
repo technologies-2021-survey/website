@@ -16,8 +16,11 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Include/footer');
 	}
 	public function login() {
-		$this->admin_model->session();
-		
+		if($this->admin_model->session() == 0) {
+		} else {
+			redirect('admin/main');
+		}
+
 		$this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric|min_length[5]', 
 			array(
 				"min_length" => "Your username is incorrect."
@@ -42,7 +45,10 @@ class Admin extends CI_Controller {
 	}
 
 	public function main() {
-		$this->admin_model->session();
+		if($this->admin_model->session() == 1) {
+		} else {
+			redirect('admin/login');
+		}
 	}
 	
 }
