@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css');?>" media="screen" />
 		<link rel="stylesheet" href="<?=base_url('assets/css/admin.css');?>" media="screen" />
 		
+		<link rel="stylesheet" href="//db.onlinewebfonts.com/c/0f56c874ba695191e7f4cab237447698?family=Futura" >
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		
