@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title><?php $title; ?></title>
+		<title><?=$title;?></title>
 		<meta name="description" content="BookACleaner">
 		<meta name="keywords" content="BookACleaner">
 		<meta name="author" content="Harvey Arboleda">
