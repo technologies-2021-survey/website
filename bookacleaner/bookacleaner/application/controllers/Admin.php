@@ -15,11 +15,12 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Include/footer');
 	}
 	public function login($username = "", $password = "") {
+
 		$result = $this->admin_model->login($username, $password);
 		if($result == 'Success') {
-			$this->admin_model->status('200', $result);
+			echo $this->admin_model->status('200', $result);
 		} else {
-			$this->admin_model->status('203', $result);
+			echo $this->admin_model->status('203', $result);
 		}
 	}
 	
