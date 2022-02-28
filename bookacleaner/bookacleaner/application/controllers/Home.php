@@ -44,6 +44,8 @@ class Home extends CI_Controller {
 			}
 			if($check == 0) {
 				echo $this->home_model->status(203, 'Error! Please select service required!');
+			} else {
+				echo $this->home_model->status(203, 'Service Required: ' . $check);
 			}
 		}
 	}
