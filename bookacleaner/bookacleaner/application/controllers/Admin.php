@@ -7,12 +7,10 @@ class Admin extends CI_Controller {
 		$this->load->model('admin_model', null, true); // auto-connect model
 
 		if($this->session->userdata('id')) {
-			if($this->session->userdata('selection') == "doctor") {
-			    redirect('admin/main');
-			}
+			redirect('admin/main');
 		}
 	}
-	
+
     public function index() {
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
@@ -43,6 +41,10 @@ class Admin extends CI_Controller {
 				echo $this->admin_model->status('203', $result);
 			}
 		}
+	}
+
+	public function main() {
+		
 	}
 	
 }
