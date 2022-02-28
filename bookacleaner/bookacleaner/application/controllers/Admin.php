@@ -46,15 +46,12 @@ class Admin extends CI_Controller {
 		if($this->admin_model->session() == 0) { redirect("admin/index"); } else { }
 		$data = array(
 			'title' => 'Admin Dashboard | BookACleaner',
-		);
-
-		$user = array(
 			'id' => $this->admin_model->user(),
 			'username' => $this->admin_model->user('username')
 		);
 
 		$this->load->view('Admin/Include/header', $data);
-		$this->load->view('Admin/Admin_main', $user);
+		$this->load->view('Admin/Admin_main', $data);
 		$this->load->view('Admin/Include/footer');
 	}
 	
