@@ -29,7 +29,7 @@
 		<div class="wrapper">
 			<header class="main-header">
 				<a href="<?php echo base_url(); ?>admin" class="logo">
-					<span class="logo-mini"><b>B</b>C</span>
+					<span class="logo-mini"><b>B</b></span>
 					<span class="logo-lg"><b>BookACleaner</b></span>
 				</a>
 				<nav class="navbar navbar-static-top">
