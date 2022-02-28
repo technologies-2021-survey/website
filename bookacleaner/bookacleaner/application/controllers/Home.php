@@ -34,7 +34,7 @@ class Home extends CI_Controller {
 		$this->form_validation->set_rules('comments_or_notes', 'Comments/Notes', 'required');
 
 		if($this->form_validation->run() == FALSE) {
-			echo $this->admin_model->status(203, 'Error! Please input the fields!');
+			echo $this->home_model->status(203, 'Error! Please input the fields!');
 		} else {
 			$check = 0;
 			for($i = 0; $i < 6; $i++) {
@@ -43,7 +43,7 @@ class Home extends CI_Controller {
 				}
 			}
 			if($check == 0) {
-				echo $this->admin_model->status(203, 'Error! Please select service required!');
+				echo $this->home_model->status(203, 'Error! Please select service required!');
 			}
 		}
 	}
