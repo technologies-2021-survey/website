@@ -41,8 +41,8 @@ class Admin_model extends CI_Model {
         $this->db->where('id', $this->session->userdata('id'));
         $query = $this->db->get('accounts');
         $row = $query->result();
-        if($type == "") { return $row['id']; } 
-        else if($type == "username") { return $row['username']; }
+        if($type == "") { return $row->id; } 
+        else if($type == "username") { return $row->username; }
     }
 }
 ?>
