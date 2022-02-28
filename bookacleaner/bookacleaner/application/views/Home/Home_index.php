@@ -349,7 +349,7 @@
 					var first_name = $('input[name=first_name]').val();
 					var last_name = $('input[name=last_name]').val();
 					var email = $('input[name=email]').val();
-					var mobile_number = $('input[name=lastmobile_number_name]').val();
+					var mobile_number = $('input[name=mobile_number]').val();
 					var preferred_date = $('input[name=preferred_date]').val();
 					var address = $('input[name=address]').val();
 					var cleaning = $('input[name=cleaning]').val();
