@@ -21,7 +21,7 @@
                                 <label class="floatingText">Password</label>
                             </div>
                             <button class="btn btn-success btn-block" name="submit">
-                                <i class="fa fa-key" aria-hidden="true"></i>
+                                <i class="fa fa-key" aria-hidden="true" style="margin-right:5px;"></i>
                                 Login
                             </button>
                         </div>
