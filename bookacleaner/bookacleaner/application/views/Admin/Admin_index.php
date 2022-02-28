@@ -72,8 +72,8 @@
 					username: username,
 					password: password						
 				},
-				success: function(result){
-                    if(result.status == 200) {
+				success: function(data){
+                    if(data.status == 200) {
                         Toast.fire({
                             icon: 'success',
                             title: "Successfully, you will be redirected to user page in 5 sec. You are not able to get back to this page by clicking the browser back button."
@@ -82,7 +82,7 @@
                     } else {
                         Toast.fire({
                             icon: 'error',
-                            title: result.message
+                            title: data.message
                         })
                     }
 				}
