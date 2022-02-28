@@ -154,7 +154,7 @@ label.floatingText {
     box-shadow: 0 0 3px #000;
 }
 
-div {
+div, a {
     -webkit-transition: opacity 200ms linear;
    -moz-transition: opacity 200ms linear;
    -o-transition: opacity 200ms linear;
