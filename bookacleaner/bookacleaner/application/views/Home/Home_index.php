@@ -352,7 +352,7 @@
 					var mobile_number = $('input[name=mobile_number]').val();
 					var preferred_date = $('input[name=preferred_date]').val();
 					var address = $('input[name=address]').val();
-					var cleaning = $('input[name=cleaning]').val();
+					var cleaning = $('select[name=cleaning]').val();
 					var sqm = $('input[name=sqm]').val();
 					var service_required = [];
 					var comments_or_notes = $('textarea[name=comments_or_notes]').val();
