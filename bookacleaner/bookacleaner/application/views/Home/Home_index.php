@@ -344,7 +344,7 @@
 					
 				});
 				var notif = new Audio('https://peekabook.tech/bookacleaner/bookacleaner/assets/mp3/mixkit-dry-pop-up-notification-alert-2356.wav');
-				$('#book').submit(function(e) {
+				$('form#book').submit(function(e) {
 					e.preventDefault();
 					var first_name = $('input[name=first_name]').val();
 					var last_name = $('input[name=last_name]').val();
