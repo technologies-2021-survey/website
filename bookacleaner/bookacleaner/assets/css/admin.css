@@ -115,3 +115,13 @@ label.floatingText {
 .box-body {
     padding: 10px;
 }
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header {
+    height: 140px;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p {
+    font-size: 12px;
+}

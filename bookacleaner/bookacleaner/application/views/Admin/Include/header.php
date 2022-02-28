@@ -55,12 +55,6 @@
 									<?=$username;?>
 								</p>
 							</li>
-							<li class="user-body">
-								<div class="row">
-									<div class="col-xs-12 text-center">
-									</div>
-								</div>
-							</li>
 							<li class="user-footer">
 								<div class="pull-right">
 									<a href="<?=base_url('admin/logout');?>" class="btn btn-default btn-flat">Sign out</a>
