@@ -32,12 +32,12 @@ class Admin extends CI_Controller {
 		$result = $this->admin_model->login($this->input->post('username'), $this->input->post('password'));
 
 		if($this->form_validation->run() == FALSE) {
-			echo $this->admin_model->status('203', 'Error! Please input username and password!');
+			echo $this->admin_model->status(203, 'Error! Please input username and password!');
 		} else {
 			if($result == 'Success') {
-				echo $this->admin_model->status('200', $result);
+				echo $this->admin_model->status(200, $result);
 			} else {
-				echo $this->admin_model->status('203', $result);
+				echo $this->admin_model->status(203, $result);
 			}
 		}
 	}
