@@ -2,7 +2,7 @@
     <div class="info-box bg-red">
         <span class="info-box-icon"><i class="fa fa-user"></i></span>
         <div class="info-box-content">
-            <span class="info-box-text">BOOKING<br/><label class="label label-info">NOW</label></span>
+            <span class="info-box-text">BOOKING <label class="label label-info">NOW</label></span>
             <span class="info-box-number">5</span>
             <span class="progress-description">
                 70%
