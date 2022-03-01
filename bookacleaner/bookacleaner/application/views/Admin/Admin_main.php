@@ -1,4 +1,17 @@
 <div class="col-lg-6 col-md-6">
+    <div class="info-box bg-red">
+        <span class="info-box-icon"><i class="fa fa-user"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text">BOOKING <label class="label label-info">NOW</label></span>
+            <span class="info-box-number"></span>
+            <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+            </div>
+            <span class="progress-description">
+                70%
+            </span>
+        </div>
+    </div>
     <div class="box-container">
         <div class="box-body">
             <h3>Calendar</h3>
@@ -55,21 +68,5 @@
     </script>
 </div>
 <div class="col-lg-4 col-md-4">
-    <div class="box-container">
-            <div class="box-body">
-                <div class="info-box bg-red">
-                    <span class="info-box-icon"><i class="fa fa-user"></i></span>
-                    <div class="info-box-content">
-                        <span class="info-box-text">BOOKING <label class="label label-info">NOW</label></span>
-                        <span class="info-box-number"></span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 70%"></div>
-                        </div>
-                        <span class="progress-description">
-                            70%
-                        </span>
-                    </div>
-                </div>
-            </div>
-    </div>
+    
 </div>
