@@ -58,7 +58,7 @@
     <div class="box-container">
             <div class="box-body">
             <div class="info-box bg-red">
-            <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+            <span class="info-box-icon"><i class="fa fa-user"></i></span>
             <div class="info-box-content">
             <span class="info-box-text">Likes</span>
             <span class="info-box-number">41,410</span>
