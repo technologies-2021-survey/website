@@ -26,13 +26,15 @@
         });
     }
     function addRow(data) {
-        var x = '<div class="cleaners-row row-'+data.id+'" style="opacity: 0; margin-left: -200px;">';
+        var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + data.cleaners_name;
             x = x + '<br>';
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
-		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'}).delay(5000);
+        $(".row-"+data.id).hide().insertAfter($(this).parent().parent()).slideDown('slow');
+
+		//$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'}).delay(5000);
     }
 
     getCleaners(id);
