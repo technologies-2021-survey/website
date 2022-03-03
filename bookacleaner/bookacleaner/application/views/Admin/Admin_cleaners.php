@@ -33,7 +33,8 @@
                     if(type == "add") {
                         id--;
                         
-                    } else if(type == "minus") {
+                    }
+                    if(type == "minus") {
                         id++;
                     }
                 }
