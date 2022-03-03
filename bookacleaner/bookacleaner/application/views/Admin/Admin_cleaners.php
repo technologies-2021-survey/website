@@ -81,20 +81,20 @@
     getCleaners(id);
 
     function minus() {
-        if(working == 0) {
+        if(working == 1) {
+            errorRow();
+        } else if(working == 0) {
             id--;
             getCleaners(id);
-        } else if(working == 1) {
-            errorRow();
-        }
+        } 
     }
     function add() {
-        if(working == 0) {
+        if(working == 1) {
+            errorRow();
+        } else if(working == 0) {
             id++;
             getCleaners(id);
-        } else if(working == 1) {
-            errorRow();
-        }
+        } 
     }
     $(document).ready(function() {
         $('#prev').click(function() {
