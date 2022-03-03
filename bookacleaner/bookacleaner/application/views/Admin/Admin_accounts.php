@@ -24,6 +24,7 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
+                    console.log("wow")
                     return 0;
                 } else {
                     return 1;
