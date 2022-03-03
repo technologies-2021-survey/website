@@ -20,11 +20,7 @@
             success: function(data){
                 data = JSON.parse(data);
                 for(var i = 0; i < data.length; i++) {
-                    for(var s = 0; s < 1000; s++) {
-                        
-                    }
                     addRow(data[i]);
-                    
                 }
             }
         });
@@ -36,7 +32,8 @@
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
-        $('.row-'+data.id).slideToggle();
+        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'});
     }
 
     getCleaners(0);
