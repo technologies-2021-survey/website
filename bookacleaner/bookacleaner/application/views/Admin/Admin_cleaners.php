@@ -116,6 +116,7 @@
     });
     $(window).on('load', function() {
         $('.hire').click(function() {
+            alert(0);
             var ids = $(this).attr("data-id");
             $.ajax({
             url: "<?php echo base_url(); ?>admin/hireCleaner/"+id,
@@ -131,6 +132,7 @@
             });
         });
         $('.fire').click(function() {
+            alert(1);
             var ids = $(this).attr("data-id");
             $.ajax({
             url: "<?php echo base_url(); ?>admin/fireCleaner/"+id,
