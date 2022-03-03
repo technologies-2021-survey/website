@@ -48,7 +48,7 @@
         });
     }
     function addRow(data) {
-        var id = data.id;
+        var id = data['id'];
 
         var x = '<div class="cleaners-row row-'+id+'">';
             x = x + '<span>'+data.cleaners_name+'</span>';
