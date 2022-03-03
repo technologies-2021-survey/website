@@ -23,5 +23,8 @@
                 }
             });
         }
+
+
+        getCleaners(0);
     });
 </script>
