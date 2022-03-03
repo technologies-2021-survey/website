@@ -23,8 +23,8 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
+                $('.cleaners-list').html("");
                 if(data.length != "") {
-                    $('.cleaners-list').html("");
                     for(var i = 0; i < data.length * 1000; i++) {
                         addRow(data[i]);
                     }
