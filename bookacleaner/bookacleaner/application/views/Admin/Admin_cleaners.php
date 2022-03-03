@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
-    function getCleaners(id, type = "") {
+    function getCleaners(id) {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners",
             type: "GET",
@@ -31,12 +31,6 @@
                     for(var i = 0; i < data.length * 1000; i++) {
                         addRow(i, data[i]);
                     }
-                    if(type == "minus") {
-                        id--;
-                    } else if(type == "add") {
-                        id++;
-                    }
-                    console.log("++++++++++++++++++++++++++++++"+id+"+++++++++++++++++++++++");
                 } else {
                     notif.play();
                     Toast.fire({
@@ -49,18 +43,16 @@
             }
         });
     }
-    function addRow(i, data) {
-        var id = i;
-
-        var x = '<div class="cleaners-row row-'+id+'">';
+    function addRow(data) {
+        var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + '<span>'+data.cleaners_name+'</span>';
             x = x + '<span>'+data.cleaners_contact+'</span>';
         x = x + '</div>';
         $('.cleaners-list').append(x);
         
         var durations = id * 700;
-        $('.row-'+id).hide().css({ opacity: 0, marginLeft: "200px"});
-        $('.row-'+id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
         console.log(durations)
     }
 
