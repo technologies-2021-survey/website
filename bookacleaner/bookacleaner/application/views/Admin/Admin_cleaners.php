@@ -4,6 +4,12 @@
             <h3>Cleaner's List</h3>
             <div class="cleaners-list">
             </div>
+            <div class="pull-left">
+                <button class="btn btn-primary">Prev</button>
+            </div>
+            <div class="pull-right">
+            <button class="btn btn-primary">Next</button>
+            </div>
         </div>
     </div>
 </div>
