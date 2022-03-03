@@ -84,7 +84,7 @@
             if(checkCleaners(s) == 0) {
                 id--;
                 getCleaners(id);
-            } else {
+            } else if(checkCleaners(s) == 1) {
                 errorRow();
             }
         });
@@ -93,7 +93,7 @@
             if(checkCleaners(s) == 0) {
                 id++;
                 getCleaners(id);
-            } else {
+            } else if(checkCleaners(s) == 1) {
                 errorRow();
             }
         });
