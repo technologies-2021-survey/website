@@ -73,7 +73,7 @@
             id--;
             if(getCleaners(id) == 1) {
                
-            } else {
+            } else if(getCleaners(id) == 0) {
                 id++;
             }
         });
@@ -81,7 +81,7 @@
             id++;
             if(getCleaners(id) == 1) {
                 
-            } else {
+            } else if(getCleaners(id) == 0) {
                 id--;
             }
         });
