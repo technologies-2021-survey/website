@@ -52,5 +52,14 @@ class Admin_model extends CI_Model {
         $this->db->where('id', $id);
 		$this->db->update('cleaners', $data);
     }
+    public function insertCleaner($cleaners_name, $cleaners_contact) {
+        $data = array(
+            'cleaners_name' => $cleaners_name,
+            'cleaners_contact' => $cleaners_contact,
+        );
+		$this->db->insert('cleaners', $data);
+        return 'Success';
+    }
+
 }
 ?>

@@ -196,5 +196,22 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, this worker is working!');
 		}
 	}
+	public function insertCleaner() {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$this->form_validation->set_rules('cleaners_name', 'Full Name', 'required');
+		$this->form_validation->set_rules('cleaners_contact', 'Contact Number', 'required');
+		$result = $this->admin_model->insertCleaner($this->input->post('cleaners_name'), $this->input->post('cleaners_contact'));
+
+		if($this->form_validation->run() == FALSE) {
+			echo $this->admin_model->status(203, 'Error! Please input full name and contact number!');
+		} else {
+			if($result == 'Success') {
+				echo $this->admin_model->status(200, $result);
+			} else {
+				echo $this->admin_model->status(203, $result);
+			}
+		}
+	}
 }
 ?>
