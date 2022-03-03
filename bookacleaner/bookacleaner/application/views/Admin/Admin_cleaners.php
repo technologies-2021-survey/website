@@ -25,10 +25,12 @@
                 data = JSON.parse(data);
                 $('.cleaners-list').html("");
                 if(data.length != "") {
+                    notif.play();
                     for(var i = 0; i < data.length; i++) {
                         addRow(data[i]);
                     }
                 } else {
+                    notif.play();
                     errorRow();
                     if(type == "add") {
                         id--;
@@ -64,7 +66,6 @@
         $('.row-0').hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row-0').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
 
-        notif.play();
         Toast.fire({
             icon: 'error',
             title: 'Error! There\'s no data'
