@@ -26,7 +26,7 @@
         });
     }
     function addRow(data) {
-        var x = '<div class="cleaners-row row-'+data.id+'">';
+        var x = '<div class="cleaners-row row-'+data.parseInt(id)+'">';
             x = x + data.cleaners_name;
             x = x + '<br>';
             x = x + data.cleaners_contact;
