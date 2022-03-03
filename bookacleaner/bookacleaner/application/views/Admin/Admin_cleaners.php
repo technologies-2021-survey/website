@@ -29,9 +29,18 @@
                 if(data.length != "") {
                     $('.cleaners-list').html("");
                     for(var i = 0; i < data.length * 1000; i++) {
-                        addRow(i, data[i]);
+                        addRow(data[i]);
                     }
                 } else {
+                    var x = '<div class="cleaners-row row-0">';
+                        x = x + '<span style="text-align:center;">No results found.</span>';
+                    x = x + '</div>';
+                    $('.cleaners-list').append(x);
+                    
+                    var durations = 1 * 700;
+                    $('.row-0').hide().css({ opacity: 0, marginLeft: "200px"});
+                    $('.row-0').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+
                     notif.play();
                     Toast.fire({
                         icon: 'error',
@@ -53,7 +62,6 @@
         var durations = id * 700;
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
-        console.log(durations)
     }
 
     getCleaners(id);
