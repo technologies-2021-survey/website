@@ -28,6 +28,7 @@
                     for(var i = 0; i < data.length * 1000; i++) {
                         addRow(data[i]);
                     }
+                    return 1;
                 } else {
                     var x = '<div class="cleaners-row row-0">';
                         x = x + '<span style="text-align:center;">No results found.</span>';
@@ -43,7 +44,7 @@
                         icon: 'error',
                         title: 'Error! There\'s no data'
                     });
-                    return false;
+                    return 0;
                 }
                 
             }
@@ -68,13 +69,19 @@
             if(id > 1) {
                 id--;
             }
-            getCleaners(id);
-            console.log(id);
+            if(getCleaners(id) == 1) {
+
+            } else {
+                id++;
+            }
         });
         $('#next').click(function() {
             id++;
-            getCleaners(id);
-            console.log(id);
+            if(getCleaners(id) == 1) {
+
+            } else {
+                id--;
+            }
         });
     });
 </script>
