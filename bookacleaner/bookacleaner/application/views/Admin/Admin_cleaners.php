@@ -18,6 +18,11 @@
 <script type="text/javascript">
     var id = 1;
     function getCleaners(ids, type = "") {
+        if(type == "minus") {
+            ids -= 1;
+        } else {
+            ids += 1;
+        }
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
             type: "GET",
@@ -84,12 +89,10 @@
                     title: 'Error! There\'s no data'
                 });
             } else {
-                id--;
                 getCleaners(id, 'minus');
             }
         });
         $('#next').click(function() {
-            id++;
             getCleaners(id, 'add');
         });
     });
