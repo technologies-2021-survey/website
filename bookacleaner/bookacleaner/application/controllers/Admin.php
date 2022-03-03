@@ -114,9 +114,8 @@ class Admin extends CI_Controller {
 		$get_data = $this->db->query("SELECT * FROM `cleaners` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
 		foreach($get_data->result() as $row) {
-			$search = $this->db->query("SELECT COUNT(*) FROM `cleaners_on_work` WHERE `cleaners_id` = '".$row->id."'");
-			$search_result = $search->row_array();
-			$total_rows = $search_result['count(*)'];
+			$search = $this->db->query("SELECT COUNT(*) FROM `cleaners_on_work` WHERE `cleaners_id` = '".$row->id."'")->row_array();
+			$total_rows = $search['count(*)'];
 
 			$array[] = array(
 				'id' =>  $row->id,
