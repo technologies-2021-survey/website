@@ -177,6 +177,13 @@ div, a {
     display: block;
 }
 
+.accounts-row, .cleaners-row {
+    transition: 0.5s;
+}
+
+.accounts-row:hover, .cleaners-row:hover {
+    opacity: 0.8;
+}
 .content h3 {
     font-family: 'Futura',sans-serif;
     padding: 20px 6px;
