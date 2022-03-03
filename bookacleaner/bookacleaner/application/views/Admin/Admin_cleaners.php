@@ -19,7 +19,8 @@
             },
             success: function(data){
                 data = JSON.parse(data);
-                for(var i = 0; i < data.length; i++) {
+                for(var i = 0; i < data.length * 1000; i++) {
+                    if(data.row[i])
                     addRow(data[i]);
                 }
             }
@@ -35,7 +36,8 @@
         // hide
         $('.row-'+data.id).hide();
         
-        $('.row-'+data.id).slideToggle(3000);
+        var duration = data.id * 100;
+        $('.row-'+data.id).slideToggle(duration);
     }
 
     getCleaners(id);
