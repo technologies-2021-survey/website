@@ -64,10 +64,12 @@
         $('#prev').click(function() {
             getCleaners(id-1);
             id--;
+            console.log(id);
         });
         $('#next').click(function() {
             getCleaners(id+1);
             id++;
+            console.log(id);
         });
     });
 </script>
