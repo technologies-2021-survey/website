@@ -113,12 +113,12 @@
             checkCleaners(s, 'add');
         });
         $('.hire').click(function() {
-            var id = $(this).attr("data-id");
-            alert(id);
+            var ids = $(this).attr("data-id");
+            alert(ids);
         });
         $('.fire').click(function() {
-            var id = $(this).attr("data-id");
-            alert(id);
+            var ids = $(this).attr("data-id");
+            alert(ids);
         });
     });
 </script>
