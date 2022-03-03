@@ -74,13 +74,13 @@
                 if(data.available == 0) {
                     // not working
                     x = x + '<div class="pull-right">';
-                        x = x +'<button class="button button-danger">Fire Cleaner</button>';
+                        x = x +'<button class="btn btn-danger">Fire Cleaner</button>';
                     x = x + '</div>';
                 }
             } else {
                 // former working
                 x = x + '<div class="pull-right">';
-                    x = x +'<button class="button button-danger">Hire Cleaner</button>';
+                    x = x +'<button class="btn btn-danger">Hire Cleaner</button>';
                 x = x + '</div>';
             }
         x = x + '</div>';
