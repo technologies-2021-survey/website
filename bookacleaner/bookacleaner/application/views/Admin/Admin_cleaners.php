@@ -56,14 +56,16 @@
         console.log(durations)
     }
 
-    getCleaners(id, "");
+    getCleaners(id);
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            getCleaners(id-1, 'minus');
+            id--;
+            getCleaners(id);
         });
         $('#next').click(function() {
-            getCleaners(id+1, 'add');
+            id++;
+            getCleaners(id);
         });
     });
 </script>
