@@ -18,19 +18,21 @@
 <script type="text/javascript">
     var id = 1;
     function checkCleaners(id) {
+        var s = "";
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
-                    return 0;
+                    s = 0;
                 } else {
-                    return 1;
+                    s = 1;
                 }
                 
             }
         });
+        return s;
     }
     function getCleaners(id) {
         $.ajax({
