@@ -87,7 +87,7 @@
             if(working == 0) {
                 id--;
                 getCleaners(id);
-            } else {
+            } else if(working == 1) {
                 errorRow();
             }
         });
@@ -97,7 +97,7 @@
             if(working == 0) {
                 id++;
                 getCleaners(id);
-            } else {
+            } else if(working == 1) {
                 errorRow();
             }
         });
