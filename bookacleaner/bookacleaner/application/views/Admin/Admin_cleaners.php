@@ -31,10 +31,12 @@
             x = x + '<br>';
             x = x + data.cleaners_contact;
         x = x + '</div>';
-        $('.cleaners-list').append(x);
-        $(".row-"+data.id).hide(500).delay(500).slideDown('slow');
+        // hide
+        $('.row-'+data.id).hide();
 
-		//$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'}).delay(5000);
+        if($('.row-'+data.id).css('display') == 'none') {
+            $(this).slideToggle();
+        }
     }
 
     getCleaners(id);
