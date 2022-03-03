@@ -5,10 +5,10 @@
             <div class="cleaners-list" style="margin-bottom: 10px;">
             </div>
             <div class="pull-left">
-                <button class="btn btn-primary">Prev</button>
+                <button class="btn btn-primary" id="prev">Prev</button>
             </div>
             <div class="pull-right">
-                <button class="btn btn-primary">Next</button>
+                <button class="btn btn-primary" id="next">Next</button>
             </div>
             <div style="clear: both;"></div>
         </div>
@@ -26,8 +26,18 @@
             },
             success: function(data){
                 data = JSON.parse(data);
-                for(var i = 0; i < data.length * 1000; i++) {
-                    addRow(data[i]);
+                if(data.length != "") {
+                    for(var i = 0; i < data.length * 1000; i++) {
+                        addRow(data[i]);
+                    }
+                    return true;
+                } else {
+                    notif.play();
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Error! There\'s no data'
+                    });
+                    return false;
                 }
             }
         });
@@ -48,4 +58,15 @@
     }
 
     getCleaners(id);
+
+    $(document).ready(function() {
+        $('#prev').click(function() {
+            getCleaners(id-1);
+            id--;
+        });
+        $('#next').click(function() {
+            getCleaners(id+1);
+            id++;
+        });
+    });
 </script>
