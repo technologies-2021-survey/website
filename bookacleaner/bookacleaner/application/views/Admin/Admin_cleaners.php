@@ -32,7 +32,7 @@
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
-        $(".row-"+data.id).hide().insertAfter($(this).parent()).slideDown('slow');
+        $(".row-"+data.id).hide().insertAfter().slideDown('slow');
 
 		//$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'}).delay(5000);
     }
