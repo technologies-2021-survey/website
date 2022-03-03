@@ -176,3 +176,7 @@ div, a {
     font-size: 12px;
     display: block;
 }
+
+.content h3 {
+    font-family: 'Futura',sans-serif;
+}
