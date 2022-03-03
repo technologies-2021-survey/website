@@ -158,7 +158,7 @@ div, a {
    transition: 0.5s;
 }
 
-.cleaners-row {
+.accounts-row, .cleaners-row {
     margin: 5px;
     padding: 10px;
     background: #f8f8f8;
@@ -166,12 +166,12 @@ div, a {
     border-radius: 5px;
 }
 
-.cleaners-row span:nth-child(1) {
+.accounts-row span:nth-child(1), .cleaners-row span:nth-child(1) {
     display: block;
     font-size: 16px;
     font-weight: bold;
 }
-.cleaners-row span:nth-child(2) {
+.accounts-row span:nth-child(2), .cleaners-row span:nth-child(2) {
     font-size: 12px;
     display: block;
 }
