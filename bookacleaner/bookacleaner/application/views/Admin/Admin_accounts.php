@@ -17,6 +17,26 @@
 
 <script type="text/javascript">
     var id = 1;
+    function checkAccounts(ids, type = "") {
+        if(type == "minus") {
+            ids -= 1;
+        } else if(type == "add") {
+            ids += 1;
+        }
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getAccounts/"+ids,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
+                if(data.length != "") {
+                    return 0;
+                } else {
+                    return 1;
+                }
+                
+            }
+        });
+    }
     function getAccounts(ids, type = "") {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getAccounts/"+ids,
@@ -25,15 +45,10 @@
                 data = JSON.parse(data);
                 $('.accounts-list').html("");
                 if(data.length != "") {
-                    notif.play();
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
                     }
-                } else {
-                    notif.play();
-                    errorRow();
                 }
-                
             }
         });
     }
@@ -50,15 +65,7 @@
     }
 
     function errorRow() {
-        var x = '<div class="accounts-row row-0">';
-            x = x + '<span style="text-align:center;">No results found.</span>';
-        x = x + '</div>';
-        $('.accounts-list').append(x);
-        
-        var durations = 1 * 700;
-        $('.row-0').hide().css({ opacity: 0, marginLeft: "200px"});
-        $('.row-0').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
-
+        notif.play();
         Toast.fire({
             icon: 'error',
             title: 'Error! There\'s no data'
@@ -69,19 +76,20 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id <= 1) {
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Error! There\'s no data'
-                });
-            } else {
+            if(checkAccounts(id-1) == 1) {
                 id--;
-                getAccounts(id, 'minus');
+                getAccounts(id);
+            } else {
+                errorRow();
             }
         });
         $('#next').click(function() {
-            id++;
-            getAccounts(id, 'add');
+            if(checkAccounts(id+1) == 1) {
+                id++;
+                getAccounts(id);
+            } else {
+                errorRow();
+            }
         });
     });
 </script>
