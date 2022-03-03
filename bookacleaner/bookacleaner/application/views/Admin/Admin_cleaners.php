@@ -98,7 +98,7 @@
     }
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id > 2) {
+            if(id > 1) {
                 var s = id - 1;
                 checkCleaners(s);
                 minus();
