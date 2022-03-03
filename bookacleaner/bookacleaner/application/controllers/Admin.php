@@ -78,7 +78,12 @@ class Admin extends CI_Controller {
 
 	public function getCleaners($page_number = "") {
 		if($page_number != "") {
-			$page_number = $page_number;
+			if($page_number == "0") {
+				$page_number = 1; 
+			} else {
+				$page_number = $page_number;
+			}
+			
 		} else {
 			$page_number = 1;
 		}

@@ -9,7 +9,7 @@
 </div>
 
 <script type="text/javascript">
-    var id = 0
+    var id = 1;
     function getCleaners(id) {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners",
@@ -36,5 +36,5 @@
 		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'});
     }
 
-    getCleaners(1);
+    getCleaners(id);
 </script>
