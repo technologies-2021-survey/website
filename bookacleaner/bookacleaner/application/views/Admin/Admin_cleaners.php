@@ -19,7 +19,6 @@
     var id = 1;
     var working;
     function checkCleaners(ids, type = "") {
-        var s = "";
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
             type: "GET",
@@ -88,7 +87,7 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id > 2) {
+            if(id > 1) {
                 var s = id - 1;
                 checkCleaners(s, 'minus');
             } else {
