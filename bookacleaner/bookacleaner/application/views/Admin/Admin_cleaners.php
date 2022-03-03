@@ -36,7 +36,7 @@
         $('.cleaners-list').append(x);
         
         var durations = id * 700;
-        $('.row-'+id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row-'+id).hide().css({ opacity: 0, marginLeft: "-200px"});
         $('.row-'+id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
         console.log(durations)
     }
