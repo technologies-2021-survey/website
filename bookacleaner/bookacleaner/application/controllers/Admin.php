@@ -62,5 +62,40 @@ class Admin extends CI_Controller {
 		
 		redirect(base_url() . 'admin/index');
 	}
+
+	public function cleaners() {
+		
+	}
+	public function getCleaners($page_number = "") {
+		if($page_number != "") {
+			$page_number = $page_number;
+		} else {
+			$page_number = 1;
+		}
+		$no_of_records_per_page = 10;
+        $offset = ($page_number - 1) * $no_of_records_per_page;
+
+		$total_pages_sql = "SELECT COUNT(*) FROM `cleaners`";
+        $result = $this->db->query($total_pages_sql)->row_array();
+
+		$total_rows = $result['count(*)'];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+		$sql = "SELECT * FROM `cleaners` LIMIT $offset, $no_of_records_per_page";
+
+		$array = array();
+
+		$get_data = $this->db->query($sql);
+
+		foreach($get_data->result() as $row) {
+			$array[] = array(
+				'id ' =>  $row->id,
+				'cleaners_name' =>  $row->cleaners_name,
+				'cleaners_contact' =>  $row->cleaners_contact
+			);
+		};
+
+		return json_encode($array);
+	}
 }
 ?>
