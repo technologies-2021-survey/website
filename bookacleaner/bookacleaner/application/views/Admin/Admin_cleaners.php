@@ -25,6 +25,7 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != 0) {
+                    notif.play();
                     if(type == "add") {
                         id++;
                         getCleaners(id);
