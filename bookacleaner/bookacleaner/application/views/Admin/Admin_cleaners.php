@@ -70,13 +70,8 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            
             if(getCleaners(id-1) == 1) {
-                if(id < 1) {
-                    //errorRow();
-                } else {
-                    id--;
-                }
+                id--;
             }
         });
         $('#next').click(function() {
