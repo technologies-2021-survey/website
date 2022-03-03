@@ -31,8 +31,10 @@
             x = x + '<br>';
             x = x + data.cleaners_contact;
         x = x + '</div>';
+        $('.cleaners-list').append(x);
         // hide
         $('.row-'+data.id).hide();
+        
         $('.row-'+data.id).slideToggle(3000);
     }
 
