@@ -70,13 +70,15 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(getCleaners(id-1) == 1) {
-                id--;
+            id--;
+            if(getCleaners(id) == 1) {
+               
             }
         });
         $('#next').click(function() {
-            if(getCleaners(id+1) == 1) {
-                id++;
+            id++;
+            if(getCleaners(id) == 1) {
+                
             }
         });
     });
