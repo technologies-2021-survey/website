@@ -30,20 +30,7 @@
                     }
                     return 1;
                 } else {
-                    var x = '<div class="cleaners-row row-0">';
-                        x = x + '<span style="text-align:center;">No results found.</span>';
-                    x = x + '</div>';
-                    $('.cleaners-list').append(x);
-                    
-                    var durations = 1 * 700;
-                    $('.row-0').hide().css({ opacity: 0, marginLeft: "200px"});
-                    $('.row-0').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
-
-                    notif.play();
-                    Toast.fire({
-                        icon: 'error',
-                        title: 'Error! There\'s no data'
-                    });
+                    errorRow();
                     return 0;
                 }
                 
@@ -62,13 +49,32 @@
         $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
 
+    function errorRow() {
+        var x = '<div class="cleaners-row row-0">';
+            x = x + '<span style="text-align:center;">No results found.</span>';
+        x = x + '</div>';
+        $('.cleaners-list').append(x);
+        
+        var durations = 1 * 700;
+        $('.row-0').hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row-0').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+
+        notif.play();
+        Toast.fire({
+            icon: 'error',
+            title: 'Error! There\'s no data'
+        });
+    }
+
     getCleaners(id);
 
     $(document).ready(function() {
         $('#prev').click(function() {
             
             if(getCleaners(id-1) == 1) {
-                if(id > 1) {
+                if(id < 1) {
+                    errorRow();
+                } else {
                     id--;
                 }
             }
