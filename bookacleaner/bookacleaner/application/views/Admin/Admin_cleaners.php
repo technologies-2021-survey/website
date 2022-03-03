@@ -75,8 +75,10 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            id--;
-            getCleaners(id, 'minus');
+            if(id > 2)
+                id--;
+                getCleaners(id, 'minus');
+            }
         });
         $('#next').click(function() {
             id++;
