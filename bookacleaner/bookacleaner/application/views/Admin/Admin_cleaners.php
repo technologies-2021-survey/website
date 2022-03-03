@@ -80,7 +80,7 @@
             } else {
                 // former working
                 x = x + '<div class="pull-right">';
-                    x = x +'<button class="btn btn-danger">Hire Cleaner</button>';
+                    x = x +'<button class="btn btn-success">Hire Cleaner</button>';
                 x = x + '</div>';
             }
         x = x + '</div>';
