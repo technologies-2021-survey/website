@@ -33,10 +33,7 @@
         x = x + '</div>';
         // hide
         $('.row-'+data.id).hide();
-
-        if($('.row-'+data.id).css('display') == 'none') {
-            $(this).slideToggle();
-        }
+        $('.row-'+data.id).slideToggle(3000);
     }
 
     getCleaners(id);
