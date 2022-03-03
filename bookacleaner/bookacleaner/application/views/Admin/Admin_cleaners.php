@@ -81,7 +81,8 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(checkCleaners(id-1) == 0) {
+            var s = id - 1;
+            if(checkCleaners(s) == 0) {
                 id--;
                 getCleaners(id);
             } else {
@@ -89,7 +90,8 @@
             }
         });
         $('#next').click(function() {
-            if(checkCleaners(id+1) == 0) {
+            var s = id + 1;
+            if(checkCleaners(s) == 0) {
                 id++;
                 getCleaners(id);
             } else {
