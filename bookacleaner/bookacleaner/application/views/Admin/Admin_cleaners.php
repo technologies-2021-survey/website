@@ -20,7 +20,7 @@
             success: function(data){
                 console.log(data.length);
                 for(var i = 0; i < data.length; i++) {
-                    console.log(data.row[i]);
+                    console.log(data[i].row);
                 }
             }
         });
