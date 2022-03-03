@@ -117,11 +117,33 @@
     $(window).on('load', function() {
         $('.hire').click(function() {
             var ids = $(this).attr("data-id");
-            alert(ids);
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/hireCleaner/"+id,
+                type: "GET",
+                success: function(data){
+                    notif.play();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Successfully!'
+                    });
+                    getCleaners(id)
+                }
+            });
         });
         $('.fire').click(function() {
             var ids = $(this).attr("data-id");
-            alert(ids);
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/fireCleaner/"+id,
+                type: "GET",
+                success: function(data){
+                    notif.play();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Successfully!'
+                    });
+                    getCleaners(id)
+                }
+            });
         }); 
     });
 </script>
