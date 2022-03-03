@@ -26,7 +26,8 @@
 		<script type="text/javascript" src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
-		<script type="text/javascript">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
+ 		<script type="text/javascript">
 			const Toast = Swal.mixin({
 				toast: true,
 				position: 'top-end',
