@@ -36,7 +36,7 @@
                     } else if(type == "add") {
                         id++;
                     }
-                    console.warn(id);
+                    
                 } else {
                     notif.play();
                     Toast.fire({
@@ -45,6 +45,7 @@
                     });
                     return false;
                 }
+                console.log("++++++++++++++++++++++++++++++".id."+++++++++++++++++++++++");
             }
         });
     }
