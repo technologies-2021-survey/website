@@ -26,16 +26,18 @@
         });
     }
     function addRow(data) {
-        var x = '<div class="cleaners-row row-'+data.parseInt(id)+'">';
+        var id = data.id;
+
+        var x = '<div class="cleaners-row row-'+id+'">';
             x = x + data.cleaners_name;
             x = x + '<br>';
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
         
-        var durations = data.id * 1000;
-        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
-        $('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: durations, easing: 'easeOutBack'});
+        var durations = id * 1000;
+        $('.row-'+id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row-'+id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: durations, easing: 'easeOutBack'});
         console.log(durations)
     }
 
