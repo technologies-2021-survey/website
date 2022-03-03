@@ -32,7 +32,7 @@
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
-        $('.row-'+data.id).fadeOut();
+        $('.row-'+data.id).slideToggle();
     }
 
     getCleaners(0);
