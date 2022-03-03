@@ -20,7 +20,7 @@
     function getCleaners(ids, type = "") {
         if(type == "minus") {
             ids -= 1;
-        } else {
+        } else if(type == "add") {
             ids += 1;
         }
         $.ajax({
@@ -33,6 +33,12 @@
                     notif.play();
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
+                    }
+
+                    if(type == "minus") {
+                        id -= 1;
+                    } else if(type == "add") {
+                        id += 1;
                     }
                 } else {
                     notif.play();
