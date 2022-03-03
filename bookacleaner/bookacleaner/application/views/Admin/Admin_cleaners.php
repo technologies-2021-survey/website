@@ -26,7 +26,7 @@
         });
     }
     function addRow(data) {
-        var x = '<div class="cleaners-row row-'+data.id+'" style="margin-left:-200px;">';
+        var x = '<div class="cleaners-row row-'+data.id+'" style="opacity: 0;margin-left:-200px;">';
             x = x + data.cleaners_name;
             x = x + '<br>';
             x = x + data.cleaners_contact;
