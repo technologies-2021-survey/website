@@ -43,7 +43,7 @@
             x = x + '<span>'+data.cleaners_contact+'</span>';
             if(data.employee == 0) {
                 if(data.available == 0) {
-                    x = x + '<label class="label label-success">Available</label>';
+                    x = x + '<label class="label label-success">Off-duty</label>';
                 } else {
                     x = x + '<label class="label label-danger">On-duty</label>';
                 }
