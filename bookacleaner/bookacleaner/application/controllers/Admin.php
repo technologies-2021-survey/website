@@ -130,14 +130,14 @@ class Admin extends CI_Controller {
 
 	public function getAccounts($page_number = "") {
 		if($page_number != "") {
-			if($page_number <= -1) {
-				$page_number = 0; 
+			if($page_number <= 0) {
+				$page_number = 1; 
 			} else {
 				$page_number = $page_number;
 			}
 			
 		} else {
-			$page_number = 0;
+			$page_number = 1;
 		}
 		$no_of_records_per_page = 10;
         $offset = ($page_number - 1) * $no_of_records_per_page;
