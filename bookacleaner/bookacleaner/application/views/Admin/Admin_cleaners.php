@@ -66,19 +66,18 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id > 1) {
-                id--;
-            }
-            if(getCleaners(id) == 1) {
-
+            
+            if(getCleaners(id-1) == 1) {
+                if(id > 1) {
+                    id--;
+                }
             } else {
                 id++;
             }
         });
         $('#next').click(function() {
-            id++;
-            if(getCleaners(id) == 1) {
-
+            if(getCleaners(id+1) == 1) {
+                id++;
             } else {
                 id--;
             }
