@@ -25,6 +25,7 @@
                 data = JSON.parse(data);
                 if(data.length != "") {
                     console.log("wow")
+                    console.log(data)
                     return 0;
                 } else {
                     return 1;
