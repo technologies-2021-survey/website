@@ -29,9 +29,8 @@
         var id = data.id;
 
         var x = '<div class="cleaners-row row-'+id+'">';
-            x = x + data.cleaners_name;
-            x = x + '<br>';
-            x = x + data.cleaners_contact;
+            x = x + '<span>'+data.cleaners_name+'</span>';
+            x = x + '<span>'+data.cleaners_contact+'</span>';
         x = x + '</div>';
         $('.cleaners-list').append(x);
         
