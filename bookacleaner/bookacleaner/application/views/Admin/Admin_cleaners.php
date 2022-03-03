@@ -82,12 +82,16 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            var s = id - 1;
-            checkCleaners(s);
-            if(working == 0) {
-                id--;
-                getCleaners(id);
-            } else if(working == 1) {
+            if(id > 2) {
+                var s = id - 1;
+                checkCleaners(s);
+                if(working == 0) {
+                    id--;
+                    getCleaners(id);
+                } else if(working == 1) {
+                    errorRow();
+                }
+            } else {
                 errorRow();
             }
         });
