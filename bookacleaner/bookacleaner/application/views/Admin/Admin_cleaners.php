@@ -114,7 +114,7 @@
         });
         
     });
-    $(window).load(function() {
+    $(window).on('load', function() {
         $('.hire').click(function() {
             var ids = $(this).attr("data-id");
             alert(ids);
