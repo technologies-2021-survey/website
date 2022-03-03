@@ -91,7 +91,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function getCleaners($page_number = "") {
-		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 		if($page_number != "") {
 			if($page_number <= 0) {
 				$page_number = 1; 
@@ -131,7 +131,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function getAccounts($page_number = "") {
-		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
 		if($page_number != "") {
 			if($page_number <= 0) {
@@ -166,7 +166,7 @@ class Admin extends CI_Controller {
 		echo json_encode($array);
 	}
 	public function fireCleaner($id) {
-		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
 		$data = array(
 			'employee' => 1,
@@ -177,7 +177,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function hireCleaner($id) {
-		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
 		$data = array(
 			'employee' => 0,
