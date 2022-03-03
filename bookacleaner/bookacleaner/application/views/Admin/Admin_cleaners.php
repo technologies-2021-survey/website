@@ -65,7 +65,7 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id >= 1) {
+            if(id > 1) {
                 id--;
             }
             getCleaners(id);
