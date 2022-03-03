@@ -83,7 +83,7 @@ class Admin extends CI_Controller {
 
 		$array = array();
 
-		$get_data = $this->db->query("SELECT * FROM `cleaners` ORDER BY `id` LIMIT $offset, $no_of_records_per_page");
+		$get_data = $this->db->query("SELECT * FROM `cleaners` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
 		foreach($get_data->result() as $row) {
 			$array[] = array(
