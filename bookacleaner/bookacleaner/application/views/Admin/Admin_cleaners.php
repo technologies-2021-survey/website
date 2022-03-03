@@ -70,10 +70,12 @@
         $('#prev').click(function() {
             id--;
             getCleaners(id);
+            console.log(id);
         });
         $('#next').click(function() {
             id++;
             getCleaners(id);
+            console.log(id);
         });
     });
 </script>
