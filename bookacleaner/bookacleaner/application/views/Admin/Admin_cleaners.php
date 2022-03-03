@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
-    function getCleaners(id) {
+    function getCleaners(id, type = "") {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
             type: "GET",
@@ -28,7 +28,11 @@
                     for(var i = 0; i < data.length * 1000; i++) {
                         addRow(data[i]);
                     }
-                    return 1;
+                    if(type == "add") {
+                        id++;
+                    } else if(type == "minus") {
+                        id--;
+                    }
                 } else {
                     errorRow();
                     return 0;
@@ -70,19 +74,10 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            
-            if(getCleaners(id-1) == 1) {
-                id--;
-            } else if(getCleaners(id-1) == 0) {
-                id++;
-            }
+            getCleaners(id+1, 'minus');
         });
         $('#next').click(function() {
-            if(getCleaners(id+1) == 1) {
-                id++;
-            } else if(getCleaners(id+1) == 0) {
-                id--;
-            }
+            getCleaners(id+1, 'add');
         });
     });
 </script>
