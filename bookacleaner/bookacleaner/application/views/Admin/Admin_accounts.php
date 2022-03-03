@@ -40,6 +40,7 @@
     function addRow(i, data) {
         var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + '<span>'+data.full_name+'</span>';
+            x = x + '<span>Administrator</span>';
         x = x + '</div>';
         $('.cleaners-list').append(x);
         
