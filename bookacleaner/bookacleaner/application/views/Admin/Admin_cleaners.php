@@ -25,7 +25,7 @@
                 data = JSON.parse(data);
                 $('.cleaners-list').html("");
                 if(data.length != "") {
-                    for(var i = 0; i < data.length * 1000; i++) {
+                    for(var i = 0; i < data.length; i++) {
                         addRow(data[i]);
                     }
                     if(type == "add") {
