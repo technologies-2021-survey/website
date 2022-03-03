@@ -115,14 +115,14 @@ class Admin extends CI_Controller {
 
 		foreach($get_data->result() as $row) {
 			$search = $this->db->query("SELECT COUNT(*) FROM `cleaners_on_work` WHERE `cleaners_id` = '".$row->id."'")->row_array();
-			$total_rows = $search['count(*)'];
+			$total_rows2 = $search['count(*)'];
 
 			$array[] = array(
 				'id' =>  $row->id,
 				'cleaners_name' =>  $row->cleaners_name,
 				'cleaners_contact' =>  $row->cleaners_contact,
 				'employee' => $row->employee,
-				'available' => $total_rows
+				'available' => $total_rows2
 			);
 		};
 
