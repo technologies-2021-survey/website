@@ -74,13 +74,13 @@
                 if(data.available == 0) {
                     // not working
                     x = x + '<div class="pull-right">';
-                        x = x +'<button class="btn btn-danger">Fire Cleaner</button>';
+                        x = x +'<button class="btn btn-danger fire" data-id="'+data.id+'">Fire Cleaner</button>';
                     x = x + '</div>';
                 }
             } else {
                 // former working
                 x = x + '<div class="pull-right">';
-                    x = x +'<button class="btn btn-success">Hire Cleaner</button>';
+                    x = x +'<button class="btn btn-success hire" data-id="'+data.id+'">Hire Cleaner</button>';
                 x = x + '</div>';
             }
         x = x + '</div>';
@@ -90,7 +90,6 @@
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
-
     function errorRow() {
         notif.play();
         Toast.fire({
@@ -98,7 +97,6 @@
             title: 'Error! There\'s no data'
         });
     }
-
     getCleaners(id);
 
     $(document).ready(function() {
@@ -113,6 +111,14 @@
         $('#next').click(function() {
             var s = id + 1;
             checkCleaners(s, 'add');
+        });
+        $('.hire').click(function() {
+            var id = $(this).attr("data-id");
+            alert(id);
+        });
+        $('.fire').click(function() {
+            var id = $(this).attr("data-id");
+            alert(id);
         });
     });
 </script>

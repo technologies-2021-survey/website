@@ -55,6 +55,7 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Include/footer');
 	}
 	public function logout() {
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
 		$data = $this->session->all_userdata();
 		foreach($data as $row => $rows_value) {
 			$this->session->unset_userdata($row);
@@ -90,6 +91,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function getCleaners($page_number = "") {
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
 		if($page_number != "") {
 			if($page_number <= 0) {
 				$page_number = 1; 
@@ -129,6 +131,8 @@ class Admin extends CI_Controller {
 	}
 
 	public function getAccounts($page_number = "") {
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+
 		if($page_number != "") {
 			if($page_number <= 0) {
 				$page_number = 1; 
@@ -160,6 +164,27 @@ class Admin extends CI_Controller {
 		};
 
 		echo json_encode($array);
+	}
+	public function fireCleaner($id) {
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+
+		$data = array(
+			'employee' => 1,
+		);
+		$this->db->where('id', $id);
+		$this->db->update('cleaners', $data);
+		echo $this->admin_model->status(200, 'Successfully!');
+	}
+
+	public function hireCleaner($id) {
+		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
+
+		$data = array(
+			'employee' => 0,
+		);
+		$this->db->where('id', $id);
+		$this->db->update('cleaners', $data);
+		echo $this->admin_model->status(200, 'Successfully!');
 	}
 }
 ?>
