@@ -76,7 +76,7 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(checkAccounts(id-1) == 1) {
+            if(checkAccounts(id-1) == 0) {
                 id--;
                 getAccounts(id);
             } else {
@@ -84,7 +84,7 @@
             }
         });
         $('#next').click(function() {
-            if(checkAccounts(id+1) == 1) {
+            if(checkAccounts(id+1) == 0) {
                 id++;
                 getAccounts(id);
             } else {
