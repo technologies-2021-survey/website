@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
-    function getCleaners(id) {
+    function getCleaners(id, type = "") {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners",
             type: "GET",
@@ -31,7 +31,11 @@
                     for(var i = 0; i < data.length * 1000; i++) {
                         addRow(data[i]);
                     }
-                    return true;
+                    if(type == "minus") {
+                        id--;
+                    } else if(type == "add") {
+                        id++;
+                    }
                 } else {
                     notif.play();
                     Toast.fire({
@@ -62,14 +66,10 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            getCleaners(id-1);
-            id--;
-            console.log(id);
+            getCleaners(id-1, 'minus');
         });
         $('#next').click(function() {
-            getCleaners(id+1);
-            id++;
-            console.log(id);
+            getCleaners(id+1, 'add');
         });
     });
 </script>
