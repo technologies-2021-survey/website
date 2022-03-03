@@ -13,7 +13,7 @@
     function getCleaners(id) {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners",
-            type: "POST",
+            type: "GET",
             data: {
                 id: id,					
             },
