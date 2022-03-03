@@ -70,18 +70,17 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            id--;
-            if(getCleaners(id) == 1) {
-               
-            } else if(getCleaners(id) == 0) {
+            
+            if(getCleaners(id-1) == 1) {
+                id--;
+            } else if(getCleaners(id-1) == 0) {
                 id++;
             }
         });
         $('#next').click(function() {
-            id++;
-            if(getCleaners(id) == 1) {
-                
-            } else if(getCleaners(id) == 0) {
+            if(getCleaners(id+1) == 1) {
+                id++;
+            } else if(getCleaners(id+1) == 0) {
                 id--;
             }
         });
