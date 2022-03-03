@@ -4,16 +4,16 @@
             <h3>
                 Cleaner's List
                 <div class="pull-right">
-                    <button class="btn btn-success">Add Cleaner</button>
+                    <button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Cleaner</button>
                 </div>
             </h3>
             <div class="cleaners-list" style="clear: both; margin-bottom: 10px;">
             </div>
             <div class="pull-left">
-                <button class="btn btn-primary" id="prev">Prev</button>
+                <button class="btn btn-primary" id="prev"><i class="fa fa-prev" aria-hidden="true"></i>&nbsp;Prev</button>
             </div>
             <div class="pull-right">
-                <button class="btn btn-primary" id="next">Next</button>
+                <button class="btn btn-primary" id="next">Next&nbsp;<i class="fa fa-next" aria-hidden="true"></i></button>
             </div>
             <div style="clear: both;"></div>
         </div>
@@ -79,13 +79,13 @@
                 if(data.available == 0) {
                     // not working
                     x = x + '<div class="pull-right">';
-                        x = x +'<button class="btn btn-danger" onclick="fire('+data.id+')">Fire Cleaner</button>';
+                        x = x +'<button class="btn btn-danger" onclick="fire('+data.id+')"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Fire Cleaner</button>';
                     x = x + '</div>';
                 }
             } else {
                 // former working
                 x = x + '<div class="pull-right">';
-                    x = x +'<button class="btn btn-success" onclick="hire('+data.id+')">Hire Cleaner</button>';
+                    x = x +'<button class="btn btn-success" onclick="hire('+data.id+')"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Hire Cleaner</button>';
                 x = x + '</div>';
             }
         x = x + '</div>';
