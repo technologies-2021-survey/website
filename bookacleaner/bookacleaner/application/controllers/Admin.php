@@ -64,8 +64,18 @@ class Admin extends CI_Controller {
 	}
 
 	public function cleaners() {
-		
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		$data = array(
+			'title' => 'Admin Dashboard | BookACleaner',
+			'id' => $this->admin_model->user(),
+			'username' => $this->admin_model->user('username')
+		);
+
+		$this->load->view('Admin/Include/header', $data);
+		$this->load->view('Admin/Admin_cleaners', $data);
+		$this->load->view('Admin/Include/footer');
 	}
+
 	public function getCleaners($page_number = "") {
 		if($page_number != "") {
 			$page_number = $page_number;
