@@ -168,23 +168,35 @@ class Admin extends CI_Controller {
 	public function fireCleaner($id) {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
-		$data = array(
-			'employee' => 1,
-		);
-		$this->db->where('id', $id);
-		$this->db->update('cleaners', $data);
-		echo $this->admin_model->status(200, 'Successfully!');
+		$search = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `cleaners_id` = '".$id."'")->num_rows();
+
+		if($search == 0) {
+			$data = array(
+				'employee' => 1,
+			);
+			$this->db->where('id', $id);
+			$this->db->update('cleaners', $data);
+			echo $this->admin_model->status(200, 'Successfully!');
+		} else {
+			echo $this->admin_model->status(200, 'Error, this worker is working!');
+		}
 	}
 
 	public function hireCleaner($id) {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
-		$data = array(
-			'employee' => 0,
-		);
-		$this->db->where('id', $id);
-		$this->db->update('cleaners', $data);
-		echo $this->admin_model->status(200, 'Successfully!');
+		$search = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `cleaners_id` = '".$id."'")->num_rows();
+
+		if($search == 0) {
+			$data = array(
+				'employee' => 0,
+			);
+			$this->db->where('id', $id);
+			$this->db->update('cleaners', $data);
+			echo $this->admin_model->status(200, 'Successfully!');
+		} else {
+			echo $this->admin_model->status(200, 'Error, this worker is working!');
+		}
 	}
 }
 ?>

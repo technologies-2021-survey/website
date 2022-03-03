@@ -103,12 +103,19 @@
         url: "<?php echo base_url(); ?>admin/fireCleaner/"+ids,
             type: "GET",
             success: function(data){
-                notif.play();
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Successfully!'
-                });
-                getCleaners(id)
+                if(data.status == 203) {
+                    Toast.fire({
+                        icon: 'error',
+                        title: data.message
+                    });
+                } else {
+                    notif.play();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Successfully!'
+                    });
+                    getCleaners(id)
+                }
             }
         });
     }
@@ -117,12 +124,19 @@
         url: "<?php echo base_url(); ?>admin/hireCleaner/"+ids,
             type: "GET",
             success: function(data){
-                notif.play();
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Successfully!'
-                });
-                getCleaners(id)
+                if(data.status == 203) {
+                    Toast.fire({
+                        icon: 'error',
+                        title: data.message
+                    });
+                } else {
+                    notif.play();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Successfully!'
+                    });
+                    getCleaners(id)
+                }
             }
         });
     }
