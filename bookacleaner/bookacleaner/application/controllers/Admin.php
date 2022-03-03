@@ -114,10 +114,16 @@ class Admin extends CI_Controller {
 		$get_data = $this->db->query("SELECT * FROM `cleaners` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
 		foreach($get_data->result() as $row) {
+			$search = $this->db->query("SELECT COUNT(*) FROM `cleaners_on_work` WHERE `cleaners_id` = '".$row->id."'");
+			$search_result = $this->db->query($search)->row_array();
+			$total_rows = $result['count(*)'];
+
 			$array[] = array(
 				'id' =>  $row->id,
 				'cleaners_name' =>  $row->cleaners_name,
-				'cleaners_contact' =>  $row->cleaners_contact
+				'cleaners_contact' =>  $row->cleaners_contact,
+				'employee' => $row->employee,
+				'available' => $total_rows
 			);
 		};
 
@@ -149,15 +155,9 @@ class Admin extends CI_Controller {
 		$get_data = $this->db->query("SELECT * FROM `accounts` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
 		foreach($get_data->result() as $row) {
-			$search = $this->db->query("SELECT COUNT(*) FROM `cleaners_on_work` WHERE `cleaners_id` = '".$row->id."'");
-			$search_result = $this->db->query($search)->row_array();
-			$total_rows = $result['count(*)'];
-
 			$array[] = array(
 				'id' =>  $row->id,
-				'full_name' =>  $row->full_name,
-				'employee' => $row->employee,
-				'available' => $total_rows
+				'full_name' =>  $row->full_name
 			);
 		};
 
