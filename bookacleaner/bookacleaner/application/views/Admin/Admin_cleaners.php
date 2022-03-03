@@ -25,7 +25,7 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
-                if(data.length != "") {
+                if(data.length != 0) {
                     working = 0;
                 } else {
                     working = 1;
@@ -41,7 +41,7 @@
             success: function(data){
                 data = JSON.parse(data);
                 $('.cleaners-list').html("");
-                if(data.length != "") {
+                if(data.length != 0) {
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
                     }
