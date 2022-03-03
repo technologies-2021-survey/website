@@ -21,6 +21,9 @@
                 data = JSON.parse(data);
                 for(var i = 0; i < data.length; i++) {
                     addRow(data[i]);
+                    for(var s = 0; s < 1000; s++) {
+                        
+                    }
                 }
             }
         });
