@@ -37,7 +37,7 @@
         $('.row-'+data.id).hide();
         
         var duration = data.id * 100;
-        $('.row-'+data.id).slideToggle(duration);
+        $('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: duration, easing: 'easeOutBack'});
     }
 
     getCleaners(id);
