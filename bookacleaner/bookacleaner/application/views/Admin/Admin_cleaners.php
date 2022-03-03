@@ -45,7 +45,7 @@
                 if(data.available == 0) {
                     x = x + '<label class="label label-success">Available</label>';
                 } else {
-                    x = x + '<label class="label label-danger">Unavailable</label>';
+                    x = x + '<label class="label label-danger">On-duty</label>';
                 }
             } else {
                 x = x + '<label class="label label-default">Former employee</label>';
