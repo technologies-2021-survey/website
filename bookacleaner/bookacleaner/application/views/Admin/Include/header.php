@@ -110,7 +110,8 @@
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="<?=base_url('admin/cleaners');?>">Cleaner's List</a></li>
+						<li><a href="<?=base_url('admin/accounts');?>">Account's List</a></li>
+						<li><a href="<?=base_url('admin/cleaners');?>">Cleaner's List</a></li>
 						</ul>
 					</li>
 					</ul>
