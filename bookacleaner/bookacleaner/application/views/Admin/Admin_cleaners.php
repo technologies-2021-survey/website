@@ -73,12 +73,16 @@
             id--;
             if(getCleaners(id) == 1) {
                
+            } else {
+                id++;
             }
         });
         $('#next').click(function() {
             id++;
             if(getCleaners(id) == 1) {
                 
+            } else {
+                id--;
             }
         });
     });
