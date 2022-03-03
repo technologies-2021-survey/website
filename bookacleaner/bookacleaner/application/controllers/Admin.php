@@ -81,7 +81,7 @@ class Admin extends CI_Controller {
 		$total_rows = $result['count(*)'];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-		$sql = "SELECT * FROM `cleaners` LIMIT $offset, $no_of_records_per_page";
+		$sql = "SELECT * FROM `cleaners` ORDER BY `id` LIMIT $offset, $no_of_records_per_page";
 
 		$array = array();
 
