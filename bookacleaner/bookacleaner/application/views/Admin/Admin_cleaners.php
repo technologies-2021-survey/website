@@ -29,7 +29,7 @@
                 if(data.length != "") {
                     $('.cleaners-list').html("");
                     for(var i = 0; i < data.length * 1000; i++) {
-                        addRow(data[i]);
+                        addRow(i, data[i]);
                     }
                     if(type == "minus") {
                         id--;
@@ -48,8 +48,8 @@
             }
         });
     }
-    function addRow(data) {
-        var id = data.id;
+    function addRow(i, data) {
+        var id = i;
 
         var x = '<div class="cleaners-row row-'+id+'">';
             x = x + '<span>'+data.cleaners_name+'</span>';
