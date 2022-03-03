@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
-    var working = 0;
+    var working;
     function checkCleaners(id) {
         var s = "";
         $.ajax({
