@@ -36,6 +36,7 @@
                     } else if(type == "add") {
                         id++;
                     }
+                    console.log(id);
                 } else {
                     notif.play();
                     Toast.fire({
@@ -48,7 +49,7 @@
         });
     }
     function addRow(data) {
-        var id = data['id'];
+        var id = data.id;
 
         var x = '<div class="cleaners-row row-'+id+'">';
             x = x + '<span>'+data.cleaners_name+'</span>';
