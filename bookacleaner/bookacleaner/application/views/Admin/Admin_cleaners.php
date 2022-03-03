@@ -2,7 +2,10 @@
     <div class="box-container">
         <div class="box-body">
             <h3>Cleaner's List</h3>
-            <div class="cleaners-list" style="margin-bottom: 10px;">
+            <div class="pull-right">
+                <button class="btn btn-success">Add Cleaner</button>
+            </div>
+            <div class="cleaners-list" style="clear: both; margin-bottom: 10px;">
             </div>
             <div class="pull-left">
                 <button class="btn btn-primary" id="prev">Prev</button>
