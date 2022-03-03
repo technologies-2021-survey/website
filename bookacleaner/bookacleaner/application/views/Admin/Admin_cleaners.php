@@ -41,6 +41,15 @@
         var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + '<span>'+data.cleaners_name+'</span>';
             x = x + '<span>'+data.cleaners_contact+'</span>';
+            if(data.employee == 0) {
+                if(data.available == 1) {
+                    x = x + '<label class="label label-success">Available</label>';
+                } else {
+                    x = x + '<label class="label label-danger">Unavailable</label>';
+                }
+            } else {
+                x = x + '<label class="label label-default">Former employee</label>';
+            }
         x = x + '</div>';
         $('.cleaners-list').append(x);
         

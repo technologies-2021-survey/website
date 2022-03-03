@@ -2,7 +2,7 @@
     <div class="box-container">
         <div class="box-body">
             <h3>Account's List</h3>
-            <div class="cleaners-list" style="margin-bottom: 10px;">
+            <div class="accounts-list" style="margin-bottom: 10px;">
             </div>
             <div class="pull-left">
                 <button class="btn btn-primary" id="prev">Prev</button>
@@ -23,7 +23,7 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
-                $('.cleaners-list').html("");
+                $('.accounts-list').html("");
                 if(data.length != "") {
                     notif.play();
                     for(var i = 0; i < data.length; i++) {
@@ -38,20 +38,12 @@
         });
     }
     function addRow(i, data) {
-        var x = '<div class="cleaners-row row-'+data.id+'">';
+        var x = '<div class="accounts-row row-'+data.id+'">';
             x = x + '<span>'+data.full_name+'</span>';
             x = x + '<span>Administrator</span>';
-            if(data.employee == 0) {
-                if(data.available == 1) {
-                    x = x + '<label class="label label-success">Available</label>';
-                } else {
-                    x = x + '<label class="label label-danger">Unavailable</label>';
-                }
-            } else {
-                x = x + '<label class="label label-default">Former employee</label>';
-            }
+        }
         x = x + '</div>';
-        $('.cleaners-list').append(x);
+        $('.accounts-list').append(x);
         
         var durations = i * 500;
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
@@ -59,10 +51,10 @@
     }
 
     function errorRow() {
-        var x = '<div class="cleaners-row row-0">';
+        var x = '<div class="accounts-row row-0">';
             x = x + '<span style="text-align:center;">No results found.</span>';
         x = x + '</div>';
-        $('.cleaners-list').append(x);
+        $('.accounts-list').append(x);
         
         var durations = 1 * 700;
         $('.row-0').hide().css({ opacity: 0, marginLeft: "200px"});
