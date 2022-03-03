@@ -19,11 +19,8 @@
     var id = 1;
     function getCleaners(id) {
         $.ajax({
-            url: "<?php echo base_url(); ?>admin/getCleaners",
+            url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
             type: "GET",
-            data: {
-                id: id,					
-            },
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
