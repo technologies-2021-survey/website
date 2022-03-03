@@ -26,13 +26,14 @@
         });
     }
     function addRow(data) {
-        var x = '<div class="cleaners-row row-'+data.id+'" style="opacity:margin-left:-200px;">';
+        var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + data.cleaners_name;
             x = x + '<br>';
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
-		$('.row-'+data.id).show().css({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'});
+        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "-200px"});
+		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'});
     }
 
     getCleaners(id);

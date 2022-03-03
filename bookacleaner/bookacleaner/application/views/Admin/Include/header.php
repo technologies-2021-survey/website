@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		
         <script type="text/javascript" src="<?=base_url('assets/js/jquery-1.10.2.min.js');?>"></script>
+        <script type="text/javascript" src="<?=base_url('assets/js/jquery.easing.1.3.js');?>"></script>
 		<script type="text/javascript" src="<?=base_url('assets/js/bootstrap.min.js');?>"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>dist/js/adminlte.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
