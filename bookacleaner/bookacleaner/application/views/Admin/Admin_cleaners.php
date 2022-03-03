@@ -42,7 +42,7 @@
             x = x + '<span>'+data.cleaners_name+'</span>';
             x = x + '<span>'+data.cleaners_contact+'</span>';
             if(data.employee == 0) {
-                if(data.available == 1) {
+                if(data.available == 0) {
                     x = x + '<label class="label label-success">Available</label>';
                 } else {
                     x = x + '<label class="label label-danger">Unavailable</label>';
