@@ -112,6 +112,9 @@
             var s = id + 1;
             checkCleaners(s, 'add');
         });
+        
+    });
+    $(function() {
         $('.hire').click(function() {
             var ids = $(this).attr("data-id");
             alert(ids);
@@ -119,6 +122,6 @@
         $('.fire').click(function() {
             var ids = $(this).attr("data-id");
             alert(ids);
-        });
+        }); 
     });
 </script>
