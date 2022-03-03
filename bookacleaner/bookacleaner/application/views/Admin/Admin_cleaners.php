@@ -80,17 +80,28 @@
 
     getCleaners(id);
 
+    function minus() {
+        if(working == 0) {
+            id--;
+            getCleaners(id);
+        } else if(working == 1) {
+            errorRow();
+        }
+    }
+    function add() {
+        if(working == 0) {
+            id++;
+            getCleaners(id);
+        } else if(working == 1) {
+            errorRow();
+        }
+    }
     $(document).ready(function() {
         $('#prev').click(function() {
             if(id > 2) {
                 var s = id - 1;
                 checkCleaners(s);
-                if(working == 0) {
-                    id--;
-                    getCleaners(id);
-                } else if(working == 1) {
-                    errorRow();
-                }
+                minus();
             } else {
                 errorRow();
             }
@@ -98,12 +109,7 @@
         $('#next').click(function() {
             var s = id + 1;
             checkCleaners(s);
-            if(working == 0) {
-                id++;
-                getCleaners(id);
-            } else if(working == 1) {
-                errorRow();
-            }
+            add();
         });
     });
 </script>
