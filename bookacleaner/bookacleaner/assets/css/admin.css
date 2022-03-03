@@ -182,7 +182,7 @@ div, a {
 }
 
 .accounts-row:hover, .cleaners-row:hover {
-    opacity: 0.8;
+    background: #e8e8e8;
 }
 .content h3 {
     font-family: 'Futura',sans-serif;
