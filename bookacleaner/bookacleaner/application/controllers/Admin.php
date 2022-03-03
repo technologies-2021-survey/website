@@ -103,7 +103,7 @@ class Admin extends CI_Controller {
 			);
 		};
 
-		echo json_encode($array);
+		echo json_encode(array("row" => $array));
 	}
 }
 ?>
