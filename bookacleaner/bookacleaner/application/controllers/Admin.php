@@ -95,7 +95,7 @@ class Admin extends CI_Controller {
 			);
 		};
 
-		return json_encode($array);
+		echo json_encode($array);
 	}
 }
 ?>
