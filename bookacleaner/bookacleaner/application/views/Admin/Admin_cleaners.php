@@ -10,10 +10,10 @@
             <div class="cleaners-list" style="clear: both; margin-bottom: 10px;">
             </div>
             <div class="pull-left">
-                <button class="btn btn-primary" id="prev"><i class="fa fa-prev" aria-hidden="true"></i>&nbsp;Prev</button>
+                <button class="btn btn-primary" id="prev"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
             </div>
             <div class="pull-right">
-                <button class="btn btn-primary" id="next">Next&nbsp;<i class="fa fa-next" aria-hidden="true"></i></button>
+                <button class="btn btn-primary" id="next">Next&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></button>
             </div>
             <div style="clear: both;"></div>
         </div>
