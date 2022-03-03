@@ -73,7 +73,7 @@
     $(document).ready(function() {
         $('#prev').click(function() {
             if(checkAccounts(id-1) == 0) {
-                id--;
+                id -= 1;
                 getAccounts(id);
             } else {
                 errorRow();
@@ -81,7 +81,7 @@
         });
         $('#next').click(function() {
             if(checkAccounts(id+1) == 0) {
-                id++;
+                id += 1;
                 getAccounts(id);
             } else {
                 errorRow();

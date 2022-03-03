@@ -82,7 +82,7 @@
         $('#prev').click(function() {
             var s = id - 1;
             if(checkCleaners(s) == 0) {
-                id--;
+                id -= 1;
                 getCleaners(id);
             } else if(checkCleaners(s) == 1) {
                 errorRow();
@@ -91,7 +91,7 @@
         $('#next').click(function() {
             var s = id + 1;
             if(checkCleaners(s) == 0) {
-                id++;
+                id += 1;
                 getCleaners(id);
             } else if(checkCleaners(s) == 1) {
                 errorRow();
