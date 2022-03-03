@@ -17,34 +17,38 @@
 
 <script type="text/javascript">
     var id = 1;
-    function getCleaners(ids, type = "") {
+    function checkCleaners(ids, type = "") {
+        if(type == "minus") {
+            ids -= 1;
+        } else if(type == "add") {
+            ids += 1;
+        }
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
+                if(data.length != "") {
+                    return 0;
+                } else {
+                    return 1;
+                }
+                
+            }
+        });
+    }
+    function getCleaners(id) {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
                 $('.cleaners-list').html("");
                 if(data.length != "") {
-                    notif.play();
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
                     }
-
-                    if(type == "minus") {
-                        id -= 1;
-                    } else if(type == "add") {
-                        id += 1;
-                    }
-                } else {
-                    notif.play();
-                    errorRow();
-                    if(type == "minus") {
-                        id += 1;
-                    } else if(type == "add") {
-                        id -= 1;
-                    }
                 }
-                
             }
         });
     }
@@ -89,19 +93,20 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id <= 1) {
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Error! There\'s no data'
-                });
-            } else {
+            if(checkCleaners(id-1) == 1) {
                 id--;
-                getCleaners(id, 'minus');
+                getCleaners(id);
+            } else {
+                errorRow();
             }
         });
         $('#next').click(function() {
-            id++;
-            getCleaners(id, 'add');
+            if(checkCleaners(id+1) == 1) {
+                id++;
+                getCleaners(id);
+            } else {
+                errorRow();
+            }
         });
     });
 </script>
