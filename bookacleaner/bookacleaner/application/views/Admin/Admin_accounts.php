@@ -41,7 +41,6 @@
         var x = '<div class="accounts-row row-'+data.id+'">';
             x = x + '<span>'+data.full_name+'</span>';
             x = x + '<span>Administrator</span>';
-        }
         x = x + '</div>';
         $('.accounts-list').append(x);
         
