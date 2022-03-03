@@ -18,7 +18,7 @@
                 id: id,					
             },
             success: function(data){
-                console.log(data.length);
+                data = JSON.parse(data);
                 for(var i = 0; i < data.length; i++) {
                     addRow(data[i]);
                 }
