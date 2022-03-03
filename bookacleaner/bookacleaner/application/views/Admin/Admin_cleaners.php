@@ -28,14 +28,14 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow(data[i]);
                     }
-                    if(type == "add") {
-                        id++;
-                    } else if(type == "minus") {
-                        id--;
-                    }
                 } else {
                     errorRow();
-                    return 0;
+                    if(type == "add") {
+                        id--;
+                        
+                    } else if(type == "minus") {
+                        id++;
+                    }
                 }
                 
             }
@@ -74,10 +74,12 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            getCleaners(id+1, 'minus');
+            id--;
+            getCleaners(id, 'minus');
         });
         $('#next').click(function() {
-            getCleaners(id+1, 'add');
+            id++;
+            getCleaners(id, 'add');
         });
     });
 </script>
