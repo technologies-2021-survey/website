@@ -8,8 +8,9 @@
                 <button class="btn btn-primary">Prev</button>
             </div>
             <div class="pull-right">
-            <button class="btn btn-primary">Next</button>
+                <button class="btn btn-primary">Next</button>
             </div>
+            <div style="clear: both;"></div>
         </div>
     </div>
 </div>
