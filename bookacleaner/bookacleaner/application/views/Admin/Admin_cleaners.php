@@ -26,7 +26,7 @@
         });
     }
     function addRow(data) {
-        var x = '<div class="cleaners-row row-'+data.id+'" style="overflow: hidden;">';
+        var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + data.cleaners_name;
             x = x + '<br>';
             x = x + data.cleaners_contact;
@@ -36,5 +36,5 @@
 		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'});
     }
 
-    getCleaners(0);
+    getCleaners(1);
 </script>
