@@ -18,11 +18,6 @@
 <script type="text/javascript">
     var id = 1;
     function checkCleaners(ids, type = "") {
-        if(type == "minus") {
-            ids -= 1;
-        } else if(type == "add") {
-            ids += 1;
-        }
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
             type: "GET",
