@@ -33,11 +33,10 @@
             x = x + data.cleaners_contact;
         x = x + '</div>';
         $('.cleaners-list').append(x);
-        // hide
-        $('.row-'+data.id).hide();
         
         var duration = data.id * 100;
-        $('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: duration, easing: 'easeOutBack'});
+        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row-'+data.id).show().animate({ display: 1, marginLeft: "0px"}, { duration: duration, easing: 'easeOutBack'});
     }
 
     getCleaners(id);
