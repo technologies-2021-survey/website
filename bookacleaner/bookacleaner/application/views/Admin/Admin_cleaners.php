@@ -32,13 +32,6 @@
                 } else {
                     notif.play();
                     errorRow();
-                    if(type == "add") {
-                        id--;
-                        
-                    }
-                    if(type == "minus") {
-                        id++;
-                    }
                 }
                 
             }
