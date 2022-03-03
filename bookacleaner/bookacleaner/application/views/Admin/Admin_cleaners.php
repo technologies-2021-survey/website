@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
-    function checkCleaners(ids, type = "") {
+    function checkCleaners(ids) {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
             type: "GET",

@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
-    function checkAccounts(ids, type = "") {
+    function checkAccounts(ids) {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getAccounts/"+ids,
             type: "GET",
@@ -33,9 +33,9 @@
             }
         });
     }
-    function getAccounts(ids, type = "") {
+    function getAccounts(ids) {
         $.ajax({
-            url: "<?php echo base_url(); ?>admin/getAccounts/"+ids,
+            url: "<?php echo base_url(); ?>admin/getAccounts/"+id,
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
