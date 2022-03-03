@@ -84,7 +84,7 @@
         $('#prev').click(function() {
             var s = id - 1;
             checkCleaners(s);
-            if(working == "0") {
+            if(working == 0) {
                 id--;
                 getCleaners(id);
             } else {
@@ -94,7 +94,7 @@
         $('#next').click(function() {
             var s = id + 1;
             checkCleaners(s);
-            if(working == "0") {
+            if(working == 0) {
                 id++;
                 getCleaners(id);
             } else {
