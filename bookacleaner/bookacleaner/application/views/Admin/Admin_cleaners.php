@@ -71,15 +71,11 @@
                 if(id > 1) {
                     id--;
                 }
-            } else {
-                id++;
             }
         });
         $('#next').click(function() {
             if(getCleaners(id+1) == 1) {
                 id++;
-            } else {
-                id--;
             }
         });
     });
