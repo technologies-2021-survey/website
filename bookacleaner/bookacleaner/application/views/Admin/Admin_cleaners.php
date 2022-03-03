@@ -18,7 +18,7 @@
 <script type="text/javascript">
     var id = 1;
     var working;
-    function checkCleaners(id) {
+    function checkCleaners(id, type = "") {
         var s = "";
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
@@ -26,9 +26,15 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != 0) {
-                    working = 0;
+                    if(type == "add") {
+                        id++;
+                        getCleaners(id);
+                    } else if(type == "minus") {
+                        id--;
+                        getCleaners(id);
+                    }
                 } else {
-                    working = 1;
+                    errorRow();
                 }
                 
             }
@@ -80,36 +86,18 @@
 
     getCleaners(id);
 
-    function minus() {
-        if(working == 1) {
-            errorRow();
-        } else if(working == 0) {
-            id--;
-            getCleaners(id);
-        } 
-    }
-    function add() {
-        if(working == 1) {
-            errorRow();
-        } else if(working == 0) {
-            id++;
-            getCleaners(id);
-        } 
-    }
     $(document).ready(function() {
         $('#prev').click(function() {
             if(id > 2) {
                 var s = id - 1;
-                checkCleaners(s);
-                minus();
+                checkCleaners(s, 'minus');
             } else {
                 errorRow();
             }
         });
         $('#next').click(function() {
             var s = id + 1;
-            checkCleaners(s);
-            add();
+            checkCleaners(s, 'add');
         });
     });
 </script>
