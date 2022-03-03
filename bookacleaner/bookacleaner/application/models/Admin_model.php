@@ -48,5 +48,9 @@ class Admin_model extends CI_Model {
             }
         }
     }
+    public function updateCleaners($id, $data) {
+        $this->db->where('id', $id);
+		$this->db->update('cleaners', $data);
+    }
 }
 ?>

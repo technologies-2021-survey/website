@@ -174,8 +174,7 @@ class Admin extends CI_Controller {
 			$data = array(
 				'employee' => 1,
 			);
-			$this->db->where('id', $id);
-			$this->db->update('cleaners', $data);
+			$this->admin_model->updateCleaners($id, $data);
 			echo $this->admin_model->status(200, 'Successfully!');
 		} else {
 			echo $this->admin_model->status(203, 'Error, this worker is working!');
@@ -191,8 +190,7 @@ class Admin extends CI_Controller {
 			$data = array(
 				'employee' => 0,
 			);
-			$this->db->where('id', $id);
-			$this->db->update('cleaners', $data);
+			$this->admin_model->updateCleaners($id, $data);
 			echo $this->admin_model->status(200, 'Successfully!');
 		} else {
 			echo $this->admin_model->status(203, 'Error, this worker is working!');
