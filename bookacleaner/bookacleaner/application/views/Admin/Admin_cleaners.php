@@ -17,15 +17,13 @@
 
 <script type="text/javascript">
     var id = 1;
-    function checkCleaners(ids) {
+    function checkCleaners(id) {
         $.ajax({
-            url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
+            url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
-                    console.log("wow")
-                    console.log(data)
                     return 0;
                 } else {
                     return 1;
