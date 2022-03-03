@@ -27,7 +27,7 @@
                 if(data.length != "") {
                     notif.play();
                     for(var i = 0; i < data.length; i++) {
-                        addRow(data[i]);
+                        addRow(i, data[i]);
                     }
                 } else {
                     notif.play();
@@ -44,14 +44,14 @@
             }
         });
     }
-    function addRow(data) {
+    function addRow(i, data) {
         var x = '<div class="cleaners-row row-'+data.id+'">';
             x = x + '<span>'+data.cleaners_name+'</span>';
             x = x + '<span>'+data.cleaners_contact+'</span>';
         x = x + '</div>';
         $('.cleaners-list').append(x);
         
-        var durations = data.id * 700;
+        var durations = i * 700;
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
