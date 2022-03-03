@@ -33,7 +33,7 @@
         x = x + '</div>';
         $('.cleaners-list').append(x);
         
-        var duration = data.id * 100;
+        var duration = data.id * 1000;
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: duration, easing: 'easeOutBack'});
     }
