@@ -25,14 +25,13 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
-                    s = 0;
+                    return "0";
                 } else {
-                    s = 1;
+                    return "1";
                 }
                 
             }
         });
-        return s;
     }
     function getCleaners(id) {
         $.ajax({
@@ -83,19 +82,19 @@
     $(document).ready(function() {
         $('#prev').click(function() {
             var s = id - 1;
-            if(checkCleaners(s) == 0) {
+            if(checkCleaners(s) == "0") {
                 id--;
                 getCleaners(id);
-            } else if(checkCleaners(s) == 1) {
+            } else {
                 errorRow();
             }
         });
         $('#next').click(function() {
             var s = id + 1;
-            if(checkCleaners(s) == 0) {
+            if(checkCleaners(s) == "0") {
                 id++;
                 getCleaners(id);
-            } else if(checkCleaners(s) == 1) {
+            } else {
                 errorRow();
             }
         });
