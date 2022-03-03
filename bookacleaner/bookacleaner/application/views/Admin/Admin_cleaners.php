@@ -18,10 +18,10 @@
 <script type="text/javascript">
     var id = 1;
     var working;
-    function checkCleaners(id, type = "") {
+    function checkCleaners(ids, type = "") {
         var s = "";
         $.ajax({
-            url: "<?php echo base_url(); ?>admin/getCleaners/"+id,
+            url: "<?php echo base_url(); ?>admin/getCleaners/"+ids,
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
