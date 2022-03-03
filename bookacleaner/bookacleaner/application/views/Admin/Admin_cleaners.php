@@ -34,12 +34,6 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
                     }
-
-                    if(type == "minus") {
-                        id -= 1;
-                    } else if(type == "add") {
-                        id += 1;
-                    }
                 } else {
                     notif.play();
                     errorRow();
