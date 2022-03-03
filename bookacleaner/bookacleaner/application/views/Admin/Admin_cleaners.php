@@ -17,6 +17,7 @@
 
 <script type="text/javascript">
     var id = 1;
+    var working = 0;
     function checkCleaners(id) {
         var s = "";
         $.ajax({
@@ -25,9 +26,9 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
-                    return "0";
+                    working = 0;
                 } else {
-                    return "1";
+                    working = 1;
                 }
                 
             }
@@ -82,7 +83,8 @@
     $(document).ready(function() {
         $('#prev').click(function() {
             var s = id - 1;
-            if(checkCleaners(s) == "0") {
+            checkCleaners(s);
+            if(working == "0") {
                 id--;
                 getCleaners(id);
             } else {
@@ -91,7 +93,8 @@
         });
         $('#next').click(function() {
             var s = id + 1;
-            if(checkCleaners(s) == "0") {
+            checkCleaners(s);
+            if(working == "0") {
                 id++;
                 getCleaners(id);
             } else {
