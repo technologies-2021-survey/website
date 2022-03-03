@@ -74,13 +74,13 @@
                 if(data.available == 0) {
                     // not working
                     x = x + '<div class="pull-right">';
-                        x = x +'<button class="btn btn-danger fire" data-id="'+data.id+'">Fire Cleaner</button>';
+                        x = x +'<button class="btn btn-danger" onclick="fire('+data.id+')">Fire Cleaner</button>';
                     x = x + '</div>';
                 }
             } else {
                 // former working
                 x = x + '<div class="pull-right">';
-                    x = x +'<button class="btn btn-success hire" data-id="'+data.id+'">Hire Cleaner</button>';
+                    x = x +'<button class="btn btn-success" onclick="hire('+data.id+')">Hire Cleaner</button>';
                 x = x + '</div>';
             }
         x = x + '</div>';
@@ -98,7 +98,34 @@
         });
     }
     getCleaners(id);
-
+    function fire(ids) {
+        $.ajax({
+        url: "<?php echo base_url(); ?>admin/fireCleaner/"+ids,
+            type: "GET",
+            success: function(data){
+                notif.play();
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Successfully!'
+                });
+                getCleaners(id)
+            }
+        });
+    }
+    function hire(ids) {
+        $.ajax({
+        url: "<?php echo base_url(); ?>admin/hireCleaner/"+ids,
+            type: "GET",
+            success: function(data){
+                notif.play();
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Successfully!'
+                });
+                getCleaners(id)
+            }
+        });
+    }
     $(document).ready(function() {
         $('#prev').click(function() {
             if(id > 1) {
@@ -112,37 +139,5 @@
             var s = id + 1;
             checkCleaners(s, 'add');
         });
-        $('.hire').click(function() {
-            alert(0);
-            var ids = $(this).attr("data-id");
-            $.ajax({
-            url: "<?php echo base_url(); ?>admin/hireCleaner/"+id,
-                type: "GET",
-                success: function(data){
-                    notif.play();
-                    Toast.fire({
-                        icon: 'success',
-                        title: 'Successfully!'
-                    });
-                    getCleaners(id)
-                }
-            });
-        });
-        $('.fire').click(function() {
-            alert(1);
-            var ids = $(this).attr("data-id");
-            $.ajax({
-            url: "<?php echo base_url(); ?>admin/fireCleaner/"+id,
-                type: "GET",
-                success: function(data){
-                    notif.play();
-                    Toast.fire({
-                        icon: 'success',
-                        title: 'Successfully!'
-                    });
-                    getCleaners(id)
-                }
-            });
-        }); 
     });
 </script>
