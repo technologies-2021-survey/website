@@ -16,7 +16,7 @@
 </div>
 
 <script type="text/javascript">
-    var id = 1;
+    var id = 0;
     var working;
     function checkCleaners(id) {
         var s = "";
@@ -98,7 +98,7 @@
     }
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(id > 1) {
+            if(id > 0) {
                 var s = id - 1;
                 checkCleaners(s);
                 minus();
