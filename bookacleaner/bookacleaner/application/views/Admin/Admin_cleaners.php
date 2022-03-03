@@ -37,7 +37,7 @@
         
         var durations = id * 1000;
         $('.row-'+id).hide().css({ opacity: 0, marginLeft: "200px"});
-        $('.row-'+id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: durations, easing: 'easeOutBack'});
+        $('.row-'+id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: durations, easing: 'easeOutBack'});
         console.log(durations)
     }
 
