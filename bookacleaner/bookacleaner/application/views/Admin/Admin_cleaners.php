@@ -73,7 +73,7 @@
             
             if(getCleaners(id-1) == 1) {
                 if(id < 1) {
-                    errorRow();
+                    //errorRow();
                 } else {
                     id--;
                 }
