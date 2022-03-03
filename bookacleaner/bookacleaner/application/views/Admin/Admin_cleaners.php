@@ -45,7 +45,7 @@
                     });
                     return false;
                 }
-                console.log("++++++++++++++++++++++++++++++ "+id+" +++++++++++++++++++++++");
+                console.log("++++++++++++++++++++++++++++++"+id+"+++++++++++++++++++++++");
             }
         });
     }
@@ -64,7 +64,7 @@
         console.log(durations)
     }
 
-    getCleaners(id);
+    getCleaners(id, "");
 
     $(document).ready(function() {
         $('#prev').click(function() {
