@@ -17,17 +17,23 @@
 
 <script type="text/javascript">
     var id = 1;
-    function checkAccounts(ids) {
+    function checkAccounts(ids, type = "") {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getAccounts/"+ids,
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
-                    console.log("wow")
-                    return 0;
+                    notif.play();
+                    if(type == "add") {
+                        id++;
+                        getAccounts(id);
+                    } else if(type == "minus") {
+                        id--;
+                        getAccounts(id);
+                    }
                 } else {
-                    return 1;
+                    errorRow();
                 }
                 
             }
@@ -72,20 +78,16 @@
 
     $(document).ready(function() {
         $('#prev').click(function() {
-            if(checkAccounts(id-1) == 0) {
-                id -= 1;
-                getAccounts(id);
+            if(id > 1) {
+                var s = id - 1;
+                checkAccounts(s, 'minus');
             } else {
                 errorRow();
             }
         });
         $('#next').click(function() {
-            if(checkAccounts(id+1) == 0) {
-                id += 1;
-                getAccounts(id);
-            } else {
-                errorRow();
-            }
+            var s = id + 1;
+            checkAccounts(s, 'add');
         });
     });
 </script>
