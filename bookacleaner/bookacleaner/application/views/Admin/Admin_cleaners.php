@@ -31,8 +31,8 @@
             x = x + '<br>';
             x = x + data.cleaners_contact;
         x = x + '</div>';
-        $('.cleaners-list').delay(5000).append(x);
-		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'});
+        $('.cleaners-list').append(x);
+		$('.row-'+data.id).show().animate({ opacity: 1, marginLeft: "0px"}, { duration: 'slow', easing: 'easeOutBack'}).delay(5000);
     }
 
     getCleaners(id);
