@@ -110,7 +110,7 @@
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="#">Hello world!</a></li>
+							<li><a href="<?=base_url('admin/cleaners');?>">Cleaner's List</a></li>
 						</ul>
 					</li>
 					</ul>
