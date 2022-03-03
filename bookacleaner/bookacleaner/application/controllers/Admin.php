@@ -76,6 +76,19 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Include/footer');
 	}
 
+	public function accounts() {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		$data = array(
+			'title' => 'Accounts\'s List | BookACleaner',
+			'id' => $this->admin_model->user(),
+			'username' => $this->admin_model->user('username')
+		);
+
+		$this->load->view('Admin/Include/header', $data);
+		$this->load->view('Admin/Admin_accounts', $data);
+		$this->load->view('Admin/Include/footer');
+	}
+
 	public function getCleaners($page_number = "") {
 		if($page_number != "") {
 			if($page_number <= 0) {
@@ -105,6 +118,40 @@ class Admin extends CI_Controller {
 				'id' =>  $row->id,
 				'cleaners_name' =>  $row->cleaners_name,
 				'cleaners_contact' =>  $row->cleaners_contact
+			);
+		};
+
+		echo json_encode($array);
+	}
+
+	public function getAccounts($page_number = "") {
+		if($page_number != "") {
+			if($page_number <= 0) {
+				$page_number = 1; 
+			} else {
+				$page_number = $page_number;
+			}
+			
+		} else {
+			$page_number = 1;
+		}
+		$no_of_records_per_page = 10;
+        $offset = ($page_number - 1) * $no_of_records_per_page;
+
+		$total_pages_sql = "SELECT COUNT(*) FROM `accounts`";
+        $result = $this->db->query($total_pages_sql)->row_array();
+
+		$total_rows = $result['count(*)'];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+		$array = array();
+
+		$get_data = $this->db->query("SELECT * FROM `accounts` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
+
+		foreach($get_data->result() as $row) {
+			$array[] = array(
+				'id' =>  $row->id,
+				'full_name' =>  $row->full_name,
 			);
 		};
 
