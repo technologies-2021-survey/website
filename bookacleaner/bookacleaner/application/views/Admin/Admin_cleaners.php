@@ -18,6 +18,7 @@
                 id: id,					
             },
             success: function(data){
+                console.log(data.length);
                 for(var i = 0; i < data.length; i++) {
                     addRow(data[i]);
                 }
