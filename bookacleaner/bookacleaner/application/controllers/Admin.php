@@ -89,7 +89,7 @@ class Admin extends CI_Controller {
 
 		foreach($get_data->result() as $row) {
 			$array[] = array(
-				'id ' =>  $row->id,
+				'id' =>  $row->id,
 				'cleaners_name' =>  $row->cleaners_name,
 				'cleaners_contact' =>  $row->cleaners_contact
 			);
