@@ -199,11 +199,13 @@
                     else if(data.service_required[zz].choice == 5) { x = x + '&nbsp;&nbsp;Aircon Cleaning<br/>'; } 
                 }
                 x = x + '<br/>';
-                x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes+' <br/><br/>';
+                x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes;
                 if(data.status == "Pending") {
-                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;" onclick="approveThis('+data.id+')">Approve</button>';
-                    x = x +  '<button class="btn btn-danger" onclick="cancelThis('+data.id+')">Cancel</button>';
+                    x = x + '<br/><br/>';
+                    x = x + '<button class="btn btn-success" style="margin-right: 5px;" onclick="approveThis('+data.id+')">Approve</button>';
+                    x = x + '<button class="btn btn-danger" onclick="cancelThis('+data.id+')">Cancel</button>';
                 } else if(data.status == "Working") {
+                    x = x + '<br/><br/>';
                     if(data.work_id != "") {
                         x = x + '<button class="btn btn-success" style="margin-right: 5px;" onclick="doneThis('+data.id+')">Done working</button>';
                     } else {
