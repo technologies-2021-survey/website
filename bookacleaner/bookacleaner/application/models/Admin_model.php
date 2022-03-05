@@ -60,6 +60,9 @@ class Admin_model extends CI_Model {
 		$this->db->insert('cleaners', $data);
         return 'Success';
     }
-
+    public function updateBookings($id, $data) {
+        $this->db->where('id', $id);
+		$this->db->update('bookings', $data);
+    }
 }
 ?>

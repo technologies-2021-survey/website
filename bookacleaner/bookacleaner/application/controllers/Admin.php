@@ -279,5 +279,46 @@ class Admin extends CI_Controller {
 
 		echo json_encode($array);
 	}
+	public function approveThis($id) {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$search = $this->db->query("SELECT * FROM `bookings` WHERE `id` = '".$id."' AND `status` = 'Pending'")->num_rows();
+
+		if($search == 1) {
+			$search2 = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$id."'")->num_rows();
+			if($search2 == 0) {
+				$data = array(
+					'status' => 'Working',
+				);
+				$this->admin_model->updateBookings($id, $data);
+				echo $this->admin_model->status(200, 'Successfully!');
+			} else {
+				echo $this->admin_model->status(203, 'Error, there\'s someone work this job!');
+			}
+		} else {
+			echo $this->admin_model->status(203, 'Error, no results found.');
+		}
+	}
+
+	public function cancelThis($id) {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$search = $this->db->query("SELECT * FROM `bookings` WHERE `id` = '".$id."' AND `status` = 'Pending'")->num_rows();
+
+		if($search == 1) {
+			$search2 = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$id."'")->num_rows();
+			if($search2 == 0) {
+				$data = array(
+					'status' => 'Cancelled',
+				);
+				$this->admin_model->updateBookings($id, $data);
+				echo $this->admin_model->status(200, 'Successfully!');
+			} else {
+				echo $this->admin_model->status(203, 'Error, there\'s someone work this job!');
+			}
+		} else {
+			echo $this->admin_model->status(203, 'Error, no results found.');
+		}
+	}
 }
 ?>
