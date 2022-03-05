@@ -161,6 +161,7 @@
                     x = x +  '<label class="label label-default">Pending</label>';
                 } else if(data.status == "Working") {
                     x = x +  '<label class="label label-warning">Working</label>';
+                    x = x +  '<label class="label label-warning">Working by: '+data.work_name+'</label>';
                 } else if(data.status == "Completed") {
                     x = x +  '<label class="label label-success">Completed</label>';
                 } else if(data.status == "Cancelled") {
