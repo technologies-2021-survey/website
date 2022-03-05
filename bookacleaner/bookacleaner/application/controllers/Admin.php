@@ -67,7 +67,7 @@ class Admin extends CI_Controller {
 	public function dashboard() {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 		$data = array(
-			'title' => 'Cleaner\'s List | BookACleaner',
+			'title' => 'Dashboard | BookACleaner',
 			'id' => $this->admin_model->user(),
 			'username' => $this->admin_model->user('username')
 		);
