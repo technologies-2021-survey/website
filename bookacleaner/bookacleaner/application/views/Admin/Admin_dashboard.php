@@ -177,8 +177,24 @@
                 x = x + '<b>Mobile Number:</b> '+data.mobile_number+' <br/>';
                 x = x + '<b>E-mail:</b> '+data.email+' <br/>';
                 x = x + '<b>Address:</b> '+data.address+' <br/>';
-                x = x + '<b>Cleaning:</b> '+data.cleaning+' <br/>';
-                x = x + '<b>SQM:</b> '+data.sqm+' <br/>';
+                x = x + '<b>Cleaning:</b> ';
+                if(data.cleaning == 1) { x = x + 'Appartment'; }
+                else if(data.cleaning == 2) { x = x + 'House'; }
+                else if(data.cleaning == 3) { x = x + 'Condo'; }
+                else if(data.cleaning == 4) { x = x + 'Office'; }
+                else if(data.cleaning == 5) { x = x + 'Others (Plesase specify in NOTES)'; }
+                x = x + '<br/>';
+                x = x + '<b>How big is the space that needs cleaning? (sqm.):</b> '+data.sqm+' sqm.<br/>';
+                x = x + '<b>Service Required:<br/>';
+                for(var zz = 0; zz < data.service_required.length; zz++) {
+                    if(data.service_required[zz] == 1) { x = x + 'Deep Cleaning<br/>'; } 
+                    else if(data.service_required[zz] == 2) { x = x + 'Disinfection Service<br/>'; } 
+                    else if(data.service_required[zz] == 3) { x = x + 'Move In & Move Out Cleaning<br/>'; } 
+                    else if(data.service_required[zz] == 4) { x = x + 'Upholstery Cleaning<br/>'; } 
+                    else if(data.service_required[zz] == 5) { x = x + 'Steam Cleaning<br/>'; } 
+                    else if(data.service_required[zz] == 6) { x = x + 'Aircon Cleaning<br/>'; } 
+                }
+                x = x + '<br/>';
                 x = x + '<b>Comments/Notes:</b> '+data.comments_or_notes+' <br/>';
             x = x + '</div>';
         x = x + '</div>';
