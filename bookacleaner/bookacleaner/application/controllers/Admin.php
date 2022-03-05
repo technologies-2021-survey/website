@@ -241,7 +241,7 @@ class Admin extends CI_Controller {
 		foreach($get_data->result() as $row) {
 			// who's working?
 			$work_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'")->result();
-			$work_cleaner = ($work_query->cleaners_id != "") ? $work_query->cleaners_id : "";
+			$work_cleaner = ($work_query->cleaners_id != "") ? $work_query->cleaners_id : $work_query->cleaners_id;
 
 			// service required
 			$service_required = array();
@@ -265,8 +265,7 @@ class Admin extends CI_Controller {
 				'sqm' => $row->sqm,
 				'comments_or_notes' => $row->comments_or_notes,
 				'service_required' => $service_required,
-				'work' => $work_cleaner,
-				'work2' => $work_query->cleaners_id
+				'work' => $work_cleaner
 			);
 		};
 
