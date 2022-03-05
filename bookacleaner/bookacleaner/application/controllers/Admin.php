@@ -73,7 +73,7 @@ class Admin extends CI_Controller {
 		);
 
 		$this->load->view('Admin/Include/header', $data);
-		$this->load->view('Admin/Admin_cleaners', $data);
+		$this->load->view('Admin/Admin_dashboard', $data);
 		$this->load->view('Admin/Include/footer');
 	}
 
