@@ -199,7 +199,11 @@
                     x = x +  '<button class="btn btn-success" style="margin-right: 5px;">Approve</button>';
                     x = x +  '<button class="btn btn-danger">Cancel</button>';
                 } else if(data.status == "Working") {
-                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;">Done working</button>';
+                    if(data.work_id != "") {
+                        x = x + '<button class="btn btn-success" style="margin-right: 5px;">Done working</button>';
+                    } else {
+                        x = x + '<button class="btn btn-success">Pick a cleaner</button>';
+                    }
                 } else if(data.status == "Completed") {
                 } else if(data.status == "Cancelled") {
                 }
