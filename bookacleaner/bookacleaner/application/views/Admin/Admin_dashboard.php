@@ -41,6 +41,7 @@
 
 <script type="text/javascript">
     var id = 1;
+    var id2 = 1;
     var working;
     function checkCleaners(ids, type = "") {
         $.ajax({
@@ -74,6 +75,43 @@
                 if(data.length != 0) {
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
+                    }
+                }
+            }
+        });
+    }
+    function checkBookings(ids, type = "") {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getBookings/"+ids,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
+                if(data.length != 0) {
+                    notif.play();
+                    if(type == "add") {
+                        id2++;
+                        getBookings(id2);
+                    } else if(type == "minus") {
+                        id2--;
+                        getBookings(id2);
+                    }
+                } else {
+                    errorRow();
+                }
+                
+            }
+        });
+    }
+    function getBookings(id) {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getBookings/"+id,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
+                $('.bookings-list').html("");
+                if(data.length != 0) {
+                    for(var i = 0; i < data.length; i++) {
+                        addRow2(i, data[i]);
                     }
                 }
             }
@@ -114,6 +152,17 @@
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
+    function addRow2(i, data) {
+        var x = '<div class="bookings-row row2-'+data.id+'">';
+            x = x + 'haha';
+        x = x + '</div>';
+        $('.bookings-list').append(x);
+        
+        var durations = i * 500;
+        $('.row2-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row2-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+    }
+
     function errorRow() {
         notif.play();
         Toast.fire({
@@ -121,7 +170,10 @@
             title: 'Error! There\'s no data'
         });
     }
+
     getCleaners(id);
+    getBookings(id2);
+    
     function fire(ids) {
         $.ajax({
         url: "<?php echo base_url(); ?>admin/fireCleaner/"+ids,
@@ -176,6 +228,19 @@
         $('#next').click(function() {
             var s = id + 1;
             checkCleaners(s, 'add');
+        });
+
+        $('#prev2').click(function() {
+            if(id2 > 1) {
+                var s = id2 - 1;
+                checkBookings(s, 'minus');
+            } else {
+                errorRow();
+            }
+        });
+        $('#next2').click(function() {
+            var s = id2 + 1;
+            checkBookings(s, 'add');
         });
     });
 </script>
