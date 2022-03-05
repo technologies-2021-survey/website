@@ -205,7 +205,7 @@
                     x = x +  '<button class="btn btn-danger" onclick="cancelThis('+data.id+')">Cancel</button>';
                 } else if(data.status == "Working") {
                     if(data.work_id != "") {
-                        x = x + '<button class="btn btn-success" style="margin-right: 5px;">Done working</button>';
+                        x = x + '<button class="btn btn-success" style="margin-right: 5px;" onclick="doneThis('+data.id+')">Done working</button>';
                     } else {
                         x = x + '<button class="btn btn-success">Pick a cleaner</button>';
                     }
