@@ -187,12 +187,12 @@
                 x = x + '<b>How big is the space that needs cleaning? (sqm.):</b> '+data.sqm+' sqm.<br/>';
                 x = x + '<b>Service Required:<br/>';
                 for(var zz = 0; zz < data.service_required.length; zz++) {
-                    if(data.service_required[zz].choice == 1) { x = x + 'Deep Cleaning<br/>'; } 
-                    else if(data.service_required[zz].choice == 2) { x = x + 'Disinfection Service<br/>'; } 
-                    else if(data.service_required[zz].choice == 3) { x = x + 'Move In & Move Out Cleaning<br/>'; } 
-                    else if(data.service_required[zz].choice == 4) { x = x + 'Upholstery Cleaning<br/>'; } 
-                    else if(data.service_required[zz].choice == 5) { x = x + 'Steam Cleaning<br/>'; } 
-                    else if(data.service_required[zz].choice == 6) { x = x + 'Aircon Cleaning<br/>'; } 
+                    if(data.service_required[zz].choice == 1) { x = x + '\tDeep Cleaning<br/>'; } 
+                    else if(data.service_required[zz].choice == 2) { x = x + '\tDisinfection Service<br/>'; } 
+                    else if(data.service_required[zz].choice == 3) { x = x + '\tMove In & Move Out Cleaning<br/>'; } 
+                    else if(data.service_required[zz].choice == 4) { x = x + '\tUpholstery Cleaning<br/>'; } 
+                    else if(data.service_required[zz].choice == 5) { x = x + '\tSteam Cleaning<br/>'; } 
+                    else if(data.service_required[zz].choice == 6) { x = x + '\tAircon Cleaning<br/>'; } 
                 }
                 x = x + '<br/>';
                 x = x + '<b>Comments/Notes:</b> '+data.comments_or_notes+' <br/>';
