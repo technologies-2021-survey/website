@@ -339,5 +339,27 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, no results found.');
 		}
 	}
+
+	public function availableCleaners() {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		$array = array();
+		
+		$get_data = $this->db->query("SELECT * FROM `cleaners` WHERE `employee` = '0'");
+
+		foreach($get_data->result() as $row) {
+			$search = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `cleaners_id` = '".$row->id."'")->num_rows();
+			if($search == 1) {
+				// working right now.
+			} else {
+				$array[] = array(
+					'id' => $row->id,
+					'cleaners_name' => $row->cleaners_name,
+					'cleaners_contact' => $row->cleaners_contact
+				);
+			}
+		}
+
+		echo json_encode($array); 
+	}
 }
 ?>
