@@ -158,7 +158,7 @@ div, a {
    transition: 0.5s;
 }
 
-.accounts-row, .cleaners-row {
+.accounts-row, .cleaners-row, .bookings-row {
     margin: 5px;
     padding: 10px;
     background: #f8f8f8;
@@ -167,21 +167,29 @@ div, a {
     clear: both;
 }
 
-.accounts-row span:nth-child(1), .cleaners-row span:nth-child(1) {
+.bookings-row span:nth-child(1), 
+.accounts-row span:nth-child(1), 
+.cleaners-row span:nth-child(1) {
     display: block;
     font-size: 16px;
     font-weight: bold;
 }
-.accounts-row span:nth-child(2), .cleaners-row span:nth-child(2) {
+.bookings-row span:nth-child(2),
+.accounts-row span:nth-child(2),
+.cleaners-row span:nth-child(2) {
     font-size: 12px;
     display: block;
 }
 
-.accounts-row, .cleaners-row {
+.bookings-row,
+.accounts-row,
+.cleaners-row {
     transition: 0.5s;
 }
 
-.accounts-row:hover, .cleaners-row:hover {
+.bookings-row:hover,
+.accounts-row:hover,
+.cleaners-row:hover {
     background: #e8e8e8;
 }
 .content h3 {
