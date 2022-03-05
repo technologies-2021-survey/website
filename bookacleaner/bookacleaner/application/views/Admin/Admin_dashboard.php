@@ -269,6 +269,7 @@
             }
         });
     }
+    
     function bookClick(id) {
         if($('.bookings-heading-'+id).siblings('.bookings-body').css('display') == 'none') {
             $('.bookings-heading-'+id).siblings('.bookings-body').hide().css({ opacity: 0, marginLeft: "200px"});
