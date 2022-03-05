@@ -165,7 +165,7 @@
                         x = x +  '<label class="label label-info">Cleaner: '+data.work_name+'</label>';
                     } else {
                         x = x +  '<label class="label label-warning" style="margin-right: 5px;">Working</label>';
-                        x = x +  '<label class="label label-info">Pick a cleaner</label>';
+                        x = x +  '<label class="label label-warning">Pick a cleaner</label>';
                     }
                 } else if(data.status == "Completed") {
                     x = x +  '<label class="label label-success" style="margin-right: 5px;">Completed</label>';
