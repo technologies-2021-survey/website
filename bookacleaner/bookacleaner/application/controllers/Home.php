@@ -67,7 +67,8 @@ class Home extends CI_Controller {
 						'cleaning' => $this->input->post('cleaning'),
 						'sqm' => $this->input->post('sqm'),
 						'first_name' => $this->input->post('first_name'),
-						'comments_or_notes' => $this->input->post('comments_or_notes')
+						'comments_or_notes' => $this->input->post('comments_or_notes'),
+						'status' => 'Pending'
 					);
 
 					$this->home_model->insertBook($insertData);
