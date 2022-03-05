@@ -156,7 +156,7 @@
         var x = '<div class="bookings-row row2-'+data.id+'">';
             x = x + '<div class="bookings-heading bookings-heading-'+data.id+'" onclick="bookClick('+data.id+')">';
                 x = x + '<span>'+data.first_name+' '+data.last_name+'</span>';
-                x = x + '<span>'+data.preferred_date+'</span>';
+                x = x + '<span><b>Preferred Date:</b> '+data.preferred_date+'</span>';
                 if(data.status == "Pending") {
                     x = x +  '<label class="label label-default">Pending</label>';
                 } else if(data.status == "Working") {
