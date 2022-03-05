@@ -194,7 +194,7 @@
                     else if(data.service_required[zz].choice == 5) { x = x + '&nbsp;&nbsp;Aircon Cleaning<br/>'; } 
                 }
                 x = x + '<br/>';
-                x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes+' <br/>';
+                x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes+' <br/><br/>';
                 if(data.status == "Pending") {
                     x = x +  '<button class="btn btn-default">Pending</button>';
                 } else if(data.status == "Working") {
