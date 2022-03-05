@@ -201,8 +201,8 @@
                 x = x + '<br/>';
                 x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes+' <br/><br/>';
                 if(data.status == "Pending") {
-                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;">Approve</button>';
-                    x = x +  '<button class="btn btn-danger">Cancel</button>';
+                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;" onclick="approveThis('+data.id+')">Approve</button>';
+                    x = x +  '<button class="btn btn-danger" onclick="cancelThis('+data.id+')">Cancel</button>';
                 } else if(data.status == "Working") {
                     if(data.work_id != "") {
                         x = x + '<button class="btn btn-success" style="margin-right: 5px;">Done working</button>';
@@ -219,6 +219,14 @@
         var durations = i * 500;
         $('.row2-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row2-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+    }
+
+    function approveThis(id) {
+        alert(id);
+    }
+
+    function cancelThis(id) {
+        alert(id);
     }
 
     function errorRow() {
