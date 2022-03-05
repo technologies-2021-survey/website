@@ -173,7 +173,13 @@
                 x = x + '</div>';
             x = x + '</div>';
             x = x + '<div class="bookings-body" style="display: none;">';
-                x = x + 'test';
+                x = x + '<b>E-mail:</b> '+data.email+' <br/>';
+                x = x + '<b>Mobile Number:</b> '+data.mobile_number+' <br/>';
+                x = x + '<b>E-mail:</b> '+data.email+' <br/>';
+                x = x + '<b>Address:</b> '+data.address+' <br/>';
+                x = x + '<b>Cleaning:</b> '+data.cleaning+' <br/>';
+                x = x + '<b>SQM:</b> '+data.sqm+' <br/>';
+                x = x + '<b>Comments/Notes:</b> '+data.comments_or_notes+' <br/>';
             x = x + '</div>';
         x = x + '</div>';
         $('.bookings-list').append(x);
