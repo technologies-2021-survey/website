@@ -320,5 +320,29 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, no results found.');
 		}
 	}
+
+	public function doneThis($id) {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$search = $this->db->query("SELECT * FROM `bookings` WHERE `id` = '".$id."' AND `status` = 'Working'")->num_rows();
+
+		if($search == 1) {
+			$search2 = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$id."'")->num_rows();
+			if($search2 == 1) {
+				$data = array(
+					'status' => 'Completed',
+				);
+				$this->admin_model->updateBookings($id, $data);
+
+				$this->db->query("DELETE FROM `cleaners_on_work` WHERE `bookings_id` = '".$id."'");
+				
+				echo $this->admin_model->status(200, 'Successfully!');
+			} else {
+				echo $this->admin_model->status(203, 'Error, no one\'s working this job!');
+			}
+		} else {
+			echo $this->admin_model->status(203, 'Error, no results found.');
+		}
+	}
 }
 ?>
