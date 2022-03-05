@@ -266,8 +266,8 @@ class Admin extends CI_Controller {
 				'sqm' => $row->sqm,
 				'comments_or_notes' => $row->comments_or_notes,
 				'service_required' => $service_required,
-				'cleaners_id' => $work_cleaner_id,
-				'cleaners_name' => $work_cleaner_name,
+				'work_id' => $work_cleaner_id,
+				'work_name' => $work_cleaner_name,
 				'status' => $row->status
 			);
 		};
