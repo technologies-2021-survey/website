@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 -- Database: `whealth`
 --
 
--- --------------------------------------------------------
-
 --
 -- Table structure for table `admins_tbl`
 --
