@@ -2,7 +2,7 @@
     <div class="box-container">
         <div class="box-body">
             <h3>
-                Cleaner's List
+                Cleaner(s)
                 <div class="pull-right">
                     <button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Cleaner</button>
                 </div>
