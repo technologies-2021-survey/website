@@ -272,7 +272,8 @@ class Admin extends CI_Controller {
 				'comments_or_notes' => $row->comments_or_notes,
 				'service_required' => $service_required,
 				'work_id' => $work_cleaner_id,
-				'work_name' => $work_cleaner_name
+				'work_name' => $work_cleaner_name,
+				'status' => $row->status
 			);
 		};
 
