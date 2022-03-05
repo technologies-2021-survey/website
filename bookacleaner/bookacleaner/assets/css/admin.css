@@ -199,6 +199,7 @@ div, a {
 
 .bookings-heading {
     position: relative;
+    cursor: pointer;
 }
 
 .bookings-heading .button {
