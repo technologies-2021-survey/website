@@ -160,8 +160,13 @@
                 if(data.status == "Pending") {
                     x = x +  '<label class="label label-default">Pending</label>';
                 } else if(data.status == "Working") {
-                    x = x +  '<label class="label label-warning" style="margin-right: 5px;">Working</label>';
-                    x = x +  '<label class="label label-info">Cleaner: '+data.work_name+'</label>';
+                    if(data.work_id != "") {
+                        x = x +  '<label class="label label-warning" style="margin-right: 5px;">Working</label>';
+                        x = x +  '<label class="label label-info">Cleaner: '+data.work_name+'</label>';
+                    } else {
+                        x = x +  '<label class="label label-warning" style="margin-right: 5px;">Working</label>';
+                        x = x +  '<label class="label label-info">Pick a cleaner</label>';
+                    }
                 } else if(data.status == "Completed") {
                     x = x +  '<label class="label label-success" style="margin-right: 5px;">Completed</label>';
                     x = x +  '<label class="label label-info">Cleaner: '+data.work_name+'</label>';
@@ -269,7 +274,7 @@
             }
         });
     }
-    
+
     function bookClick(id) {
         if($('.bookings-heading-'+id).siblings('.bookings-body').css('display') == 'none') {
             $('.bookings-heading-'+id).siblings('.bookings-body').hide().css({ opacity: 0, marginLeft: "200px"});
