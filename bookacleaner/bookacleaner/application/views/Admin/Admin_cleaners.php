@@ -20,6 +20,25 @@
     </div>
 </div>
 
+<div class="col-lg-6 col-md-6">
+    <div class="box-container">
+        <div class="box-body">
+            <h3>
+                Booking(s)
+            </h3>
+            <div class="bookings-list" style="clear: both; margin-bottom: 10px;">
+            </div>
+            <div class="pull-left">
+                <button class="btn btn-primary" id="prev"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-primary" id="next">Next&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript">
     var id = 1;
     var working;
