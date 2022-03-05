@@ -154,7 +154,7 @@
     }
     function addRow2(i, data) {
         var x = '<div class="bookings-row row2-'+data.id+'">';
-            x = x + '<div class="bookings-heading bookings-heading-'+data.id+'" data-id2="'+data.id+'">';
+            x = x + '<div class="bookings-heading bookings-heading-'+data.id+'" onclick="bookClick('+data.id+')">';
                 x = x + '<span>'+data.first_name+' '+data.last_name+'</span>';
                 x = x + '<span>'+data.preferred_date+'</span>';
                 x = x + '<div class="button">';
@@ -225,6 +225,10 @@
             }
         });
     }
+    function bookClick(id) {
+        $('.bookings-heading-'+id).siblings('.bookings-body').fadeToggle();
+    }
+
     $(document).ready(function() {
         $('#prev').click(function() {
             if(id > 1) {
@@ -249,9 +253,6 @@
         $('#next2').click(function() {
             var s = id2 + 1;
             checkBookings(s, 'add');
-        });
-        $('.bookings-heading').click(function() {
-            $(this).siblings('.bookings-body').fadeToggle();
         });
     });
 </script>
