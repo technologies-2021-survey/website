@@ -213,5 +213,63 @@ class Admin extends CI_Controller {
 			}
 		}
 	}
+	public function getBookings($page_number = "") {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		if($page_number != "") {
+			if($page_number <= 0) {
+				$page_number = 1; 
+			} else {
+				$page_number = $page_number;
+			}
+			
+		} else {
+			$page_number = 1;
+		}
+		$no_of_records_per_page = 10;
+        $offset = ($page_number - 1) * $no_of_records_per_page;
+
+		$total_pages_sql = "SELECT COUNT(*) FROM `bookings`";
+        $result = $this->db->query($total_pages_sql)->row_array();
+
+		$total_rows = $result['count(*)'];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+		$array = array();
+
+		$get_data = $this->db->query("SELECT * FROM `bookings` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
+
+		foreach($get_data->result() as $row) {
+			// who's working?
+			$work_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'")->result();
+			$work_cleaner = ($work_query->cleaners_id != "") ? $work_query->cleaners_id : "";
+
+			// service required
+			$service_required = array();
+
+			$service_required_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'");
+			foreach($service_required_query->result() as $row2) {
+				$service_required[] = array(
+					'choice' => $row2->choice
+				);
+			}
+
+			$array[] = array(
+				'id' =>  $row->id,
+				'first_name' =>  $row->first_name,
+				'last_name' =>  $row->last_name,
+				'email' => $row->email,
+				'mobile_number' => $row->mobile_number,
+				'preferred_date' => $row->preferred_date,
+				'address' => $row->address,
+				'cleaning' => $row->cleaning,
+				'sqm' => $row->sqm,
+				'comments_or_notes' => $row->comments_or_notes,
+				'service_required' => $service_required,
+				'work' => $work_cleaner
+			);
+		};
+
+		echo json_encode($array);
+	}
 }
 ?>
