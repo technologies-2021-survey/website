@@ -241,9 +241,12 @@ class Admin extends CI_Controller {
 		foreach($get_data->result() as $row) {
 			// who's working?
 			$work_cleaner_id = "";
+			$work_cleaner_name = "";
 			$work_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'")->result_array();
 			if($work_query['cleaners_id'] != "") {
 				$work_cleaner_id = $work_query['cleaners_id'];
+				$work_cleaner_query = $this->db->query("SELECT * FROM `cleaners` WHERE `id` = '".$work_cleaner_id."'")->result_array();
+				$work_cleaner_name = $work_cleaner_query['cleaners_name'];
 			}
 
 			// service required
@@ -268,7 +271,8 @@ class Admin extends CI_Controller {
 				'sqm' => $row->sqm,
 				'comments_or_notes' => $row->comments_or_notes,
 				'service_required' => $service_required,
-				'work_id' => $work_cleaner_id
+				'work_id' => $work_cleaner_id,
+				'work_name' => $work_cleaner_name
 			);
 		};
 
