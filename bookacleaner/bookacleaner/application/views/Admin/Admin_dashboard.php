@@ -251,8 +251,7 @@
             checkBookings(s, 'add');
         });
         $('.bookings-heading').click(function() {
-            var idz = $(this).attr("data-id2");
-            $(this).siblings('.bookings-body-'+idz).slideToggle();
+            $(this).siblings('.bookings-body').fadeToggle();
         });
     });
 </script>
