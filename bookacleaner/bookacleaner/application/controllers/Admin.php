@@ -246,7 +246,7 @@ class Admin extends CI_Controller {
 			// service required
 			$service_required = array();
 
-			$service_required_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'");
+			$service_required_query = $this->db->query("SELECT * FROM `bookings_service_required` WHERE `bookings_id` = '".$row->id."'");
 			foreach($service_required_query->result() as $row2) {
 				$service_required[] = array(
 					'choice' => $row2->choice
