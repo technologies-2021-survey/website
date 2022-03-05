@@ -157,8 +157,8 @@
             x = x + '<div class="bookings-heading-'+data.id+'">';
                 x = x + '<span>'+data.first_name+' '+data.last_name+'</span>';
                 x = x + '<span>'+data.preferred_date+'</span>';
-                x = x + '<div class="pull-right">';
-                    x = x + 'test';
+                x = x + '<div class="button">';
+                    x = x + '<i class="fa fa-caret-down"></i>';
                 x = x + '</div>';
             x = x + '</div>';
             x = x + '<div class="bookings-body-'+data.id+'" style="display: none;">';
