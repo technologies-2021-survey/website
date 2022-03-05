@@ -200,6 +200,7 @@ div, a {
 .bookings-heading {
     position: relative;
     cursor: pointer;
+    user-select: none;
 }
 
 .bookings-heading .button {
