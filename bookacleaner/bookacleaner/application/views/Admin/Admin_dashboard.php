@@ -160,10 +160,10 @@
                 if(data.status == "Pending") {
                     x = x +  '<label class="label label-default">Pending</label>';
                 } else if(data.status == "Working") {
-                    x = x +  '<label class="label label-warning" style="margin-right:10px;">Working</label>';
+                    x = x +  '<label class="label label-warning" style="margin-right: 5px;">Working</label>';
                     x = x +  '<label class="label label-info">Cleaner: '+data.work_name+'</label>';
                 } else if(data.status == "Completed") {
-                    x = x +  '<label class="label label-success" style="margin-right:10px;">Completed</label>';
+                    x = x +  '<label class="label label-success" style="margin-right: 5px;">Completed</label>';
                     x = x +  '<label class="label label-info">Cleaner: '+data.work_name+'</label>';
                 } else if(data.status == "Cancelled") {
                     x = x +  '<label class="label label-danger">Cancelled</label>';
