@@ -154,7 +154,7 @@
     }
     function addRow2(i, data) {
         var x = '<div class="bookings-row row2-'+data.id+'">';
-            x = x + '<div class="bookings-heading-'+data.id+'">';
+            x = x + '<div class="bookings-heading bookings-heading-'+data.id+'">';
                 x = x + '<span>'+data.first_name+' '+data.last_name+'</span>';
                 x = x + '<span>'+data.preferred_date+'</span>';
                 x = x + '<div class="button">';

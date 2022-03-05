@@ -196,3 +196,7 @@ div, a {
     font-family: 'Futura',sans-serif;
     padding: 20px 5px;
 }
+
+.bookings-heading {
+    position: relative;
+}
