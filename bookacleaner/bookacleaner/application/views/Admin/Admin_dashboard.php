@@ -222,11 +222,51 @@
     }
 
     function approveThis(id) {
-        alert(id);
+        if (window.confirm("Are you sure?")) {
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/approveThis/"+id,
+                type: "GET",
+                success: function(data){
+                    if(data.status == 203) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        });
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Successfully!'
+                        });
+                        getBookings(id2)
+                    }
+                }
+            });
+        }
     }
 
     function cancelThis(id) {
-        alert(id);
+        if (window.confirm("Are you sure?")) {
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/cancelThis/"+id,
+                type: "GET",
+                success: function(data){
+                    if(data.status == 203) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        });
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Successfully!'
+                        });
+                        getBookings(id2)
+                    }
+                }
+            });
+        }
     }
 
     function errorRow() {
