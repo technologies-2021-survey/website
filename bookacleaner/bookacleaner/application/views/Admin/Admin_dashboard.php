@@ -195,7 +195,7 @@
                     else if(data.service_required[zz].choice == 5) { x = x + '&nbsp;&nbsp;Aircon Cleaning<br/>'; } 
                 }
                 x = x + '<br/>';
-                x = x + '<b>Comments/Notes:</b> '+data.comments_or_notes+' <br/>';
+                x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes+' <br/>';
             x = x + '</div>';
         x = x + '</div>';
         $('.bookings-list').append(x);
