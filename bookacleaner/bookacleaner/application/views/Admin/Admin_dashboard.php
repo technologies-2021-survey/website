@@ -196,13 +196,12 @@
                 x = x + '<br/>';
                 x = x + '<b>Comments/Notes:</b><br/>'+data.comments_or_notes+' <br/><br/>';
                 if(data.status == "Pending") {
-                    x = x +  '<button class="btn btn-default">Pending</button>';
+                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;">Approve</button>';
+                    x = x +  '<button class="btn btn-danger">Cancel</button>';
                 } else if(data.status == "Working") {
-                    x = x +  '<button class="btn btn-warning" style="margin-right: 5px;">Working</button>';
+                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;">Done working</button>';
                 } else if(data.status == "Completed") {
-                    x = x +  '<button class="btn btn-success" style="margin-right: 5px;">Completed</button>';
                 } else if(data.status == "Cancelled") {
-                    x = x +  '<button class="btn btn-danger">Cancelled</button>';
                 }
             x = x + '</div>';
         x = x + '</div>';
