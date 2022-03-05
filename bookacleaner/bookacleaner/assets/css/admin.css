@@ -215,4 +215,9 @@ div, a {
 
 .bookings-body {
     transition: 0.5s;
+    padding: 10px;
+    background: #fff;
+    margin-top: 10px;
+    box-shadow: 0 0 3px #b6b6b6;
+    border-radius: 5px;
 }
