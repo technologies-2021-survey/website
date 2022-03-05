@@ -161,7 +161,7 @@
                     x = x + '<i class="fa fa-caret-down"></i>';
                 x = x + '</div>';
             x = x + '</div>';
-            x = x + '<div class="bookings-body-'+data.id+'" style="display: none;">';
+            x = x + '<div class="bookings-body" style="display: none;">';
                 x = x + 'test';
             x = x + '</div>';
         x = x + '</div>';
