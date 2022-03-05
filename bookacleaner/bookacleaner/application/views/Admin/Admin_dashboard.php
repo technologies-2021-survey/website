@@ -154,7 +154,8 @@
     }
     function addRow2(i, data) {
         var x = '<div class="bookings-row row2-'+data.id+'">';
-            x = x + 'haha';
+            x = x + '<span>'+data.first_name+' '+data.last_name+'</span>';
+            x = x + '<span>'+data.preferred_date+'</span>';
         x = x + '</div>';
         $('.bookings-list').append(x);
         
