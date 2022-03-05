@@ -185,7 +185,7 @@
                 else if(data.cleaning == 5) { x = x + 'Others (Plesase specify in NOTES)'; }
                 x = x + '<br/>';
                 x = x + '<b>How big is the space that needs cleaning? (sqm.):</b> '+data.sqm+' sqm.<br/>';
-                x = x + '<b>Service Required:<br/>';
+                x = x + '<b>Service Required:<br/>'+data.service_required.length;
                 for(var zz = 0; zz < data.service_required.length; zz++) {
                     if(data.service_required[zz] == 1) { x = x + 'Deep Cleaning<br/>'; } 
                     else if(data.service_required[zz] == 2) { x = x + 'Disinfection Service<br/>'; } 
