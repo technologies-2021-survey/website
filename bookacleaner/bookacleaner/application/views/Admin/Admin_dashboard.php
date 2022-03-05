@@ -228,10 +228,10 @@
     function bookClick(id) {
         if($('.bookings-heading-'+id).siblings('.bookings-body').css('display') == 'none') {
             $('.bookings-heading-'+id).siblings('.bookings-body').hide().css({ opacity: 0, marginLeft: "200px"});
-            $('.bookings-heading-'+id).siblings('.bookings-body').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+            $('.bookings-heading-'+id).siblings('.bookings-body').show('slow').animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
         } else {
             $('.bookings-heading-'+id).siblings('.bookings-body').show().css({ opacity: 1, marginLeft: "0px"});
-            $('.bookings-heading-'+id).siblings('.bookings-body').show(durations).animate({ opacity: 0, marginLeft: "200px"}, { duration: 'normal', easing: 'easeOutBack'});
+            $('.bookings-heading-'+id).siblings('.bookings-body').hide('slow').animate({ opacity: 0, marginLeft: "200px"}, { duration: 'normal', easing: 'easeOutBack'});
         }
     }
 
