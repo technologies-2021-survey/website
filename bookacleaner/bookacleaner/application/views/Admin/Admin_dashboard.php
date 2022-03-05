@@ -250,6 +250,9 @@
             var s = id2 + 1;
             checkBookings(s, 'add');
         });
-        $('')
+        $('.bookings-heading').click(function() {
+            var idz = $(this).attr("data-id2");
+            $(this).siblings('.bookings-body-'+idz).slideToggle();
+        });
     });
 </script>
