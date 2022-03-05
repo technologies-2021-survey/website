@@ -175,7 +175,6 @@
             x = x + '<div class="bookings-body" style="display: none;">';
                 x = x + '<b>E-mail:</b> '+data.email+' <br/>';
                 x = x + '<b>Mobile Number:</b> '+data.mobile_number+' <br/>';
-                x = x + '<b>E-mail:</b> '+data.email+' <br/>';
                 x = x + '<b>Address:</b> '+data.address+' <br/>';
                 x = x + '<b>Cleaning:</b> ';
                 if(data.cleaning == 1) { x = x + 'Appartment'; }
