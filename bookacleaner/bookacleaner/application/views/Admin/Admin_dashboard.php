@@ -157,6 +157,15 @@
             x = x + '<div class="bookings-heading bookings-heading-'+data.id+'" onclick="bookClick('+data.id+')">';
                 x = x + '<span>'+data.first_name+' '+data.last_name+'</span>';
                 x = x + '<span>'+data.preferred_date+'</span>';
+                if(data.status == "Pending") {
+                    x = x +  '<label class="label label-default">Pending</label>';
+                } else if(data.status == "Working") {
+                    x = x +  '<label class="label label-warning">Working</label>';
+                } else if(data.status == "Completed") {
+                    x = x +  '<label class="label label-success">Completed</label>';
+                } else if(data.status == "Cancelled") {
+                    x = x +  '<label class="label label-danger">Cancelled</label>';
+                }
                 x = x + '<div class="button">';
                     x = x + '<i class="fa fa-caret-down"></i>';
                 x = x + '</div>';
