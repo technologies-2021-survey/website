@@ -242,10 +242,10 @@ class Admin extends CI_Controller {
 			// who's working?
 			$work_cleaner_id = "";
 			$work_cleaner_name = "";
-			$work_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'")->result_array();
+			$work_query = $this->db->query("SELECT * FROM `cleaners_on_work` WHERE `bookings_id` = '".$row->id."'")->row_array();
 			if($work_query['cleaners_id'] != "") {
 				$work_cleaner_id = $work_query['cleaners_id'];
-				$work_cleaner_query = $this->db->query("SELECT * FROM `cleaners` WHERE `id` = '".$work_cleaner_id."'")->result_array();
+				$work_cleaner_query = $this->db->query("SELECT * FROM `cleaners` WHERE `id` = '".$work_cleaner_id."'")->row_array();
 				$work_cleaner_name = $work_cleaner_query['cleaners_name'];
 			}
 
