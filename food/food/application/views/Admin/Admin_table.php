@@ -1,5 +1,30 @@
 <div class="col-lg-6 col-md-6">
     <div class="box-container"> 
+    <div class="box-body">
+            <h3>
+                Table(s)
+                <div class="pull-right">
+                    <button class="btn btn-success" style="margin-right: 10px;" onclick="refresh1()">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                        &nbsp;Refresh
+                    </button>
+                    <button class="btn btn-success">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        &nbsp;Add Table
+                    </button>
+                </div>
+            </h3>
+            
+            <div class="table-list" style="clear:both;margin-bottom: 10px;">
+            </div>
+            <div class="pull-left">
+                <button class="btn btn-primary" id="prev"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-primary" id="next">Next&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
         <div class="box-body">
             <h3>
                 Table(s)
