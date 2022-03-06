@@ -150,6 +150,10 @@
                 x = x + '<label class="label label-success">'+data.status+'</label>';
             }
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-dashboard" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
+            x = x + '<div class="pull-right">';
+                x = x + '<button class="btn btn-success">View Order</button>';
+            x = x + '</div>';
+            x = x + '<div style="clear: both;"></div>';
         x = x + '</div>';
         $('.dine-in-list').append(x);
         
