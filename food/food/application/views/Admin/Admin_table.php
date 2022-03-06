@@ -64,7 +64,18 @@
         </button>
       </div>
       <div class="modal-body">
-        
+        <table>
+            <thead>
+                <tr>
+                    <td>Food</td>
+                    <Td>Quantity</Td>
+                    <Td>Total</Td>
+                </tr>
+            </thead>
+            <tbody class="view-order-body">
+
+            </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -80,11 +91,17 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
-                    $('.modal-body').html("");
+                    $('.view-order-body').html("");
 
                     $('#viewOrder').modal('show');
-                    
-                    console.log(data[0]);
+                    for(var i = 0; i < data[i].length; i++) {
+                        var x = '<tr>';
+                            x = x + '<td>'+data[i].foodname+'</td>';
+                            x = x + '<td>'+data[i].quantity+'</td>';
+                            x = x + '<td>'+data[i].row_total+'</td>';
+                        x = x + '</tr>';
+                        $('.view-order-body').append(x);
+                    }
                 } else {
                     errorRow();
                 }
