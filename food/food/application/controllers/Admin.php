@@ -252,5 +252,38 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, no data found.');
 		}
 	}
+	public function getTableDineInOrder($id) {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."'")->num_rows();
+
+		if($search == 1) {
+			$sql = $this->db->query("SELECT * FROM `tables_orders` WHERE `tables_dine_in_id` = '".$id."'");
+			$array = array();
+			$overall_total = 0;
+			foreach($sql->result() as $data) {
+				$food_name = "";
+				$food_price = "";
+
+				$sql2 = $this->db->query("SELECT * FROM `menu` WHERE `id` = '".$data->menu_id."'");
+				foreach($sql2->result() as $data2) {
+					$food_name = $data2->food_name;
+					$food_price = $data2->food_price;
+				}
+
+				$array[] = array(
+					'food_name' => $food_name,
+					'food_price' => $food_price,
+					'quantity' => $data->quantity,
+					'row_total' => $data->quantity * $food_price
+				);
+				$overall_total += ($data->quantity * $food_price);
+			}
+
+			echo json_encode($array);
+		} else {
+			echo $this->admin_model->status(203, 'Error, no data found.');
+		}
+
+	}
 }
 ?>
