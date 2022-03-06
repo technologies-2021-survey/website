@@ -80,8 +80,11 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
+                    $('.modal-body').html("");
+
                     $('#viewOrder').modal('show');
-                    console.log(data);
+                    
+                    console.log(data[0]);
                 } else {
                     errorRow();
                 }
