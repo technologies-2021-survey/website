@@ -99,7 +99,7 @@
                     
                     for(var i = 0; i < data[0].length; i++) {
                         var x = '<tr>';
-                            x = x + '<td>('+(i+1)+')</td>';
+                            x = x + '<td>'+(i+1)+'</td>';
                             x = x + '<td>('+data[0][i].food_name+')</td>';
                             x = x + '<td>P'+data[0][i].food_price+'</td>';
                             x = x + '<td>'+data[0][i].quantity+'</td>';
