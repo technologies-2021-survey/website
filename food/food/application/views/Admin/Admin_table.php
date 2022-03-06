@@ -419,7 +419,7 @@
 
     function addSampleDineIn() {
         $.ajax({
-            url: "<?php echo base_url(); ?>admin/addSampleDineIn/"+id,
+            url: "<?php echo base_url(); ?>admin/addSampleDineIn",
             type: "GET",
             success: function(data){
                 if(data.status == 203) {
