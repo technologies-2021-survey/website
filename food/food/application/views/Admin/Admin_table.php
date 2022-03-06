@@ -396,13 +396,7 @@
             url: "<?php echo base_url(); ?>admin/doneServe/"+id+"/"+table_id,
                 type: "GET",
                 success: function(data){
-                    if(data.status == 203) {
-                        notif.play();
-                        Toast.fire({
-                            icon: 'error',
-                            title: data.message
-                        });
-                    } else if(data.status == 200) {
+                    if(data.status == 200) {
                         notif.play();
                         Toast.fire({
                             icon: 'success',
@@ -412,6 +406,12 @@
                         getDineIn(id2);
                         getListOrders(id3);
                         
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        });
                     }
                 }
             });
