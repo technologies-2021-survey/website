@@ -59,5 +59,8 @@ class Admin_model extends CI_Model {
     public function deleteMenu($id) {
         $this->db->query("DELETE FROM `menu` WHERE `id` = '".$id."'");
     }
+    public function addMenu($data) {
+		$this->db->insert('menu', $data);
+    }
 }
 ?>
