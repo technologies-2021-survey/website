@@ -52,5 +52,9 @@ class Admin_model extends CI_Model {
         $this->db->where('id', $id);
 		$this->db->update('tables_dine_in', $data);
     }
+    public function updateTable($id, $data) {
+        $this->db->where('id', $id);
+		$this->db->update('tables', $data);
+    }
 }
 ?>
