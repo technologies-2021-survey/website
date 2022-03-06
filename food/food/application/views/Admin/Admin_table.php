@@ -5,7 +5,7 @@
                 Table(s)
                 <div class="pull-right">
                     <button class="btn btn-success" style="margin-right: 10px;">
-                        <i class="fa fa-refresh" aria-hidden="true" onclick="refresh()"></i>
+                        <i class="fa fa-refresh" aria-hidden="true" onclick="refresh1()"></i>
                         &nbsp;Refresh
                     </button>
                     <button class="btn btn-success">
@@ -238,7 +238,7 @@
         }
     }
 
-    function refresh() {
+    function refresh1() {
         getTables(id)
     }
     function refresh2() {
