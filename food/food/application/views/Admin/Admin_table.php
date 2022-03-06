@@ -149,7 +149,7 @@
             } else if(data.status == "Done") {
                 x = x + '<label class="label label-success">'+data.status+'</label>';
             }
-            x = x + '<label class="label label-primary" style="margin-left;"><i class="fa fa-dashboard" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
+            x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-dashboard" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
         x = x + '</div>';
         $('.dine-in-list').append(x);
         
