@@ -94,7 +94,7 @@
                     $('.view-order-body').html("");
 
                     $('#viewOrder').modal('show');
-                    console.log(data[0].foodname[0]);
+                    console.log(data[0].foodname);
                     /*
                     for(var i = 0; i < data[0].length; i++) {
                         var x = '<tr>';
