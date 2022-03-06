@@ -279,7 +279,7 @@
                         $('#addAccount').modal('hide');
                         $('input[name=full_name]').val("");
                         $('input[name=username]').val("");
-                        $('input[name=account_level]').val("");
+                        $('input[name=password]').val("");
                         Toast.fire({
                             icon: 'success',
                             title: "Successfully"
