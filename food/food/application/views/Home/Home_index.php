@@ -17,7 +17,7 @@
 
 		<section class="book" id="book">
 			<div class="container">
-				<h3>Book a service or get a quote today</h3>
+				<h3>Contact Info</h3>
 				<div class="row">
 					<div style="background: #2b137e;margin: 0 15px;box-shadow: 0 0 10px #281276;">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding: 0;margin: 0;">
@@ -27,7 +27,6 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="col-md-4">
 								<div class="contact-item" style="padding-top: 20%;">
-									<h3 style="color: white;">Contact Info</h3>
 									<p style="color: white; font-size: 23px;">
 										<span><i class="fas fa-map-marker-alt" style="padding-right: 1%;"></i></span>
 										64 F. Calderon St., Calumpang Marikina City, Philippines
