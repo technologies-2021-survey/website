@@ -150,7 +150,7 @@
             }
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-dashboard" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
-                x = x + '<button class="btn btn-primary">View Order</button>';
+                x = x + '<button class="btn btn-primary" style="margin-right: 10px;">View Order</button>';
                 x = x + '<button class="btn btn-success">Done serve</button>';
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
