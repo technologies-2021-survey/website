@@ -53,6 +53,22 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="viewOrderLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewOrderLabel">View Order</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
     var id = 1;
@@ -64,6 +80,7 @@
             success: function(data){
                 data = JSON.parse(data);
                 if(data.length != "") {
+                    $('#viewOrder').modal('show');
                     alert(data);
                 } else {
                     errorRow();
