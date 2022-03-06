@@ -41,5 +41,27 @@ class Auth_model extends CI_Model {
             );
         }
     }
+
+    public function staff_login($username, $password) {
+        $q = $this->db->select('id, username, password')->from("accounts")->where(
+            array(
+                'username' => $username, 
+                'password' => $password)
+            )->get()->row();
+        if($q == "") {
+            return array(
+                'status' => 204,
+                'message' => "Invalid username/password."
+            );
+        } else {
+            return array(
+                'status' => 200,
+                'message' => "Successfully login!",
+                'username' => $username,
+                'id' => $q->id,
+                'account_level' => $q->account_level,
+            );
+        }
+    }
 }
 ?>
