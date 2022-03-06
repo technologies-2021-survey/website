@@ -158,7 +158,7 @@
             var s = id + 1;
             getMenu(s, 'add');
         });
-        $('#addMenus').submit(function() {
+        $('#addMenus').submit(function(e) {
             e.preventDefault();
             var food_name = $('input[name=food_name]').val();
             var food_price = $('input[name=food_price]').val();
