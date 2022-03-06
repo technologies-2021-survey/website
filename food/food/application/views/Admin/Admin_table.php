@@ -64,12 +64,12 @@
         </button>
       </div>
       <div class="modal-body">
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <td>Food</td>
-                    <Td>Quantity</Td>
-                    <Td>Total</Td>
+                    <th>Food</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody class="view-order-body">
@@ -97,7 +97,7 @@
                     
                     for(var i = 0; i < data[0].length; i++) {
                         var x = '<tr>';
-                            x = x + '<td>'+data[0][i].foodname+'</td>';
+                            x = x + '<td>'+data[0][i].food_name+'</td>';
                             x = x + '<td>'+data[0][i].quantity+'</td>';
                             x = x + '<td>'+data[0][i].row_total+'</td>';
                         x = x + '</tr>';
