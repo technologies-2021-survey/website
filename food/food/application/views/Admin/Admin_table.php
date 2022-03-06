@@ -182,7 +182,7 @@
                         addRow3(i, data[i]);
                     }
                 } else {
-                    errorRows('.list-orders-list');
+                    errorRows('list-orders-list');
                 }
             }
         });
@@ -223,7 +223,7 @@
                         addRow(i, data[i]);
                     }
                 } else {
-                    errorRows('.table-list');
+                    errorRows('table-list');
                 }
             }
         });
@@ -264,7 +264,7 @@
                         addRow2(i, data[i]);
                     }
                 } else {
-                    errorRows('.dine-list');
+                    errorRows('dine-list');
                 }
             }
         });
@@ -352,7 +352,7 @@
         var x = '<div class="accounts-row hehe-1">';
             x = x + '<center>No results found</center>';
         x = x + '</div>';
-        $(insert).append(x);
+        $('.'+insert).append(x);
         $('.hehe-1').hide().css({ opacity: 0, marginLeft: "200px"});
         $('.hehe-1').show('slow').animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
