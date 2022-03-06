@@ -9,7 +9,7 @@ class Auth_model extends CI_Model {
         $client_service = $this->input->get_request_header("Client-Service", TRUE);
         $auth_key = $this->input->get_request_header("Auth-Key", TRUE);
 
-        if($client_service == $this->client_service && $auth_key == $this->auth_key) {
+        if($client_service == $this->client_service && $auth_key == $this->auth_key) { 
             return true;
         } else {
             return json_output(
