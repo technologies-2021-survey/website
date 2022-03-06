@@ -367,5 +367,43 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, please input data');
 		}
 	}
+
+	public function getListOrders($page_number = "") {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		if($page_number != "") {
+			if($page_number <= 0) {
+				$page_number = 1; 
+			} else {
+				$page_number = $page_number;
+			}
+			
+		} else {
+			$page_number = 1;
+		}
+		$no_of_records_per_page = 10;
+        $offset = ($page_number - 1) * $no_of_records_per_page;
+
+		$total_pages_sql = "SELECT COUNT(*) FROM `tables_dine_in` WHERE `status` = 'Done'";
+        $result = $this->db->query($total_pages_sql)->row_array();
+
+		$total_rows = $result['count(*)'];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+		$array = array();
+
+		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Done' ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
+
+		foreach($get_data->result() as $row) {
+			$array[] = array(
+				'id' =>  $row->id,
+				'table_id' =>  $row->table_id,
+				'time' => $row->time,
+				'status' => 'Done'
+			);
+		};
+
+		echo json_encode($array);
+	}
 }
 ?>

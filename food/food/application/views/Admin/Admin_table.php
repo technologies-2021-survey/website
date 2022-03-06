@@ -1,6 +1,6 @@
 <div class="col-lg-6 col-md-6">
     <div class="box-container"> 
-    <div class="box-body">
+        <div class="box-body">
             <h3>
                 Table(s)
                 <div class="pull-right">
@@ -25,28 +25,26 @@
             </div>
             <div style="clear: both;"></div>
         </div>
+    </div>
+    <div class="box-container"> 
         <div class="box-body">
             <h3>
-                Table(s)
+                List Order(s)
                 <div class="pull-right">
-                    <button class="btn btn-success" style="margin-right: 10px;" onclick="refresh1()">
+                    <button class="btn btn-success" style="margin-right: 10px;" onclick="refresh3()">
                         <i class="fa fa-refresh" aria-hidden="true"></i>
                         &nbsp;Refresh
-                    </button>
-                    <button class="btn btn-success">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        &nbsp;Add Table
                     </button>
                 </div>
             </h3>
             
-            <div class="table-list" style="clear:both;margin-bottom: 10px;">
+            <div class="list-orders-list" style="clear:both;margin-bottom: 10px;">
             </div>
             <div class="pull-left">
-                <button class="btn btn-primary" id="prev"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
+                <button class="btn btn-primary" id="prev3"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
             </div>
             <div class="pull-right">
-                <button class="btn btn-primary" id="next">Next&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                <button class="btn btn-primary" id="next3">Next&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></button>
             </div>
             <div style="clear: both;"></div>
         </div>
@@ -78,6 +76,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="viewOrderLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -111,6 +110,7 @@
 <script type="text/javascript">
     var id = 1;
     var id2 = 1;
+    var id3 = 0;
     function getTableDineInOrder(ids, type = "") {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getTableDineInOrder/"+ids,
@@ -143,6 +143,45 @@
                     errorRow();
                 }
                 
+            }
+        });
+    }
+
+    function checkListOrders(ids, type = "") {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getListOrders/"+ids,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
+                if(data.length != "") {
+                    notif.play();
+                    if(type == "add") {
+                        id3++;
+                        getListOrders(id3);
+                    } else if(type == "minus") {
+                        id3--;
+                        getListOrders(id3);
+                    }
+                } else {
+                    errorRow();
+                }
+                
+            }
+        });
+    }
+    
+    function getListOrders(ids) {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getListOrders/"+id3,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
+                $('.list-orders-list').html("");
+                if(data.length != "") {
+                    for(var i = 0; i < data.length; i++) {
+                        addRow2(i, data[i]);
+                    }
+                }
             }
         });
     }
@@ -257,7 +296,9 @@
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-clock-o" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
                 x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">View Order</button>';
-                x = x + '<button class="btn btn-success" onclick="doneServe('+data.id+')">Done serve</button>';
+                if(data.status == "Waiting") {
+                    x = x + '<button class="btn btn-success" onclick="doneServe('+data.id+')">Done serve</button>';
+                }
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
         x = x + '</div>';
