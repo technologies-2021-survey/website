@@ -45,8 +45,8 @@
 		<div class="wrapper">
 			<header class="main-header">
 				<a href="<?php echo base_url(); ?>admin" class="logo">
-					<span class="logo-mini"><b>B</b></span>
-					<span class="logo-lg"><b>BookACleaner</b></span>
+					<span class="logo-mini"><b>CL</b></span>
+					<span class="logo-lg"><b>Cafe Lidia</b></span>
 				</a>
 				<nav class="navbar navbar-static-top">
 				<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -110,8 +110,11 @@
 							</span>
 						</a>
 						<ul class="treeview-menu">
-						<li><a href="<?=base_url('admin/accounts');?>">Account's List</a></li>
-						<li><a href="<?=base_url('admin/dashboard');?>">Cleaner(s) / Booking(s)</a></li>
+							<li><a href="<?=base_url('admin/table');?>">Table</a></li>
+							<li><a href="<?=base_url('admin/menu');?>">Menu</a></li>
+							<li><a href="<?=base_url('admin/inventory');?>">Inventory</a></li>
+							<li><a href="<?=base_url('admin/accounts');?>">Accounts</a></li>
+							<li><a href="<?=base_url('admin/settings');?>">Settings</a></li>
 						</ul>
 					</li>
 					</ul>
