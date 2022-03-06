@@ -163,12 +163,9 @@
             var food_name = $('input[name=food_name]').val();
             var food_price = $('input[name=food_price]').val();
             $.ajax({
-				url: "<?php echo base_url(); ?>admin/addMenu",
+				url: "<?php echo base_url(); ?>admin/addMenu/"+food_name+"/"+food_price,
 				type: "POST",
-				data: {
-					food_name: food_name,
-					food_price: food_price						
-				},
+				data: {},
 				success: function(data){
                     var data = JSON.parse(data);
                     if(data.status == 200) {
