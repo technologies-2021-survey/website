@@ -4,7 +4,7 @@
             <h3>
                 Menu(s)
                 <div class="pull-right">
-                    <button class="btn btn-success">
+                    <button class="btn btn-success" onclick="addMenu()">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                         &nbsp;Add Menu
                     </button>
@@ -136,6 +136,9 @@
         $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
 
+    function addMenu() {
+        $('#addMenu').modal('show');
+    }
     getMenu(id);
 
     $(document).ready(function() {
