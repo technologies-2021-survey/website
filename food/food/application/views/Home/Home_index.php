@@ -49,7 +49,7 @@
 								</div>
 								<div class="contact-item">
 									<p style="color: white;">
-										<span><i class="far fa-envelope"></i> Email</span> cafe_lidia@yahoo.com.ph
+										<span><i class="fa fa-envelope"></i> Email</span> cafe_lidia@yahoo.com.ph
 									</p>
 								</div>
 							</div>
