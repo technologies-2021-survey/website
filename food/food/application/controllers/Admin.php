@@ -303,5 +303,42 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Admin_menu', $data);
 		$this->load->view('Admin/Include/footer');
 	}
+
+	public function getMenu($page_number = "") {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		if($page_number != "") {
+			if($page_number <= 0) {
+				$page_number = 1; 
+			} else {
+				$page_number = $page_number;
+			}
+			
+		} else {
+			$page_number = 1;
+		}
+		$no_of_records_per_page = 10;
+        $offset = ($page_number - 1) * $no_of_records_per_page;
+
+		$total_pages_sql = "SELECT COUNT(*) FROM `menu`";
+        $result = $this->db->query($total_pages_sql)->row_array();
+
+		$total_rows = $result['count(*)'];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+		$array = array();
+
+		$get_data = $this->db->query("SELECT * FROM `menu` ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
+
+		foreach($get_data->result() as $row) {
+			$array[] = array(
+				'id' =>  $row->id,
+				'food_name' =>  $row->food_name,
+				'food_price' =>  $row->food_price
+			);
+		};
+
+		echo json_encode($array);
+	}
 }
 ?>
