@@ -74,7 +74,7 @@
         var x = '<div class="accounts-row row-'+data.id+'">';
             x = x + '<span>'+data.food_name+'</span>';
             x = x + '<span>P'+data.food_price+'</span>';
-            x = x + '<div class="pull-right" style="margin-top: -20px;">';
+            x = x + '<div class="pull-right" style="margin-top: -36px;">';
                 x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">Delete</button>';
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
