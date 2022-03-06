@@ -57,6 +57,22 @@
 <script type="text/javascript">
     var id = 1;
     var id2 = 1;
+    function getTableDineInOrder(ids, type = "") {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/getTableDineInOrder/"+ids,
+            type: "GET",
+            success: function(data){
+                data = JSON.parse(data);
+                if(data.length != "") {
+                    alert(data);
+                } else {
+                    errorRow();
+                }
+                
+            }
+        });
+    }
+
     function checkTables(ids, type = "") {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getTables/"+ids,
@@ -79,6 +95,7 @@
             }
         });
     }
+    
     function getTables(ids) {
         $.ajax({
             url: "<?php echo base_url(); ?>admin/getTables/"+id,
@@ -165,7 +182,7 @@
             }
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-clock-o" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
-                x = x + '<button class="btn btn-primary" style="margin-right: 10px;">View Order</button>';
+                x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">View Order</button>';
                 x = x + '<button class="btn btn-success" onclick="doneServe('+data.id+')">Done serve</button>';
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
@@ -212,6 +229,7 @@
             });
         }
     }
+
     function doneServe(id) {
         if (window.confirm("Are you sure?")) {
             $.ajax({
@@ -244,6 +262,7 @@
     function refresh2() {
         getDineIn(id)
     }
+
     $(document).ready(function() {
         $('#prev').click(function() {
             if(id > 1) {
