@@ -20,11 +20,11 @@
 				<h3>Book a service or get a quote today</h3>
 				<div class="row">
 					<div style="background: #2b137e;margin: 0 15px;box-shadow: 0 0 10px #281276;">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding: 0;margin: 0;">
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding: 0;margin: 0;">
 							
 							<iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=64%20F.%20Calderon%20St.,%20Calumpang%20Marikina%20City,%20Philippines&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
 						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="col-md-4">
 								<div class="contact-item" style="padding-top: 20%;">
 									<h3 style="color: white;">Contact Info</h3>
