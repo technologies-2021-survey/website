@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title><?php echo $title; ?></title>
-		<meta name="description" content="BookACleaner">
-		<meta name="keywords" content="BookACleaner">
-		<meta name="author" content="Harvey Arboleda">
+		<meta name="description" content="Cafe Lidia">
+		<meta name="keywords" content="Cafe Lidia Lidiaaner">
+		<meta name="author" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
