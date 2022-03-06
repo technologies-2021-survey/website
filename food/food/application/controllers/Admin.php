@@ -355,18 +355,15 @@ class Admin extends CI_Controller {
 	}
 
 	public function addMenu($name, $price) {
-		if($name != "" && $price != 0) {
-			if(is_int($price) == true) {
-				// success
-				$data = array(
-					'food_name' => $name,
-					'food_price' => $price,
-				);
-				$this->admin_model->addMenu($data);
-			} else {
-				// error
-				echo $this->admin_model->status(203, 'Error, please input integer in price');
-			}
+		if($name != "" && $price != "") {
+			$data = array(
+				'food_name' => $name,
+				'food_price' => (int) $price,
+			);
+			$this->admin_model->addMenu($data);
+		} else {
+			// error
+			echo $this->admin_model->status(203, 'Error, please input data');
 		}
 	}
 }
