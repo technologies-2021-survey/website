@@ -25,7 +25,7 @@ date_default_timezone_set('Asia/Manila');
 */
 
 
-$config['base_url'] = 'http://peekabook.tech/bookacleaner/bookacleaner';
+$config['base_url'] = 'http://peekabook.tech/food/food';
 
 /*
 |--------------------------------------------------------------------------
