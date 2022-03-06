@@ -101,7 +101,7 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
-                $('.accounts-list').html("");
+                $('.customer-list').html("");
                 if(data.length != "") {
                     for(var i = 0; i < data.length; i++) {
                         addRow2(i, data[i]);
