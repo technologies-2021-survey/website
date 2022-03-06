@@ -42,7 +42,7 @@
                 <label>Price</label>
                 <input type="number" class="form-control" name="food_price" required=""/>
             </div>
-            <button class="btn btn-success" id="add">
+            <button class="btn btn-success" id="add" name="submit">
                 <i class="fa fa-plus" aria-hidden="true"></i>
                 &nbsp;Add Menu
             </button>
@@ -157,6 +157,38 @@
         $('#next').click(function() {
             var s = id + 1;
             getMenu(s, 'add');
+        });
+        $('#addMenu').submit(function() {
+            e.preventDefault();
+            var food_name = $('input[name=food_name]').val();
+            var food_price = $('input[name=food_price]').val();
+            $.ajax({
+				url: "<?php echo base_url(); ?>admin/addMenu",
+				type: "POST",
+				data: {
+					food_name: food_name,
+					food_price: food_price						
+				},
+				success: function(data){
+                    var data = JSON.parse(data);
+                    if(data.status == 200) {
+                        notif.play();
+                        $('#addMenu').modal('hide');
+                        $('input[name=food_name]').val("");
+                        $('input[name=food_price]').val("");
+                        Toast.fire({
+                            icon: 'success',
+                            title: "Successfully"
+                        })
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        })
+                    }
+				}
+			});
         });
     });
 </script>
