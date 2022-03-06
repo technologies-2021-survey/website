@@ -397,11 +397,12 @@
                 type: "GET",
                 success: function(data){
                     if(data.status == 203) {
+                        notif.play();
                         Toast.fire({
                             icon: 'error',
                             title: data.message
                         });
-                    } else {
+                    } else if(data.status == 200) {
                         notif.play();
                         Toast.fire({
                             icon: 'success',
