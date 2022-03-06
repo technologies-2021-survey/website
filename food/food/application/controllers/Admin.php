@@ -239,13 +239,16 @@ class Admin extends CI_Controller {
 
 		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Waiting' ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
+		$count = 1;
 		foreach($get_data->result() as $row) {
 			$array[] = array(
+				'queue' => ($page_number * 10) + $count,
 				'id' =>  $row->id,
 				'table_id' =>  $row->table_id,
 				'time' => $row->time,
 				'status' => 'Waiting'
 			);
+			$count++;
 		};
 
 		echo json_encode($array);
