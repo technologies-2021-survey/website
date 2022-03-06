@@ -94,14 +94,16 @@
                     $('.view-order-body').html("");
 
                     $('#viewOrder').modal('show');
-                    for(var i = 0; i < data[i].length; i++) {
+                    console.log(data[0].foodname[0]);
+                    /*
+                    for(var i = 0; i < data[0].length; i++) {
                         var x = '<tr>';
-                            x = x + '<td>'+data[i].foodname+'</td>';
-                            x = x + '<td>'+data[i].quantity+'</td>';
-                            x = x + '<td>'+data[i].row_total+'</td>';
+                            x = x + '<td>'+data[0].foodname[i]+'</td>';
+                            x = x + '<td>'+data[0].quantity+'</td>';
+                            x = x + '<td>'+data[0].row_total+'</td>';
                         x = x + '</tr>';
                         $('.view-order-body').append(x);
-                    }
+                    }*/
                 } else {
                     errorRow();
                 }
