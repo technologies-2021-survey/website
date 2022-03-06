@@ -48,21 +48,9 @@ class Admin_model extends CI_Model {
             }
         }
     }
-    public function updateCleaners($id, $data) {
+    public function updateDineIn($id, $data) {
         $this->db->where('id', $id);
-		$this->db->update('cleaners', $data);
-    }
-    public function insertCleaner($cleaners_name, $cleaners_contact) {
-        $data = array(
-            'cleaners_name' => $cleaners_name,
-            'cleaners_contact' => $cleaners_contact,
-        );
-		$this->db->insert('cleaners', $data);
-        return 'Success';
-    }
-    public function updateBookings($id, $data) {
-        $this->db->where('id', $id);
-		$this->db->update('bookings', $data);
+		$this->db->update('tables_dine_in', $data);
     }
 }
 ?>
