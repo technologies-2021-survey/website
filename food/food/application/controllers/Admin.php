@@ -401,7 +401,7 @@ class Admin extends CI_Controller {
 			'food_name' => $this->input->post('food_name'),
 			'food_price' => $this->input->post('food_price')
 		);
-		
+
 		$result = $this->admin_model->addMenu($data);
 
 		if($this->form_validation->run() == FALSE) {
@@ -451,6 +451,51 @@ class Admin extends CI_Controller {
 		};
 
 		echo json_encode($array);
+	}
+
+	public function addAccount() {
+
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$this->form_validation->set_rules('full_name', 'Full Name', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('account_level', 'Account Level', 'required');
+
+		if($this->admin_model->checkUsername($this->input->post('username'), 'accounts') == false) {
+			echo $this->admin_model->status(203, 'Error! username is already exist!');
+			return false;
+		}
+
+		if($this->input->post('account_level') == 0) { }
+		else if($this->input->post('account_level') == 1) { }
+		else if($this->input->post('account_level') == 2) { }
+		else if($this->input->post('account_level') == 3) { }
+		else if($this->input->post('account_level') == 4) { }
+		else {
+			echo $this->admin_model->status(203, 'Error! please put properly the account level');
+			return false;
+		}
+
+
+		$data = array(
+			'full_name' => $this->input->post('full_name'),
+			'username' => $this->input->post('username'),
+			'password' => md5($this->input->post('password')),
+			'account_level' => $this->input->post('account_level')
+		);
+		
+		$result = $this->admin_model->addAccount($data);
+
+		if($this->form_validation->run() == FALSE) {
+			echo $this->admin_model->status(203, 'Error! Please input the data');
+		} else {
+			if($result == 'Success') {
+				echo $this->admin_model->status(200, $result);
+			} else {
+				echo $this->admin_model->status(203, $result);
+			}
+		}
 	}
 }
 ?>

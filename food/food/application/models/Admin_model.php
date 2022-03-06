@@ -63,5 +63,22 @@ class Admin_model extends CI_Model {
 		$this->db->insert('menu', $data);
         return 'Success';
     }
+    public function checkUsername($username, $table) {
+        $this->db->where('username', $username);
+        $result = $this->db->get($table);
+
+        if($result->num_rows() > 0){
+            /*
+            * the email already exists
+            */
+            return false;
+        }else{
+            return true;
+        }
+    }
+    public function addAccount($data) {
+		$this->db->insert('accounts', $data);
+        return 'Success';
+    }
 }
 ?>
