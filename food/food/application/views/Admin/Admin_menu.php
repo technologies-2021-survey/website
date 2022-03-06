@@ -162,6 +162,14 @@
             e.preventDefault();
             var food_name = $('input[name=food_name]').val();
             var food_price = $('input[name=food_price]').val();
+            if(isNaN(food_price)) {
+                notif.play();
+                Toast.fire({
+                    icon: 'error',
+                    title: "Error! must input numbers!"
+                })
+                return false;
+            }
             $.ajax({
 				url: "<?php echo base_url(); ?>admin/addMenu/"+food_name+"/"+food_price,
 				type: "POST",
