@@ -264,7 +264,7 @@
                         addRow2(i, data[i]);
                     }
                 } else {
-                    errorRows('dine-list');
+                    errorRows('dine-in-list');
                 }
             }
         });
