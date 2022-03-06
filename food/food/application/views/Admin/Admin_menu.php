@@ -22,6 +22,32 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="addMenuLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addMenuLabel" style="display: inline-block;">Add Menu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addMenu">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="food_name" required=""/>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" class="form-control" name="food_price" required=""/>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
     var id = 1;
     function checkMenu(ids, type = "") {
