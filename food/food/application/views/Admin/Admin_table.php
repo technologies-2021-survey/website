@@ -261,6 +261,7 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
+                data.reverse();
                 $('.dine-in-list').html("");
                 if(data.length != "") {
                     for(var i = 0; i < data.length; i++) {
