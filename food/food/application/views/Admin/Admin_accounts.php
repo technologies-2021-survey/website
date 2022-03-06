@@ -52,17 +52,17 @@
     </div>
 </div>
 
-<div class="modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="addMenuLabel" aria-hidden="true">
+<div class="modal fade" id="addAccount" tabindex="-1" role="dialog" aria-labelledby="addAccountLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addMenuLabel" style="display: inline-block;">Add Menu</h5>
+        <h5 class="modal-title" id="addAccountLabel" style="display: inline-block;">Add Menu</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="addMenus">
+        <form id="addAccounts">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" class="form-control" name="username" required=""/>
@@ -215,6 +215,10 @@
 
     getAccounts(id);
     getCustomers(id2);
+
+    function addAccount() {
+        $('#addAccount').modal('show');
+    }
 
     $(document).ready(function() {
         $('#prev').click(function() {
