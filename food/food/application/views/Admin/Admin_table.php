@@ -315,6 +315,8 @@
                 x = x + '<label class="label label-danger">'+data.status+'</label>';
             } else if(data.status == "Eating") {
                 x = x + '<label class="label label-danger">'+data.status+'</label>';
+            } else if(data.status == "Eating") {
+                x = x + '<label class="label label-danger">'+data.status+'</label>';
             }
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-clock-o" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
@@ -430,6 +432,18 @@
         $('#next2').click(function() {
             var s = id2 + 1;
             checkDineIn(s, 'add');
+        });
+        $('#prev3').click(function() {
+            if(id3 > 1) {
+                var s = id3 - 1;
+                checkListOrders(s3, 'minus');
+            } else {
+                errorRow();
+            }
+        });
+        $('#next3').click(function() {
+            var s = id3 + 1;
+            checkListOrders(s, 'add');
         });
     });
 </script>
