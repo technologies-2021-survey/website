@@ -32,7 +32,7 @@
             <hr class="colorgraph" style="margin:0;padding:0;"/>
             <p style="text-align: center; padding: 15px; font-size: 12px; font-weight: 300;">
                 <i class="fa fa-copyright" aria-hidden="true" style="margin-right: 5px;"></i>
-                A-Team / Page rendered in {elapsed_time} seconds
+                TechLance / Page rendered in {elapsed_time} seconds
             </p>
         </div>
     </div>
@@ -61,7 +61,7 @@
             }
             
         });
-        var notif = new Audio('https://peekabook.tech/bookacleaner/bookacleaner/assets/mp3/mixkit-dry-pop-up-notification-alert-2356.wav');
+        var notif = new Audio('https://peekabook.tech/food/food/assets/mp3/mixkit-dry-pop-up-notification-alert-2356.wav');
         $('#login').submit(function(e) {
             e.preventDefault();
             var username = $('input[name=username]').val();
