@@ -361,6 +361,7 @@ class Admin extends CI_Controller {
 				'food_price' => (int) $price,
 			);
 			$this->admin_model->addMenu($data);
+			echo $this->admin_model->status(200, 'Successfully!');
 		} else {
 			// error
 			echo $this->admin_model->status(203, 'Error, please input data');
