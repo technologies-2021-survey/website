@@ -99,12 +99,17 @@
                     for(var i = 0; i < data[0].length; i++) {
                         var x = '<tr>';
                             x = x + '<td>'+data[0][i].food_name+'</td>';
-                            x = x + '<td>'+data[0][i].food_price+'</td>';
+                            x = x + '<td>P'+data[0][i].food_price+'</td>';
                             x = x + '<td>'+data[0][i].quantity+'</td>';
-                            x = x + '<td>'+data[0][i].row_total+'</td>';
+                            x = x + '<td>P'+data[0][i].row_total+'</td>';
                         x = x + '</tr>';
                         $('.view-order-body').append(x);
                     }
+                    var y = '<tr>';
+                        y = y + '<td colspan="4">';
+                            y = y + '<b>Overall Total:</b> P'+data[1].overall_total;
+                        y = y + '</td>';
+                    y = y + '</tr>';
                 } else {
                     errorRow();
                 }
