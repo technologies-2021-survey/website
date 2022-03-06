@@ -240,7 +240,7 @@ class Admin extends CI_Controller {
 		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Waiting' ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
 		$count = 1;
-		$pagesn = ($page_number==2) ? 1 : $page_number;
+		$pagesn = ($page_number==2) ? 1 : $page_number-1;
 		foreach($get_data->result() as $row) {
 			$array[] = array(
 				'queue' => ($page_number == 1) ? $count : (10 * $pagesn) + $count,
