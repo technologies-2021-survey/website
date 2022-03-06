@@ -76,7 +76,9 @@
                 <select name="account_level" class="form-control">
                     <option value="0">Administrator</option>
                     <option value="1">Cashier</option>
-                    <option value="2">Kitchen</option>
+                    <option value="2">Kitchen 1</option>
+                    <option value="3">Kitchen 2</option>
+                    <option value="4">Dispatcher</option>
                 </select>
             </div>
             <button class="btn btn-success" id="add" name="submit">
@@ -172,7 +174,9 @@
             x = x + '<span>'+data.full_name+'</span>';
             if(data.account_level == 0) { x = x + '<span>Administrator</span>'; }
             else if(data.account_level == 1) { x = x + '<span>Cashier</span>'; }
-            else if(data.account_level == 2) { x = x + '<span>Kitchen</span>'; }
+            else if(data.account_level == 2) { x = x + '<span>Kitchen 1</span>'; }
+            else if(data.account_level == 3) { x = x + '<span>Kitchen 2</span>'; }
+            else if(data.account_level == 4) { x = x + '<span>Dispatcher</span>'; }
         x = x + '</div>';
         $('.accounts-list').append(x);
         
