@@ -6,7 +6,7 @@
                 <div class="pull-right">
                     <button class="btn btn-success">
                         <i class="fa fa-plus" aria-hidden="true"></i>
-                        &nbsp;Add Cleaner
+                        &nbsp;Add Table
                     </button>
                 </div>
             </h3>
@@ -15,3 +15,9 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        
+    });
+</script>
