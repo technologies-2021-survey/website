@@ -255,7 +255,7 @@ class Admin extends CI_Controller {
 		echo json_encode($array);
 	}
 
-	public function doneServe($id, $table_id) {
+	public function doneSitting($id, $table_id) {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
 		$searchIfAvailable = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `table_id` = '".$table_id."' AND `status` = 'Eating'")->num_rows();
@@ -268,11 +268,11 @@ class Admin extends CI_Controller {
 				$search2 = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'");
 				foreach($search2->result() as $data2) {
 					$get_table_id = $data2->table_id;
-					$this->db->query("UPDATE `tables` SET `status` = 'Eating' WHERE `id` = '".$get_table_id."'");
+					$this->db->query("UPDATE `tables` SET `status` = 'Sitting' WHERE `id` = '".$get_table_id."'");
 				}
 				
 				$dataz = array(
-					'status' => 'Eating',
+					'status' => 'Sitting',
 				);
 				$this->admin_model->updateDineIn($id, $dataz);
 				echo $this->admin_model->status(200, 'Successfully!');

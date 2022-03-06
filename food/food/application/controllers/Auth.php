@@ -56,7 +56,7 @@ class Auth extends CI_Controller {
                 $username = $params['username'];
                 $password = $params['password'];
 
-                $response = $this->auth_model->login($username, $password);
+                $response = $this->auth_model->staff_login($username, $password);
                 echo json_encode($response);
                 json_output($response['status'], $response);
             }

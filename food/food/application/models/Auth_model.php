@@ -25,7 +25,7 @@ class Auth_model extends CI_Model {
         $q = $this->db->select('id, username, password')->from("customer_accounts")->where(
             array(
                 'username' => $username, 
-                'password' => $password)
+                'password' => md5($password))
             )->get()->row();
         if($q == "") {
             return array(
@@ -36,6 +36,7 @@ class Auth_model extends CI_Model {
             return array(
                 'status' => 200,
                 'message' => "Successfully login!",
+                'full_name' => $q->full_name,
                 'username' => $username,
                 'customer_id' => $q->id
             );
@@ -43,10 +44,10 @@ class Auth_model extends CI_Model {
     }
 
     public function staff_login($username, $password) {
-        $q = $this->db->select('id, username, password')->from("accounts")->where(
+        $q = $this->db->select('id, full_name, username, password')->from("accounts")->where(
             array(
                 'username' => $username, 
-                'password' => $password)
+                'password' => md5($password))
             )->get()->row();
         if($q == "") {
             return array(
@@ -58,6 +59,7 @@ class Auth_model extends CI_Model {
                 'status' => 200,
                 'message' => "Successfully login!",
                 'username' => $username,
+                'full_name' => $q->full_name,
                 'id' => $q->id,
                 'account_level' => $q->account_level,
             );
