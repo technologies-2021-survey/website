@@ -6,7 +6,7 @@
                 <div class="pull-right">
                     <button class="btn btn-success">
                         <i class="fa fa-refresh" aria-hidden="true"></i>
-                        &nbsp;Refresh
+                        &nbsp;Add Menu
                     </button>
                 </div>
             </h3>
