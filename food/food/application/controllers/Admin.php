@@ -451,7 +451,7 @@ class Admin extends CI_Controller {
 				'id' =>  $row->id,
 				'table_id' =>  $row->table_id,
 				'time' => $row->time,
-				'status' => 'Done'
+				'status' => $row->status
 			);
 		};
 
