@@ -190,7 +190,9 @@
                             icon: 'success',
                             title: 'Successfully!'
                         });
-                        getDineIn(id2)
+                        getTables(id);
+                        getDineIn(id2);
+                        
                     }
                 }
             });
