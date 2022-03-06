@@ -140,7 +140,7 @@
     }
 
     function addRow2(i, data) {
-        var x = '<div class="accounts-row row-'+data.id+'">';
+        var x = '<div class="accounts-row row2-'+data.id+'">';
             x = x + '<span>'+data.table_id+'</span>';
             if(data.status == "Waiting") {
                 x = x + '<label class="label label-danger">'+data.status+'</label>';
@@ -154,8 +154,8 @@
         $('.dine-in-list').append(x);
         
         var durations = i * 500;
-        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
-        $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+        $('.row2-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row2-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
 
     function errorRow() {
