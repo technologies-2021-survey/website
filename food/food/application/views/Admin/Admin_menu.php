@@ -53,7 +53,7 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
-                $('.table-list').html("");
+                $('.menu-list').html("");
                 if(data.length != "") {
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
@@ -116,27 +116,14 @@
         $('#prev').click(function() {
             if(id > 1) {
                 var s = id - 1;
-                checkTables(s, 'minus');
+                getMenu(s, 'minus');
             } else {
                 errorRow();
             }
         });
         $('#next').click(function() {
             var s = id + 1;
-            checkTables(s, 'add');
-        });
-
-        $('#prev2').click(function() {
-            if(id2 > 1) {
-                var s = id2 - 1;
-                checkDineIn(s2, 'minus');
-            } else {
-                errorRow();
-            }
-        });
-        $('#next2').click(function() {
-            var s = id2 + 1;
-            checkDineIn(s, 'add');
+            getMenu(s, 'add');
         });
     });
 </script>
