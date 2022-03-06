@@ -397,7 +397,12 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('food_name', 'Name', 'required');
 		$this->form_validation->set_rules('food_price', 'Price', 'required');
 
-		$result = $this->admin_model->addMenu($this->input->post('food_name'), $this->input->post('food_price'));
+		$data = array(
+			'food_name' => $this->input->post('food_name'),
+			'food_price' => $this->input->post('food_price')
+		);
+		
+		$result = $this->admin_model->addMenu($data);
 
 		if($this->form_validation->run() == FALSE) {
 			echo $this->admin_model->status(203, 'Error! Please input name and price!');

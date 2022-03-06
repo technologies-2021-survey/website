@@ -61,6 +61,7 @@ class Admin_model extends CI_Model {
     }
     public function addMenu($data) {
 		$this->db->insert('menu', $data);
+        return 'Success';
     }
 }
 ?>
