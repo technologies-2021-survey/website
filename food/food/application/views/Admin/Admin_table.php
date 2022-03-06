@@ -108,7 +108,7 @@
                         $('.view-order-body').append(x);
                     }
                     var y = '<tr>';
-                        y = y + '<td colspan="4" style="text-align: right;">';
+                        y = y + '<td colspan="5" style="text-align: right;">';
                             y = y + '<b>Overall Total:</b> P'+data[1].overall_total;
                         y = y + '</td>';
                     y = y + '</tr>';
