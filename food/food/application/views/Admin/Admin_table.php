@@ -181,6 +181,8 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow3(i, data[i]);
                     }
+                } else {
+                    errorRows('.list-orders-list');
                 }
             }
         });
@@ -220,6 +222,8 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
                     }
+                } else {
+                    errorRows('.table-list');
                 }
             }
         });
@@ -259,6 +263,8 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow2(i, data[i]);
                     }
+                } else {
+                    errorRows('.dine-list');
                 }
             }
         });
@@ -340,6 +346,15 @@
             icon: 'error',
             title: 'Error! There\'s no data'
         });
+    }
+
+    function errorRows(insert) {
+        var x = '<div class="accounts-row hehe-1">';
+            x = x + '<center>No results found</center>';
+        x = x + '</div>';
+        $(insert).append(x);
+        $('.hehe-1').hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.hehe-1').show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
 
     getTables(id);
