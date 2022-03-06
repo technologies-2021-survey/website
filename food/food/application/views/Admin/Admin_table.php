@@ -151,7 +151,7 @@
             }
             x = x + moment.unix(data.time).utc().fromNow();
         x = x + '</div>';
-        $('.table-list').append(x);
+        $('.dine-in-list').append(x);
         
         var durations = i * 500;
         $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
