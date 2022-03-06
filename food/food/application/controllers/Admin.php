@@ -9,7 +9,7 @@ class Admin extends CI_Controller {
 
     public function index() {
 		$data = array(
-			'title' => 'Admin Dashboard | BookACleaner',
+			'title' => 'Admin Dashboard | Cafe Lidia',
 		);
 		if($this->admin_model->session() == 1) { redirect(base_url() . "admin/main"); } else { }
 		$this->load->view('Admin/Include/header_login', $data);
@@ -45,7 +45,7 @@ class Admin extends CI_Controller {
 	public function main() {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 		$data = array(
-			'title' => 'Admin Dashboard | BookACleaner',
+			'title' => 'Admin Dashboard | Cafe Lidia',
 			'id' => $this->admin_model->user(),
 			'username' => $this->admin_model->user('username')
 		);
@@ -67,7 +67,7 @@ class Admin extends CI_Controller {
 	public function dashboard() {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 		$data = array(
-			'title' => 'Dashboard | BookACleaner',
+			'title' => 'Dashboard | Cafe Lidia',
 			'id' => $this->admin_model->user(),
 			'username' => $this->admin_model->user('username')
 		);
@@ -80,7 +80,7 @@ class Admin extends CI_Controller {
 	public function accounts() {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 		$data = array(
-			'title' => 'Accounts\'s List | BookACleaner',
+			'title' => 'Accounts\'s List | Cafe Lidia',
 			'id' => $this->admin_model->user(),
 			'username' => $this->admin_model->user('username')
 		);

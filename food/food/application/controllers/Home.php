@@ -9,7 +9,7 @@ class Home extends CI_Controller {
 
 	public function index() {
 		$data = array(
-			'title' => 'Home | BookACleaner',
+			'title' => 'Home | Cafe Lidia',
 			'content' => 'Home'
 		);
 		$this->load->view('Home/Include/header', $data);
