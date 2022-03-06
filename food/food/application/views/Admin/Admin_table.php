@@ -314,9 +314,9 @@
             if(data.status == "Waiting") {
                 x = x + '<label class="label label-danger">'+data.status+'</label>';
             } else if(data.status == "Eating") {
-                x = x + '<label class="label label-danger">'+data.status+'</label>';
-            } else if(data.status == "Eating") {
-                x = x + '<label class="label label-danger">'+data.status+'</label>';
+                x = x + '<label class="label label-primary">'+data.status+'</label>';
+            } else if(data.status == "Done") {
+                x = x + '<label class="label label-success">'+data.status+'</label>';
             }
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-clock-o" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
