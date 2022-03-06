@@ -8,7 +8,7 @@
                         <i class="fa fa-refresh" aria-hidden="true"></i>
                         &nbsp;Refresh
                     </button>
-                    <button class="btn btn-success">
+                    <button class="btn btn-success" onclick="addAccount()">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                         &nbsp;Add Account
                     </button>
@@ -217,7 +217,7 @@
         notif.play();
         $('#addAccount').modal('show');
     }
-    
+
     getAccounts(id);
     getCustomers(id2);
 
