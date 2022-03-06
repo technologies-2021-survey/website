@@ -110,6 +110,7 @@
                             y = y + '<b>Overall Total:</b> P'+data[1].overall_total;
                         y = y + '</td>';
                     y = y + '</tr>';
+                    $('.view-order-body').append(y);
                 } else {
                     errorRow();
                 }
