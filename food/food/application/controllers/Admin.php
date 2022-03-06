@@ -279,7 +279,7 @@ class Admin extends CI_Controller {
 				$overall_total += ($data->quantity * $food_price);
 			}
 
-			echo json_encode($array);
+			echo json_encode($array, array("overall_total" => $overall_total));
 		} else {
 			echo $this->admin_model->status(203, 'Error, no data found.');
 		}
