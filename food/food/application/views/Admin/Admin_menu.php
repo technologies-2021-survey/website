@@ -175,9 +175,12 @@
                 return false;
             }
             $.ajax({
-				url: "<?php echo base_url(); ?>admin/addMenu/"+food_name+"/"+food_price,
+				url: "<?php echo base_url(); ?>admin/addMenu",
 				type: "POST",
-				data: {},
+				data: {
+                    food_name: food_name,
+                    food_price: food_price
+                },
 				success: function(data){
                     var data = JSON.parse(data);
                     if(data.status == 200) {

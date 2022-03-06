@@ -390,18 +390,23 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, no data found.');
 		}
 	}
+	public function addMenu() {
 
-	public function addMenu($name, $price) {
-		if($name != "" && $price != "") {
-			$data = array(
-				'food_name' => $name,
-				'food_price' => (int) $price,
-			);
-			$this->admin_model->addMenu($data);
-			echo $this->admin_model->status(200, 'Successfully!');
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$this->form_validation->set_rules('food_name', 'Name', 'required');
+		$this->form_validation->set_rules('food_price', 'Price', 'required');
+
+		$result = $this->admin_model->addMenu($this->input->post('food_name'), $this->input->post('food_price'));
+
+		if($this->form_validation->run() == FALSE) {
+			echo $this->admin_model->status(203, 'Error! Please input name and price!');
 		} else {
-			// error
-			echo $this->admin_model->status(203, 'Error, please input data');
+			if($result == 'Success') {
+				echo $this->admin_model->status(200, $result);
+			} else {
+				echo $this->admin_model->status(203, $result);
+			}
 		}
 	}
 
