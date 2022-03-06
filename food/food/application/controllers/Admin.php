@@ -168,7 +168,8 @@ class Admin extends CI_Controller {
 		foreach($get_data->result() as $row) {
 			$array[] = array(
 				'id' =>  $row->id,
-				'table_name' =>  $row->table_name
+				'table_name' =>  $row->table_name,
+				'status' => $row->status
 			);
 		};
 

@@ -66,6 +66,11 @@
     function addRow(i, data) {
         var x = '<div class="accounts-row row-'+data.id+'">';
             x = x + '<span>'+data.table_name+'</span>';
+            if(data.status == "Available") {
+                x = x + '<label class="label label-success">'+data.status+'</label>';
+            } else {
+                x = x + '<label class="label label-danger">'+data.status+'</label>';
+            }
         x = x + '</div>';
         $('.table-list').append(x);
         
