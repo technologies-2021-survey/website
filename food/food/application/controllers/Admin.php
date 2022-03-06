@@ -267,10 +267,10 @@ class Admin extends CI_Controller {
 					$this->db->query("UPDATE `tables` SET `status` = 'Eating' WHERE `id` = '".$get_table_id."'");
 				}
 				
-				$data = array(
+				$dataz = array(
 					'status' => 'Eating',
 				);
-				$this->admin_model->updateDineIn($id, $data);
+				$this->admin_model->updateDineIn($id, $dataz);
 				echo $this->admin_model->status(200, 'Successfully!');
 			} else {
 				echo $this->admin_model->status(203, 'Error, no data found.');
