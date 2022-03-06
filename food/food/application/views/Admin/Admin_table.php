@@ -473,7 +473,7 @@
         $('#prev2').click(function() {
             if(id2 > 1) {
                 var s = id2 - 1;
-                checkDineIn(s2, 'minus');
+                checkDineIn(s, 'minus');
             } else {
                 errorRow();
             }
@@ -482,6 +482,7 @@
             var s = id2 + 1;
             checkDineIn(s, 'add');
         });
+
         $('#prev3').click(function() {
             if(id3 > 1) {
                 var s = id3 - 1;
