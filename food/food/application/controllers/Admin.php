@@ -256,7 +256,7 @@ class Admin extends CI_Controller {
 
 		$searchIfAvailable = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `table_id` = '".$table_id."' AND `status` = 'Eating'")->num_rows();
 
-		if($searchIfAvailable == 0) {
+		if($searchIfAvailable == 1) {
 			$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'")->num_rows();
 
 			if($search == 1) {
