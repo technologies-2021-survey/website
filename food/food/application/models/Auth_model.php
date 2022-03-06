@@ -65,5 +65,8 @@ class Auth_model extends CI_Model {
             );
         }
     }
+    public function test() {
+        echo'haha';
+    }
 }
 ?>
