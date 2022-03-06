@@ -436,7 +436,7 @@ class Admin extends CI_Controller {
 		$no_of_records_per_page = 10;
         $offset = ($page_number - 1) * $no_of_records_per_page;
 
-		$total_pages_sql = "SELECT COUNT(*) FROM `tables_dine_in` WHERE `status` = 'Done'";
+		$total_pages_sql = "SELECT COUNT(*) FROM `tables_dine_in` WHERE `status` = 'Done' AND `status` = 'Eating'";
         $result = $this->db->query($total_pages_sql)->row_array();
 
 		$total_rows = $result['count(*)'];
@@ -444,7 +444,7 @@ class Admin extends CI_Controller {
 
 		$array = array();
 
-		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Done' ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
+		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Done' AND `status` = 'Eating' ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
 
 		foreach($get_data->result() as $row) {
 			$array[] = array(
