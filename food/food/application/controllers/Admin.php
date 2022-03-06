@@ -236,5 +236,21 @@ class Admin extends CI_Controller {
 			echo $this->admin_model->status(203, 'Error, no data found.');
 		}
 	}
+
+	public function doneEating($id) {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$search = $this->db->query("SELECT * FROM `tables` WHERE `id` = '".$id."' AND `status` = 'Eating'")->num_rows();
+
+		if($search == 1) {
+			$data = array(
+				'status' => 'Available',
+			);
+			$this->admin_model->updateTable($id, $data);
+			echo $this->admin_model->status(200, 'Successfully!');
+		} else {
+			echo $this->admin_model->status(203, 'Error, no data found.');
+		}
+	}
 }
 ?>
