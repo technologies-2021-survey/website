@@ -75,7 +75,7 @@
             x = x + '<span>'+data.food_name+'</span>';
             x = x + '<span>P'+data.food_price+'</span>';
             x = x + '<div class="pull-right" style="margin-top: -36px;">';
-                x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">Delete</button>';
+                x = x + '<button class="btn btn-danger" style="margin-right: 10px;" onclick="deleteMenu('+data.id+')">Delete</button>';
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
         x = x + '</div>';
