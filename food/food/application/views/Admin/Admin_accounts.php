@@ -217,6 +217,7 @@
     getCustomers(id2);
 
     function addAccount() {
+        notif.play();
         $('#addAccount').modal('show');
     }
 
