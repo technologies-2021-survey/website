@@ -81,6 +81,7 @@
                 data = JSON.parse(data);
                 if(data.length != "") {
                     $('#viewOrder').modal('show');
+                    console.log(data);
                 } else {
                     errorRow();
                 }
