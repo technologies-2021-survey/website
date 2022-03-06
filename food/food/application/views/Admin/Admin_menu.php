@@ -42,10 +42,13 @@
                 <label>Price</label>
                 <input type="number" class="form-control" name="food_price" required=""/>
             </div>
-            <button class="btn btn-success" id="add" name="submit">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-                &nbsp;Add Menu
-            </button>
+            <div class="pull-right">
+                <button class="btn btn-success" id="add" name="submit">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    &nbsp;Add Menu
+                </button>
+            </div>
+            <div style="clear:both;"></div>
         </form>
       </div>
     </div>

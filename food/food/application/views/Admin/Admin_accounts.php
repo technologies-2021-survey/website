@@ -81,10 +81,13 @@
                     <option value="4">Dispatcher</option>
                 </select>
             </div>
+            <div class="pull-right">
             <button class="btn btn-success" id="add" name="submit">
                 <i class="fa fa-plus" aria-hidden="true"></i>
                 &nbsp;Add Account
             </button>
+            </div>
+            <div style="clear:both;"></div>
         </form>
       </div>
     </div>
