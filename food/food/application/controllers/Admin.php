@@ -233,7 +233,7 @@ class Admin extends CI_Controller {
 			$this->admin_model->updateDineIn($id, $data);
 			echo $this->admin_model->status(200, 'Successfully!');
 		} else {
-			echo $this->admin_model->status(203, 'Error, this worker is working!');
+			echo $this->admin_model->status(203, 'Error, no data found.');
 		}
 	}
 }

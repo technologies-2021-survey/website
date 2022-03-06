@@ -151,7 +151,7 @@
             x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-dashboard" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
                 x = x + '<button class="btn btn-primary" style="margin-right: 10px;">View Order</button>';
-                x = x + '<button class="btn btn-success">Done serve</button>';
+                x = x + '<button class="btn btn-success" onclick="doneServe('+data.id+')">Done serve</button>';
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
         x = x + '</div>';
@@ -172,6 +172,30 @@
 
     getTables(id);
     getDineIn(id2);
+
+    function doneServe(id) {
+        if (window.confirm("Are you sure?")) {
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/doneServe/"+id,
+                type: "GET",
+                success: function(data){
+                    if(data.status == 203) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        });
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Successfully!'
+                        });
+                        getDineIn(id2)
+                    }
+                }
+            });
+        }
+    }
 
     $(document).ready(function() {
         $('#prev').click(function() {
