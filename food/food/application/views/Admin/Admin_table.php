@@ -319,6 +319,7 @@
 
     getTables(id);
     getDineIn(id2);
+    getListOrders(id3);
 
     function doneEating(id) {
         if (window.confirm("Are you sure?")) {
@@ -375,7 +376,10 @@
         getTables(id)
     }
     function refresh2() {
-        getDineIn(id)
+        getDineIn(id2)
+    }
+    function refresh3() {
+        getListOrders(id3)
     }
 
     $(document).ready(function() {
