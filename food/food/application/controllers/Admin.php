@@ -284,6 +284,11 @@ class Admin extends CI_Controller {
 				'status' => 'Available',
 			);
 			$this->admin_model->updateTable($id, $data);
+
+			$data2 = array(
+				'status' => 'Done',
+			);
+			$this->admin_model->updateDineIn2($id, $data2);
 			echo $this->admin_model->status(200, 'Successfully!');
 		} else {
 			echo $this->admin_model->status(203, 'Error, no data found.');
