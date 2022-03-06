@@ -405,6 +405,7 @@
                         });
                         getTables(id);
                         getDineIn(id2);
+                        getListOrders(id3);
                         
                     }
                 }

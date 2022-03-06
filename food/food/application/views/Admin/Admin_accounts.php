@@ -134,6 +134,8 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow(i, data[i]);
                     }
+                } else {
+                    errorRows('accounts-list');
                 }
             }
         });
@@ -172,6 +174,8 @@
                     for(var i = 0; i < data.length; i++) {
                         addRow2(i, data[i]);
                     }
+                } else {
+                    errorRows('customers-list');
                 }
             }
         });
@@ -228,7 +232,14 @@
     getAccounts(id);
     getCustomers(id2);
 
-    
+    function errorRows(insert) {
+        var x = '<div class="accounts-row hehe-1">';
+            x = x + '<center>No results found</center>';
+        x = x + '</div>';
+        $('.'+insert).append(x);
+        $('.hehe-1').hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.hehe-1').show('slow').animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+    }
 
     $(document).ready(function() {
         $('#prev').click(function() {
