@@ -52,6 +52,43 @@
     </div>
 </div>
 
+<div class="modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="addMenuLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addMenuLabel" style="display: inline-block;">Add Menu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addMenus">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" required=""/>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" required=""/>
+            </div>
+            <div class="form-group">
+                <label>Account Level</label>
+                <select name="account_level" class="form-control">
+                    <option value="0">Administrator</option>
+                    <option value="1">Cashier</option>
+                    <option value="2">Kitchen</option>
+                </select>
+            </div>
+            <button class="btn btn-success" id="add" name="submit">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                &nbsp;Add Account
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
     var id = 1;
     var id2 = 1;
@@ -171,7 +208,7 @@
         notif.play();
         getDineIn(id2)
     }
-    
+
     getAccounts(id);
     getCustomers(id2);
 
