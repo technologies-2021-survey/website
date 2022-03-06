@@ -340,5 +340,18 @@ class Admin extends CI_Controller {
 
 		echo json_encode($array);
 	}
+
+	public function deleteMenu($id) {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+
+		$search = $this->db->query("SELECT * FROM `menu` WHERE `id` = '".$id."'")->num_rows();
+
+		if($search == 1) {
+			$this->admin_model->deleteMenu($id);
+			echo $this->admin_model->status(200, 'Successfully!');
+		} else {
+			echo $this->admin_model->status(203, 'Error, no data found.');
+		}
+	}
 }
 ?>

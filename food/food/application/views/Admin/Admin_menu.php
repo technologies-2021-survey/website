@@ -70,6 +70,30 @@
         });
     }
 
+    function deleteMenu(id) {
+        if (window.confirm("Are you sure?")) {
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/deleteMenu/"+id,
+                type: "GET",
+                success: function(data){
+                    if(data.status == 203) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        });
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Successfully!'
+                        });
+                        getMenu(id);
+                    }
+                }
+            });
+        }
+    }
+
     function addRow(i, data) {
         var x = '<div class="accounts-row row-'+data.id+'">';
             x = x + '<span>'+data.food_name+'</span>';
