@@ -43,7 +43,7 @@
         </div>
     </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
     var id = 1;
     var id2 = 1;
@@ -149,6 +149,7 @@
             } else if(data.status == "Done") {
                 x = x + '<label class="label label-success">'+data.status+'</label>';
             }
+            x = x + moment.unix(data.time).utc().fromNow();
         x = x + '</div>';
         $('.table-list').append(x);
         
