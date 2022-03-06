@@ -33,7 +33,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="addMenu">
+        <form id="addMenus">
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" class="form-control" name="food_name" required=""/>
@@ -158,7 +158,7 @@
             var s = id + 1;
             getMenu(s, 'add');
         });
-        $('#addMenu').submit(function() {
+        $('#addMenus').submit(function() {
             e.preventDefault();
             var food_name = $('input[name=food_name]').val();
             var food_price = $('input[name=food_price]').val();
