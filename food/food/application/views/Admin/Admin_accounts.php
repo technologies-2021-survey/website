@@ -256,5 +256,44 @@
             var s = id + 1;
             checkCustomers(s, 'add');
         });
+        $('#addAccounts').submit(function(e) {
+            e.preventDefault();
+            var full_name = $('input[name=full_name]').val();
+            var username = $('input[name=username]').val();
+            var password = $('input[name=password]').val();
+            var account_level = $('select[name=account_level]').val();
+
+            $.ajax({
+				url: "<?php echo base_url(); ?>admin/addAccount",
+				type: "POST",
+				data: {
+                    full_name: full_name,
+                    username: username,
+                    password: password,
+                    account_level: account_level
+                },
+				success: function(data){
+                    var data = JSON.parse(data);
+                    if(data.status == 200) {
+                        notif.play();
+                        $('#addAccount').modal('hide');
+                        $('input[name=full_name]').val("");
+                        $('input[name=username]').val("");
+                        $('input[name=account_level]').val("");
+                        Toast.fire({
+                            icon: 'success',
+                            title: "Successfully"
+                        })
+                        getAccounts(id);
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        })
+                    }
+				}
+			});
+        });
     });
 </script>
