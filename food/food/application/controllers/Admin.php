@@ -265,7 +265,7 @@ class Admin extends CI_Controller {
 			}
 			
 			$data = array(
-				'status' => 'Done',
+				'status' => 'Eating',
 			);
 			$this->admin_model->updateDineIn($id, $data);
 			echo $this->admin_model->status(200, 'Successfully!');
