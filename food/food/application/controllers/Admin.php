@@ -254,7 +254,7 @@ class Admin extends CI_Controller {
 	public function doneServe($id, $table_id) {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
-		$searchIfAvailable = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$table_id."' AND `status` = 'Eating'")->num_rows();
+		$searchIfAvailable = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `table_id` = '".$table_id."' AND `status` = 'Eating'")->num_rows();
 
 		if($searchIfAvailable == 0) {
 			$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'")->num_rows();
