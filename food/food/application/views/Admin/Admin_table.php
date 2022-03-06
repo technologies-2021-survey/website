@@ -307,7 +307,7 @@
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
                 x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">View Order</button>';
                 if(data.status == "Waiting") {
-                    x = x + '<button class="btn btn-success" onclick="doneServe('+table_id+','+data.id+')">Done serve</button>';
+                    x = x + '<button class="btn btn-success" onclick="doneServe('+data.table_id+','+data.id+')">Done serve</button>';
                 }
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
