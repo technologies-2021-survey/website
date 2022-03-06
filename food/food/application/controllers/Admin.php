@@ -242,7 +242,7 @@ class Admin extends CI_Controller {
 		$count = 1;
 		foreach($get_data->result() as $row) {
 			$array[] = array(
-				'queue' => ($page_number * 10) + $count,
+				'queue' => ($page_number == 1) ? $count : ($page_number * 10) + $count,
 				'id' =>  $row->id,
 				'table_id' =>  $row->table_id,
 				'time' => $row->time,
