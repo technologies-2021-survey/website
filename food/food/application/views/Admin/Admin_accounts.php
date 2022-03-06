@@ -64,6 +64,10 @@
       <div class="modal-body">
         <form id="addAccounts">
             <div class="form-group">
+                <label>Full name</label>
+                <input type="text" class="form-control" name="full_name" required=""/>
+            </div>
+            <div class="form-group">
                 <label>Username</label>
                 <input type="text" class="form-control" name="username" required=""/>
             </div>
@@ -82,10 +86,10 @@
                 </select>
             </div>
             <div class="pull-right">
-            <button class="btn btn-success" id="add" name="submit">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-                &nbsp;Add Account
-            </button>
+                <button class="btn btn-success" id="add" name="submit">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    &nbsp;Add Account
+                </button>
             </div>
             <div style="clear:both;"></div>
         </form>
