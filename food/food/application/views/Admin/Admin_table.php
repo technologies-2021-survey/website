@@ -371,6 +371,7 @@
             url: "<?php echo base_url(); ?>admin/doneEating/"+id,
                 type: "GET",
                 success: function(data){
+                    data = JSON.parse(data);
                     if(data.status == 203) {
                         Toast.fire({
                             icon: 'error',
@@ -396,6 +397,7 @@
             url: "<?php echo base_url(); ?>admin/doneServe/"+id+"/"+table_id,
                 type: "GET",
                 success: function(data){
+                    data = JSON.parse(data);
                     if(data.status == 200) {
                         notif.play();
                         Toast.fire({
