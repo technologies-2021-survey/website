@@ -15,8 +15,7 @@
 				<div class="collapse navbar-collapse" id="bookacleaner">
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#services">Services</a></li>
-						<li><a href="#book">Book</a></li>
+						<li><a href="#services">Contact</a></li>
 					</ul>
 				</div>
 			</div>
