@@ -213,13 +213,15 @@
         getDineIn(id2)
     }
 
-    getAccounts(id);
-    getCustomers(id2);
-
     function addAccount() {
         notif.play();
         $('#addAccount').modal('show');
     }
+    
+    getAccounts(id);
+    getCustomers(id2);
+
+    
 
     $(document).ready(function() {
         $('#prev').click(function() {
