@@ -251,26 +251,32 @@ class Admin extends CI_Controller {
 		echo json_encode($array);
 	}
 
-	public function doneServe($id) {
+	public function doneServe($id, $table_id) {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
-		$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'")->num_rows();
+		$searchIfAvailable = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$table_id."' AND `status` = 'Eating'")->num_rows();
 
-		if($search == 1) {
-			
-			$search2 = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'");
-			foreach($search2->result() as $data2) {
-				$get_table_id = $data2->table_id;
-				$this->db->query("UPDATE `tables` SET `status` = 'Eating' WHERE `id` = '".$get_table_id."'");
+		if($searchIfAvailable == 0) {
+			$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'")->num_rows();
+
+			if($search == 1) {
+				
+				$search2 = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'");
+				foreach($search2->result() as $data2) {
+					$get_table_id = $data2->table_id;
+					$this->db->query("UPDATE `tables` SET `status` = 'Eating' WHERE `id` = '".$get_table_id."'");
+				}
+				
+				$data = array(
+					'status' => 'Eating',
+				);
+				$this->admin_model->updateDineIn($id, $data);
+				echo $this->admin_model->status(200, 'Successfully!');
+			} else {
+				echo $this->admin_model->status(203, 'Error, no data found.');
 			}
-			
-			$data = array(
-				'status' => 'Eating',
-			);
-			$this->admin_model->updateDineIn($id, $data);
-			echo $this->admin_model->status(200, 'Successfully!');
 		} else {
-			echo $this->admin_model->status(203, 'Error, no data found.');
+			echo $this->admin_model->status(203, 'Error, there\'s someone in the table.');
 		}
 	}
 

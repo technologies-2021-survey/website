@@ -307,7 +307,7 @@
             x = x + '<div class="pull-right" style="margin-top: -20px;">';
                 x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">View Order</button>';
                 if(data.status == "Waiting") {
-                    x = x + '<button class="btn btn-success" onclick="doneServe('+data.id+')">Done serve</button>';
+                    x = x + '<button class="btn btn-success" onclick="doneServe('+table_id+','+data.id+')">Done serve</button>';
                 }
             x = x + '</div>';
             x = x + '<div style="clear: both;"></div>';
@@ -390,10 +390,10 @@
         }
     }
 
-    function doneServe(id) {
+    function doneServe(table_id, id) {
         if (window.confirm("Are you sure?")) {
             $.ajax({
-            url: "<?php echo base_url(); ?>admin/doneServe/"+id,
+            url: "<?php echo base_url(); ?>admin/doneServe/"+id+"/"+table_id,
                 type: "GET",
                 success: function(data){
                     if(data.status == 203) {
