@@ -2,7 +2,13 @@
     <div class="box-container"> 
         <div class="box-body">
             <h3>
-                Dine In(s)
+                Menu(s)
+                <div class="pull-right">
+                    <button class="btn btn-success">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                        &nbsp;Refresh
+                    </button>
+                </div>
             </h3>
         </div>
     </div>
