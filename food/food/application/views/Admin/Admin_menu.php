@@ -141,6 +141,7 @@
     }
 
     function addMenu() {
+        notif.play();
         $('#addMenu').modal('show');
     }
     getMenu(id);
