@@ -25,33 +25,31 @@
 							<iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=64%20F.%20Calderon%20St.,%20Calumpang%20Marikina%20City,%20Philippines&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="col-md-4">
-								<div class="contact-item" style="padding-top: 20%;">
-									<p style="color: white; font-size: 23px;">
-										<span><i class="fas fa-map-marker-alt" style="padding-right: 1%;"></i></span>
-										64 F. Calderon St., Calumpang Marikina City, Philippines
-									</p>
-								</div>
-								<div class="contact-item">
-									<p style="color: white;">
-										<span><i class="fa fa-phone"></i> Phone</span> (02) 8647 7606
-									</p>
-								</div>
-								<div class="contact-item">
-									<p style="color: white;">
-										<span><i class="fa fa-phone"></i> Phone</span> (02) 8647 2542
-									</p>
-								</div>
-								<div class="contact-item">
-									<p style="color: white;">
-										<span><i class="fa fa-phone"></i> Phone</span> 0916 338 7201
-									</p>
-								</div>
-								<div class="contact-item">
-									<p style="color: white;">
-										<span><i class="far fa-envelope"></i> Email</span> cafe_lidia@yahoo.com.ph
-									</p>
-								</div>
+							<div class="contact-item" style="padding-top: 20%;">
+								<p style="color: white; font-size: 23px;">
+									<span><i class="fas fa-map-marker-alt" style="padding-right: 1%;"></i></span>
+									64 F. Calderon St., Calumpang Marikina City, Philippines
+								</p>
+							</div>
+							<div class="contact-item">
+								<p style="color: white;">
+									<span><i class="fa fa-phone"></i> Phone</span> (02) 8647 7606
+								</p>
+							</div>
+							<div class="contact-item">
+								<p style="color: white;">
+									<span><i class="fa fa-phone"></i> Phone</span> (02) 8647 2542
+								</p>
+							</div>
+							<div class="contact-item">
+								<p style="color: white;">
+									<span><i class="fa fa-phone"></i> Phone</span> 0916 338 7201
+								</p>
+							</div>
+							<div class="contact-item">
+								<p style="color: white;">
+									<span><i class="far fa-envelope"></i> Email</span> cafe_lidia@yahoo.com.ph
+								</p>
 							</div>
 						</div>
 						<div style="clear:both;"></div>
