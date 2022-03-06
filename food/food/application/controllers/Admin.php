@@ -292,7 +292,16 @@ class Admin extends CI_Controller {
 	}
 
 	public function menu() {
-		
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		$data = array(
+			'title' => 'Menu | Cafe Lidia',
+			'id' => $this->admin_model->user(),
+			'username' => $this->admin_model->user('username')
+		);
+
+		$this->load->view('Admin/Include/header', $data);
+		$this->load->view('Admin/Admin_menu', $data);
+		$this->load->view('Admin/Include/footer');
 	}
 }
 ?>
