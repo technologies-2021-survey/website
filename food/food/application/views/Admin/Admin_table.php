@@ -4,8 +4,8 @@
             <h3>
                 Table(s)
                 <div class="pull-right">
-                    <button class="btn btn-success" style="margin-right: 10px;">
-                        <i class="fa fa-refresh" aria-hidden="true" onclick="refresh1()"></i>
+                    <button class="btn btn-success" style="margin-right: 10px;" onclick="refresh1()">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
                         &nbsp;Refresh
                     </button>
                     <button class="btn btn-success">
