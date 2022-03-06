@@ -219,7 +219,7 @@ class Admin extends CI_Controller {
 
 		$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'")->num_rows();
 
-		if($search == 0) {
+		if($search == 1) {
 			
 			$search2 = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `id` = '".$id."' AND `status` = 'Waiting'");
 			foreach($search2->result() as $data2) {
