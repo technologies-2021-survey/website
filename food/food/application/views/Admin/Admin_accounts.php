@@ -124,6 +124,7 @@
     function addRow2(i, data) {
         var x = '<div class="accounts-row row2-'+data.id+'">';
             x = x + '<span>'+data.full_name+'</span>';
+            x = x + '<span>Customer</span>';
         x = x + '</div>';
         $('.customers-list').append(x);
         
