@@ -141,6 +141,7 @@
     }
 
     getAccounts(id);
+    getCustomers(id2);
 
     $(document).ready(function() {
         $('#prev').click(function() {
