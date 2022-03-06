@@ -134,7 +134,7 @@
             }
             if(data.status == "Eating") {
                 x = x + '<div class="pull-right" style="margin-top: -20px;">';
-                    x = x + '<button class="btn btn-success" style="margin-right: 10px;">Done eating</button>';
+                    x = x + '<button class="btn btn-success" style="margin-right: 10px;"  onclick="doneEating('+data.id+')">Done eating</button>';
                 x = x + '</div>';
             }
         x = x + '</div>';
