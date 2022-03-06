@@ -297,7 +297,7 @@
 
     function addRow2(i, data) {
         var x = '<div class="accounts-row row2-'+data.id+'">';
-            x = x + '<span>Table '+data.table_id+'</span>';
+            x = x + '<span>Queue #'+data.queue+' / Table '+data.table_id+'</span>';
             if(data.status == "Waiting") {
                 x = x + '<label class="label label-danger">'+data.status+'</label>';
             } else if(data.status == "Eating") {
