@@ -5,13 +5,17 @@
                 Table(s)
                 <div class="pull-right">
                     <button class="btn btn-success">
+                        <i class="fa fa-refresh" aria-hidden="true" onclick="refresh()"></i>
+                        &nbsp;Refresh
+                    </button>
+                    <button class="btn btn-success">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                         &nbsp;Add Table
                     </button>
                 </div>
             </h3>
             
-            <div class="table-list" style="margin-bottom: 10px;">
+            <div class="table-list" style="clear:both;margin-bottom: 10px;">
             </div>
             <div class="pull-left">
                 <button class="btn btn-primary" id="prev"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
@@ -29,9 +33,15 @@
         <div class="box-body">
             <h3>
                 Dine In(s)
+                <div class="pull-right">
+                    <button class="btn btn-success" onclick="refresh2()">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                        &nbsp;Refresh
+                    </button>
+                </div>
             </h3>
             
-            <div class="dine-in-list" style="margin-bottom: 10px;">
+            <div class="dine-in-list" style="clear:both;margin-bottom: 10px;">
             </div>
             <div class="pull-left">
                 <button class="btn btn-primary" id="prev2"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
@@ -228,6 +238,12 @@
         }
     }
 
+    function refresh() {
+        getTables(id)
+    }
+    function refresh2() {
+        getDineIn(id)
+    }
     $(document).ready(function() {
         $('#prev').click(function() {
             if(id > 1) {
