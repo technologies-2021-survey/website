@@ -57,9 +57,13 @@
             <h3>
                 Dine In(s)
                 <div class="pull-right">
-                    <button class="btn btn-success" onclick="refresh2()">
+                    <button class="btn btn-success" onclick="refresh2()" style="margin-right: 5px;">
                         <i class="fa fa-refresh" aria-hidden="true"></i>
                         &nbsp;Refresh
+                    </button>
+                    <button class="btn btn-success" onclick="addSampleDineIn()">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        &nbsp;Add Sample Dine In
                     </button>
                 </div>
             </h3>
@@ -411,6 +415,30 @@
                 }
             });
         }
+    }
+
+    function addSampleDineIn() {
+        $.ajax({
+            url: "<?php echo base_url(); ?>admin/addSampleDineIn/"+id,
+            type: "GET",
+            success: function(data){
+                if(data.status == 203) {
+                    Toast.fire({
+                        icon: 'error',
+                        title: data.message
+                    });
+                } else {
+                    notif.play();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Successfully!'
+                    });
+                    getTables(id);
+                    getDineIn(id2);
+                    getListOrders(id3);
+                }
+            }
+        });
     }
 
     function refresh1() {

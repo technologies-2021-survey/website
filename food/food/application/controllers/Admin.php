@@ -502,5 +502,33 @@ class Admin extends CI_Controller {
 			}
 		}
 	}
+	public function addSampleDineIn() {
+		$getUniqId = uniqid();
+		$finalUniqId = $getUniqId;
+
+		$data = array(
+			'unique_id' => $finalUniqId,
+			'table_id' => rand(1, 4),
+			'time' => time(),
+			'status' => 'Waiting'
+		);
+
+		$this->db->insert('tables_dine_in', $data);
+
+		$getId = "";
+		$search = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `unique_id` = '".$finalUniqId."'");
+		foreach($search->result() as $dataz) {
+			$getId = $dataz->id;
+		}
+
+		$data2 = array(
+			'tables_dine_in_id' => $getId,
+			'menu_id' => 1,
+			'quantity' => rand(1,10)
+		);
+		$this->db->insert('tables_orders', $data2);
+
+		echo $this->admin_model->status(200, 'Success');
+	}
 }
 ?>
