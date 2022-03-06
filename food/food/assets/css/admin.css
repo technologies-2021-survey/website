@@ -158,7 +158,10 @@ div, a {
    transition: 0.5s;
 }
 
-.accounts-row, .cleaners-row, .bookings-row {
+.table-row, 
+.accounts-row, 
+.cleaners-row, 
+.bookings-row {
     margin: 5px;
     padding: 10px;
     background: #f8f8f8;
@@ -167,6 +170,7 @@ div, a {
     clear: both;
 }
 
+.table-row span:nth-child(1), 
 .bookings-row span:nth-child(1), 
 .accounts-row span:nth-child(1), 
 .cleaners-row span:nth-child(1) {
@@ -174,6 +178,7 @@ div, a {
     font-size: 16px;
     font-weight: bold;
 }
+.table-row span:nth-child(2),
 .bookings-row span:nth-child(2),
 .accounts-row span:nth-child(2),
 .cleaners-row span:nth-child(2) {
@@ -181,12 +186,14 @@ div, a {
     display: block;
 }
 
+.table-row,
 .bookings-row,
 .accounts-row,
 .cleaners-row {
     transition: 0.5s;
 }
 
+.table-row:hover,
 .bookings-row:hover,
 .accounts-row:hover,
 .cleaners-row:hover {
