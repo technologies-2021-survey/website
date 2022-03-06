@@ -113,10 +113,10 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
-                $('.table-list').html("");
+                $('.dine-in-list').html("");
                 if(data.length != "") {
                     for(var i = 0; i < data.length; i++) {
-                        addRow(i, data[i]);
+                        addRow2(i, data[i]);
                     }
                 }
             }
@@ -130,6 +130,24 @@
                 x = x + '<label class="label label-success">'+data.status+'</label>';
             } else {
                 x = x + '<label class="label label-danger">'+data.status+'</label>';
+            }
+        x = x + '</div>';
+        $('.table-list').append(x);
+        
+        var durations = i * 500;
+        $('.row-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+    }
+
+    function addRow2(i, data) {
+        var x = '<div class="accounts-row row-'+data.id+'">';
+            x = x + '<span>'+data.table_id+'</span>';
+            if(data.status == "Waiting") {
+                x = x + '<label class="label label-danger">'+data.status+'</label>';
+            } else if(data.status == "Eating") {
+                x = x + '<label class="label label-danger">'+data.status+'</label>';
+            } else if(data.status == "Done") {
+                x = x + '<label class="label label-success">'+data.status+'</label>';
             }
         x = x + '</div>';
         $('.table-list').append(x);

@@ -206,7 +206,8 @@ class Admin extends CI_Controller {
 			$array[] = array(
 				'id' =>  $row->id,
 				'table_id' =>  $row->table_id,
-				'time' => $row->time
+				'time' => $row->time,
+				'status' => 'Waiting'
 			);
 		};
 
