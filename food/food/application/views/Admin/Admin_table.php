@@ -398,12 +398,15 @@
     }
 
     function refresh1() {
+        notif.play();
         getTables(id)
     }
     function refresh2() {
+        notif.play();
         getDineIn(id2)
     }
     function refresh3() {
+        notif.play();
         getListOrders(id3)
     }
 
