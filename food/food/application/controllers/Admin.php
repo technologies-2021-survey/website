@@ -125,6 +125,19 @@ class Admin extends CI_Controller {
 
 		echo json_encode($array);
 	}
+
+	public function table() {
+		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
+		$data = array(
+			'title' => 'Table | Cafe Lidia',
+			'id' => $this->admin_model->user(),
+			'username' => $this->admin_model->user('username')
+		);
+
+		$this->load->view('Admin/Include/header', $data);
+		$this->load->view('Admin/Admin_table', $data);
+		$this->load->view('Admin/Include/footer');
+	}
 	
 }
 ?>
