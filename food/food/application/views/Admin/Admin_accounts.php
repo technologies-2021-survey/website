@@ -19,7 +19,7 @@
     <div class="box-container">
         <div class="box-body">
             <h3>Customer's List</h3>
-            <div class="customer-list" style="margin-bottom: 10px;">
+            <div class="customers-list" style="margin-bottom: 10px;">
             </div>
             <div class="pull-left">
                 <button class="btn btn-primary" id="prev2"><i class="fa fa-caret-left" aria-hidden="true"></i>&nbsp;Prev</button>
@@ -101,7 +101,7 @@
             type: "GET",
             success: function(data){
                 data = JSON.parse(data);
-                $('.customer-list').html("");
+                $('.customers-list').html("");
                 if(data.length != "") {
                     for(var i = 0; i < data.length; i++) {
                         addRow2(i, data[i]);
@@ -125,7 +125,7 @@
         var x = '<div class="accounts-row row2-'+data.id+'">';
             x = x + '<span>'+data.full_name+'</span>';
         x = x + '</div>';
-        $('.customer-list').append(x);
+        $('.customers-list').append(x);
         
         var durations = i * 500;
         $('.row2-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
