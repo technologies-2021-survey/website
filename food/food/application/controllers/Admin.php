@@ -139,7 +139,7 @@ class Admin extends CI_Controller {
 		$this->load->view('Admin/Include/footer');
 	}
 	
-	public function getTable($page_number = "") {
+	public function getTables($page_number = "") {
 		if($this->admin_model->session() == 0) { redirect(base_url() . "admin/index"); } else { }
 
 		if($page_number != "") {
