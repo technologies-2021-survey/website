@@ -237,7 +237,7 @@ class Admin extends CI_Controller {
 
 		$array = array();
 
-		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Waiting' ORDER BY `id` DESC LIMIT $offset, $no_of_records_per_page");
+		$get_data = $this->db->query("SELECT * FROM `tables_dine_in` WHERE `status` = 'Waiting' ORDER BY `id` ASC LIMIT $offset, $no_of_records_per_page");
 
 		$count = 1;
 		foreach($get_data->result() as $row) {
