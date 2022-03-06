@@ -179,7 +179,7 @@
                 $('.list-orders-list').html("");
                 if(data.length != "") {
                     for(var i = 0; i < data.length; i++) {
-                        addRow2(i, data[i]);
+                        addRow3(i, data[i]);
                     }
                 }
             }
@@ -307,6 +307,29 @@
         var durations = i * 500;
         $('.row2-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
         $('.row2-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
+    }
+    function addRow3(i, data) {
+        var x = '<div class="accounts-row row3-'+data.id+'">';
+            x = x + '<span>Table '+data.table_id+'</span>';
+            if(data.status == "Waiting") {
+                x = x + '<label class="label label-danger">'+data.status+'</label>';
+            } else if(data.status == "Eating") {
+                x = x + '<label class="label label-danger">'+data.status+'</label>';
+            }
+            x = x + '<label class="label label-primary" style="margin-left: 5px;"><i class="fa fa-clock-o" style="margin-right: 5px;"></i>'+moment.unix(data.time).utc().fromNow()+'</label>';
+            x = x + '<div class="pull-right" style="margin-top: -20px;">';
+                x = x + '<button class="btn btn-primary" style="margin-right: 10px;" onclick="getTableDineInOrder('+data.id+')">View Order</button>';
+                if(data.status == "Waiting") {
+                    x = x + '<button class="btn btn-success" onclick="doneServe('+data.id+')">Done serve</button>';
+                }
+            x = x + '</div>';
+            x = x + '<div style="clear: both;"></div>';
+        x = x + '</div>';
+        $('.list-orders-list').append(x);
+        
+        var durations = i * 500;
+        $('.row3-'+data.id).hide().css({ opacity: 0, marginLeft: "200px"});
+        $('.row3-'+data.id).show(durations).animate({ opacity: 1, marginLeft: "0px"}, { duration: 'normal', easing: 'easeOutBack'});
     }
 
     function errorRow() {
