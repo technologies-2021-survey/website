@@ -180,6 +180,7 @@
                             icon: 'success',
                             title: "Successfully"
                         })
+                        getMenu(id);
                     } else {
                         notif.play();
                         Toast.fire({
