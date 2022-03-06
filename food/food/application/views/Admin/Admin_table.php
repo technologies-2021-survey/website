@@ -94,6 +94,7 @@
                 data = JSON.parse(data);
                 if(data.length != "") {
                     $('.view-order-body').html("");
+                    $('#viewOrderLabel').text("View Order #"+ids);
 
                     $('#viewOrder').modal('show');
                     
