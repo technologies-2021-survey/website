@@ -67,7 +67,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Food</th>
+                    <th>Name</th>
+                    <th>Price</th>
                     <th>Quantity</th>
                     <th>Total</th>
                 </tr>
@@ -98,6 +99,7 @@
                     for(var i = 0; i < data[0].length; i++) {
                         var x = '<tr>';
                             x = x + '<td>'+data[0][i].food_name+'</td>';
+                            x = x + '<td>'+data[0][i].food_price+'</td>';
                             x = x + '<td>'+data[0][i].quantity+'</td>';
                             x = x + '<td>'+data[0][i].row_total+'</td>';
                         x = x + '</tr>';
