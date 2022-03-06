@@ -113,7 +113,9 @@
     function addRow(i, data) {
         var x = '<div class="accounts-row row-'+data.id+'">';
             x = x + '<span>'+data.full_name+'</span>';
-            x = x + '<span>Administrator</span>';
+            if(data.account_level == 0) { x = x + '<span>Administrator</span>'; }
+            else if(data.account_level == 1) { x = x + '<span>Cashier</span>'; }
+            else if(data.account_level == 2) { x = x + '<span>Kitchen</span>'; }
         x = x + '</div>';
         $('.accounts-list').append(x);
         
