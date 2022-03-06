@@ -178,6 +178,30 @@
     getTables(id);
     getDineIn(id2);
 
+    function doneEating(id) {
+        if (window.confirm("Are you sure?")) {
+            $.ajax({
+            url: "<?php echo base_url(); ?>admin/doneEating/"+id,
+                type: "GET",
+                success: function(data){
+                    if(data.status == 203) {
+                        Toast.fire({
+                            icon: 'error',
+                            title: data.message
+                        });
+                    } else {
+                        notif.play();
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Successfully!'
+                        });
+                        getTables(id);
+                        getDineIn(id2);
+                    }
+                }
+            });
+        }
+    }
     function doneServe(id) {
         if (window.confirm("Are you sure?")) {
             $.ajax({
