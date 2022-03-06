@@ -130,7 +130,12 @@
             if(data.status == "Available") {
                 x = x + '<label class="label label-success">'+data.status+'</label>';
             } else {
-                x = x + '<label class="label label-danger">'+data.status+'</label>';
+                x = x + '<label class="label label-primary">'+data.status+'</label>';
+            }
+            if(data.status == "Eating") {
+                x = x + '<div class="pull-right" style="margin-top: -20px;">';
+                    x = x + '<button class="btn btn-success" style="margin-right: 10px;">Done eating</button>';
+                x = x + '</div>';
             }
         x = x + '</div>';
         $('.table-list').append(x);
