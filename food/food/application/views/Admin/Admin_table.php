@@ -373,7 +373,7 @@
                     data = JSON.parse(data);
                     if(data.status == 203) {
                         Toast.fire({
-                            icon: 'error',
+                            icon: 'error', 
                             title: data.message
                         });
                     } else {
